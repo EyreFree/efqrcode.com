@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
 body{
 	font-family: 'Open Sans', sans-serif;
 	background:#FFF;
@@ -123,7 +123,7 @@ nav a#pull {
 	}
 	nav a#pull:after {
 		content:"";
-		background: url('nav-icon.png') no-repeat;
+		background: url('../images/nav-icon.png') no-repeat;
 		width: 30px;
 		height: 30px;
 		display: inline-block;
