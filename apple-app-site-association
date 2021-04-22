@@ -1,13 +1,10 @@
 {
-    "appclips": {
-        "apps": ["P3X2725LYY.AppStore.EFQRCode.Clip"]
-    }
     "applinks": {
         "apps": [],
         "details": [
             {
-                "appID": "P3X2725LYY.AppStore.EFQRCode",
-                "paths": [ "*" ]
+                "appID": "P3X2725LYY.EFQRCoder",
+                "paths": [ "*" , "/qq_conn/1107951345/*", "/wxe784dc79eb717068*"]
             }
         ]
     }
