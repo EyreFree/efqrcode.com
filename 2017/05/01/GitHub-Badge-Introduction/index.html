@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>GitHub 项目徽章的添加和设置 | EyreFree</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Badge," />
+  
+
+  <meta name="description" content="许多同学在 GitHub 上发布了自己的开源项目，有辛苦开发的实用工具、构思巧妙的开源库、别具一格的 App、精心整理的示例代码等等。 自己花了大把时间和精力构建的项目，当然是希望能够得到更多人的关注，被更多的人知晓或者使用。如何更好滴向他人展示自己的项目，介绍项目相关信息呢？用一些通用的小图标来描述项目相关信息不失为一种很棒的选择，几个好看的徽标能够为自己的项目说明增色不少！ 一. 徽标简介Gi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitHub 项目徽章的添加和设置">
+<meta property="og:url" content="http://www.eyrefree.org/2017/05/01/GitHub-Badge-Introduction/index.html">
+<meta property="og:site_name" content="EyreFree">
+<meta property="og:description" content="许多同学在 GitHub 上发布了自己的开源项目，有辛苦开发的实用工具、构思巧妙的开源库、别具一格的 App、精心整理的示例代码等等。 自己花了大把时间和精力构建的项目，当然是希望能够得到更多人的关注，被更多的人知晓或者使用。如何更好滴向他人展示自己的项目，介绍项目相关信息呢？用一些通用的小图标来描述项目相关信息不失为一种很棒的选择，几个好看的徽标能够为自己的项目说明增色不少！ 一. 徽标简介Gi">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1018190-3489b47031ed2017.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1018190-b2676f0571e5684c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://img.shields.io/travis/ReSwift/ReSwift/master.svg?style=flat-square">
+<meta property="og:image" content="https://img.shields.io/codecov/c/github/ReSwift/ReSwift.svg?style=flat-square">
+<meta property="og:image" content="https://img.shields.io/cocoapods/v/ReSwift.svg?style=flat-square">
+<meta property="og:image" content="https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20tvos%20%7C%20watchos-lightgrey.svg?style=flat-square">
+<meta property="og:image" content="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square">
+<meta property="og:image" content="https://raw.githubusercontent.com/onevcat/Kingfisher/master/images/logo.png">
+<meta property="og:image" content="https://img.shields.io/travis/onevcat/Kingfisher/master.svg">
+<meta property="og:image" content="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat">
+<meta property="og:image" content="https://img.shields.io/badge/SPM-ready-orange.svg">
+<meta property="og:image" content="https://img.shields.io/cocoapods/v/Kingfisher.svg?style=flat">
+<meta property="og:image" content="https://img.shields.io/cocoapods/l/Kingfisher.svg?style=flat">
+<meta property="og:image" content="https://img.shields.io/cocoapods/p/Kingfisher.svg?style=flat">
+<meta property="og:image" content="https://codebeat.co/assets/svg/badges/A-398b39-669406e9e1b136187b91af587d4092b0160370f271f66a651f444b990c2730e9.svg">
+<meta property="og:image" content="https://img.shields.io/badge/made%20with-%3C3-orange.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/Alamofire/Alamofire/assets/alamofire.png">
+<meta property="og:image" content="https://travis-ci.org/Alamofire/Alamofire.svg?branch=master">
+<meta property="og:image" content="https://img.shields.io/cocoapods/v/Alamofire.svg">
+<meta property="og:image" content="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat">
+<meta property="og:image" content="https://img.shields.io/cocoapods/p/Alamofire.svg?style=flat">
+<meta property="og:image" content="https://img.shields.io/badge/twitter-@AlamofireSF-blue.svg?style=flat">
+<meta property="og:image" content="https://badges.gitter.im/Alamofire/Alamofire.svg">
+<meta property="og:image" content="https://raw.githubusercontent.com/EyreFree/EFQRCode/assets/EFQRCode.jpg">
+<meta property="og:image" content="http://img.shields.io/travis/EyreFree/EFQRCode.svg">
+<meta property="og:image" content="https://codecov.io/gh/EyreFree/EFQRCode/branch/master/graph/badge.svg">
+<meta property="og:image" content="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat">
+<meta property="og:image" content="https://img.shields.io/badge/SPM-ready-orange.svg">
+<meta property="og:image" content="https://img.shields.io/cocoapods/v/EFQRCode.svg?style=flat">
+<meta property="og:image" content="https://img.shields.io/cocoapods/p/EFQRCode.svg?style=flat">
+<meta property="og:image" content="https://img.shields.io/badge/language-swift-orange.svg">
+<meta property="og:image" content="https://codebeat.co/badges/01f53e9d-542c-4c22-adc7-d1dbff0d2a6f">
+<meta property="og:image" content="https://img.shields.io/cocoapods/l/EFQRCode.svg?style=flat">
+<meta property="og:image" content="https://badges.gitter.im/EyreFree/EFQRCode.svg">
+<meta property="og:image" content="https://img.shields.io/badge/twitter-@EyreFree777-blue.svg?style=flat">
+<meta property="og:image" content="https://img.shields.io/badge/weibo-@EyreFree-red.svg?style=flat">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1018190-bd12202658a6a391.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://travis-ci.org/Alamofire/Alamofire.svg?branch=master">
+<meta property="og:image" content="https://img.shields.io/codeship/d6c1ddd0-16a3-0132-5f85-2e35c05e22b1.svg">
+<meta property="og:image" content="https://img.shields.io/vso/build/larsbrinkhoff/953a34b9-5966-4923-a48a-c41874cfb5f5/1.svg">
+<meta property="og:image" content="https://img.shields.io/snap-ci/ThoughtWorksStudios/eb_deployer/master.svg">
+<meta property="og:image" content="https://img.shields.io/cocoapods/dt/AFNetworking.svg">
+<meta property="og:image" content="https://img.shields.io/cocoapods/dm/AFNetworking.svg">
+<meta property="og:image" content="https://img.shields.io/cocoapods/dw/AFNetworking.svg">
+<meta property="og:image" content="https://img.shields.io/cocoapods/v/Alamofire.svg?style=flat">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1018190-a6257e9b997c4a7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://img.shields.io/badge/360_store-v1.2.3-519dd9.svg">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1018190-a1fceb0028ce645a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1018190-95306d0d263235c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://codecov.io/gh/EyreFree/EFQRCode/branch/master/graph/badge.svg">
+<meta property="og:image" content="https://img.shields.io/cocoapods/p/Alamofire.svg?style=flat">
+<meta property="og:image" content="https://img.shields.io/badge/platform-ios-lightgrey.svg">
+<meta property="og:image" content="https://img.shields.io/badge/language-swift-orange.svg">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1018190-7aaab9c7de41a78c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1018190-271c429613a8d34e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/1018190-080b0705f241d072.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://codebeat.co/badges/01f53e9d-542c-4c22-adc7-d1dbff0d2a6f">
+<meta property="og:image" content="https://img.shields.io/cocoapods/l/Alamofire.svg?style=flat">
+<meta property="og:image" content="https://img.shields.io/badge/license-MIT-000000.svg">
+<meta property="og:image" content="https://img.shields.io/badge/color-brightgreen-brightgreen.svg?maxAge=2592000">
+<meta property="og:image" content="https://img.shields.io/badge/color-green-green.svg?maxAge=2592000">
+<meta property="og:image" content="https://img.shields.io/badge/color-yellowgreen-yellowgreen.svg?maxAge=2592000">
+<meta property="og:image" content="https://img.shields.io/badge/color-yellow-yellow.svg?maxAge=2592000">
+<meta property="og:image" content="https://img.shields.io/badge/color-orange-orange.svg?maxAge=2592000">
+<meta property="og:image" content="https://img.shields.io/badge/color-red-red.svg?maxAge=2592000">
+<meta property="og:image" content="https://img.shields.io/badge/color-lightgrey-lightgrey.svg?maxAge=2592000">
+<meta property="og:image" content="https://img.shields.io/badge/color-blue-blue.svg?maxAge=2592000">
+<meta property="og:image" content="https://img.shields.io/badge/color-ff69b4-ff69b4.svg?maxAge=2592000">
+<meta property="og:image" content="https://img.shields.io/badge/weibo-@EyreFree-red.svg">
+<meta property="og:image" content="https://img.shields.io/badge/twitter-@EyreFree777-blue.svg">
+<meta property="og:image" content="https://img.shields.io/cocoapods/v/Alamofire.svg?style=plastic">
+<meta property="og:image" content="https://img.shields.io/cocoapods/v/Alamofire.svg?style=flat">
+<meta property="og:image" content="https://img.shields.io/cocoapods/v/Alamofire.svg?style=flat-square">
+<meta property="og:image" content="https://img.shields.io/cocoapods/v/Alamofire.svg?style=social">
+<meta property="og:image" content="https://img.shields.io/cocoapods/v/Alamofire.svg?label=healthinesses">
+<meta property="og:image" content="https://img.shields.io/badge/gadget-Raspberry%20Pi-pink.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAACJ0lEQVR4AW2Qy0tUfxjGv3Pm3O+XGec3jnMZZ9Rxxp+WkYpJ2QkVIzDpkkoGBSOpBZmWgRIkWSs30SJchC26B9aijKLaFET9Be1q46ayRVDU5uk9Q8seeOG8X573eT/nZbwQqo5l5Rube52PQdH3BcaY4SbEiy2+/WFLv7ueblJv0luJmRHBHzqfwuyDRkzfKqB8pRZeQnwzuZynvgHTtwsYvZRBs2+VGSU5nfsjX2bocexqDsMLKXgZCQfmkzi6lK0EDJxOfNJdoYORQl5O3OeXY5+H59PI5XXUMh3RuIQR6v2J2Ld8h3488FXMBWb2TJkNPw9GUzirF3HX2oZFrQUD0Rqc84rfVcaPs0D/cTK/Q6y6N6eVsJX3MCglcUzJYVytw6CYxKRSj1Elu0bWCBNCXCnPGz96pTieOTvxyN6OIm/hid2Nx1SzWhGxsLwR4aQ9rFOMPl8lwwQlvXZ78NLZhRbBwZrTjReOjzuENKc1YUTOrLJ+Kf7+srEJhIL7dhfOaI34n7cxpRWwYnbghFqPMmENyelXzOLE0d1SNbrFGOKcgmDwnduH61Y7zJCAvVINDisZJMPqNEuHVeOQnPr11u3FESWLa2ZbBecp8VNaZXBBb15njHUxmxPC7YK3uGS0YkzNo1VwcZJWtwkeThHKMg33SfEVMqsskBeSjLqwMZYKa18ppXKRwESIv0u8NVPFyRb7hxK0ZYX+fIPO95D6KBXH/uoPnu/BfZ7Zxb0AAAAASUVORK5CYII">
+<meta property="og:image" content="https://img.shields.io/badge/gadget-Raspberry%20Pi-pink.svg?logoWidth=100&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAACJ0lEQVR4AW2Qy0tUfxjGv3Pm3O+XGec3jnMZZ9Rxxp+WkYpJ2QkVIzDpkkoGBSOpBZmWgRIkWSs30SJchC26B9aijKLaFET9Be1q46ayRVDU5uk9Q8seeOG8X573eT/nZbwQqo5l5Rube52PQdH3BcaY4SbEiy2+/WFLv7ueblJv0luJmRHBHzqfwuyDRkzfKqB8pRZeQnwzuZynvgHTtwsYvZRBs2+VGSU5nfsjX2bocexqDsMLKXgZCQfmkzi6lK0EDJxOfNJdoYORQl5O3OeXY5+H59PI5XXUMh3RuIQR6v2J2Ld8h3488FXMBWb2TJkNPw9GUzirF3HX2oZFrQUD0Rqc84rfVcaPs0D/cTK/Q6y6N6eVsJX3MCglcUzJYVytw6CYxKRSj1Elu0bWCBNCXCnPGz96pTieOTvxyN6OIm/hid2Nx1SzWhGxsLwR4aQ9rFOMPl8lwwQlvXZ78NLZhRbBwZrTjReOjzuENKc1YUTOrLJ+Kf7+srEJhIL7dhfOaI34n7cxpRWwYnbghFqPMmENyelXzOLE0d1SNbrFGOKcgmDwnduH61Y7zJCAvVINDisZJMPqNEuHVeOQnPr11u3FESWLa2ZbBecp8VNaZXBBb15njHUxmxPC7YK3uGS0YkzNo1VwcZJWtwkeThHKMg33SfEVMqsskBeSjLqwMZYKa18ppXKRwESIv0u8NVPFyRb7hxK0ZYX+fIPO95D6KBXH/uoPnu/BfZ7Zxb0AAAAASUVORK5CYII">
+<meta property="og:image" content="https://img.shields.io/badge/weibo-@EyreFree-red.svg?style=social&link=https://www.baidu.com&link=https://www.google.com">
+<meta property="og:image" content="https://img.shields.io/badge/twitter-@EyreFree777-blue.svg?colorA=abcdef">
+<meta property="og:image" content="https://img.shields.io/badge/twitter-@EyreFree777-blue.svg?colorB=abcdef">
+<meta property="og:image" content="https://img.shields.io/cocoapods/v/Alamofire.svg?colorB=000000">
+<meta property="og:image" content="https://img.shields.io/travis/onevcat/Kingfisher/master.svg">
+<meta property="og:image" content="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat">
+<meta property="og:image" content="https://img.shields.io/badge/SPM-ready-orange.svg">
+<meta property="og:image" content="https://img.shields.io/cocoapods/v/Kingfisher.svg?style=flat">
+<meta property="og:image" content="https://img.shields.io/cocoapods/l/Kingfisher.svg?style=flat">
+<meta property="og:image" content="https://img.shields.io/cocoapods/p/Kingfisher.svg?style=flat">
+<meta property="og:image" content="https://codebeat.co/assets/svg/badges/A-398b39-669406e9e1b136187b91af587d4092b0160370f271f66a651f444b990c2730e9.svg">
+<meta property="article:published_time" content="2017-05-01T07:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-25T08:23:41.241Z">
+<meta property="article:author" content="EyreFree">
+<meta property="article:tag" content="Badge">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/1018190-3489b47031ed2017.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?638f7245dab1e13e3d8fbdd9cc3b0895";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="EyreFree" type="application/atom+xml">
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/project/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            项目
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80-%E5%BE%BD%E6%A0%87%E7%AE%80%E4%BB%8B"><span class="toc-text">一. 徽标简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C-%E5%B8%B8%E7%94%A8%E5%BE%BD%E6%A0%87%E6%B7%BB%E5%8A%A0"><span class="toc-text">二. 常用徽标添加</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90%E7%8A%B6%E6%80%81"><span class="toc-text">1. 持续集成状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%A1%B9%E7%9B%AE%E4%B8%8B%E8%BD%BD%E9%87%8F"><span class="toc-text">2. 项目下载量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%A1%B9%E7%9B%AE%E7%89%88%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-text">3. 项目版本信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E4%BB%A3%E7%A0%81%E6%B5%8B%E8%AF%95%E8%A6%86%E7%9B%96%E7%8E%87"><span class="toc-text">4. 代码测试覆盖率</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E9%A1%B9%E7%9B%AE%E6%94%AF%E6%8C%81%E5%B9%B3%E5%8F%B0"><span class="toc-text">5. 项目支持平台</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E9%A1%B9%E7%9B%AE%E8%AF%AD%E8%A8%80"><span class="toc-text">6. 项目语言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90"><span class="toc-text">7. 代码分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">8. 开源协议类型</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BE%BD%E6%A0%87"><span class="toc-text">三. 自定义徽标</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%A0%87%E9%A2%98%EF%BC%8F%E5%86%85%E5%AE%B9%EF%BC%8F%E9%A2%9C%E8%89%B2%EF%BC%8F%E9%93%BE%E6%8E%A5"><span class="toc-text">1. 标题／内容／颜色／链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E9%99%84%E5%8A%A0%E5%8F%82%E6%95%B0"><span class="toc-text">2. 附加参数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-style"><span class="toc-text">1. style</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#plastic"><span class="toc-text">plastic</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#flat"><span class="toc-text">flat</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#flat-square"><span class="toc-text">flat-square</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#social"><span class="toc-text">social</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-label"><span class="toc-text">2. label</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-logo"><span class="toc-text">3. logo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-logoWidth"><span class="toc-text">4. logoWidth</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-link"><span class="toc-text">5. link</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-colorA"><span class="toc-text">6. colorA</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-colorB"><span class="toc-text">7. colorB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-maxAge"><span class="toc-text">8. maxAge</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%87%E6%B3%A8"><span class="toc-text">备注</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B-%E5%85%B6%E4%BB%96"><span class="toc-text">四. 其他</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-GitHub-Badge-Introduction" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">GitHub 项目徽章的添加和设置</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.05.01</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>EyreFree</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/GitHub/">GitHub</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://www.eyrefree.org/2017/05/01/GitHub-Badge-Introduction/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>许多同学在 GitHub 上发布了自己的开源项目，有辛苦开发的实用工具、构思巧妙的开源库、别具一格的 App、精心整理的示例代码等等。</p>
+<p>自己花了大把时间和精力构建的项目，当然是希望能够得到更多人的关注，被更多的人知晓或者使用。如何更好滴向他人展示自己的项目，介绍项目相关信息呢？用一些通用的小图标来描述项目相关信息不失为一种很棒的选择，几个好看的徽标能够为自己的项目说明增色不少！</p>
+<h1 id="一-徽标简介"><a href="#一-徽标简介" class="headerlink" title="一. 徽标简介"></a>一. 徽标简介</h1><p>GitHub 项目的 README.md 中可以添加徽章（Badge）对项目进行标记和说明，这些好看的小图标不仅简洁美观，而且还包含了清晰易读的信息。</p>
+<p>徽标主要由图片和对应的链接（当然，你可以不填）组成，徽标图片的话一般由左半部分的名称和右半部分的值组成。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1018190-3489b47031ed2017.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="一枚普通的徽标"></p>
+<p>GitHub 徽标的官方网站是 <a target="_blank" rel="noopener" href="http://shields.io/">http://shields.io/</a>，我萌可以在官网预览绝大部分的徽标样式，然后选择自己喜欢的（当然首先需要适用于自己的目标项目）徽标，添加到自己的项目文档中去。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1018190-b2676f0571e5684c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Shields.IO"></p>
+<p>下面贴出几个栗子以供参考：</p>
+<ul>
+<li>正在学习的 ReSwift</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://travis-ci.org/ReSwift/ReSwift"><img src="https://img.shields.io/travis/ReSwift/ReSwift/master.svg?style=flat-square" alt="Build Status"></a> <a target="_blank" rel="noopener" href="http://codecov.io/github/ReSwift/ReSwift"><img src="https://img.shields.io/codecov/c/github/ReSwift/ReSwift.svg?style=flat-square" alt="Code coverage status"></a> <a target="_blank" rel="noopener" href="https://cocoapods.org/pods/ReSwift"><img src="https://img.shields.io/cocoapods/v/ReSwift.svg?style=flat-square" alt="CocoaPods Compatible"></a> <a target="_blank" rel="noopener" href="https://github.com/ReSwift/ReSwift/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/platform-ios%20%7C%20osx%20%7C%20tvos%20%7C%20watchos-lightgrey.svg?style=flat-square" alt="Platform support"></a> <a target="_blank" rel="noopener" href="https://github.com/ReSwift/ReSwift/blob/master/LICENSE.md"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="License MIT"></a></p>
+<ul>
+<li>大名鼎鼎的 Kingfisher</li>
+</ul>
+<p align="center">
+
+<img src="https://raw.githubusercontent.com/onevcat/Kingfisher/master/images/logo.png" alt="Kingfisher" title="Kingfisher" width="557"/>
+
+</p>
+
+<p align="center">
+<a target="_blank" rel="noopener" href="https://travis-ci.org/onevcat/Kingfisher"><img src="https://img.shields.io/travis/onevcat/Kingfisher/master.svg"></a>
+<a target="_blank" rel="noopener" href="https://github.com/Carthage/Carthage/"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
+<a target="_blank" rel="noopener" href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-ready-orange.svg"></a>
+<a target="_blank" rel="noopener" href="http://onevcat.github.io/Kingfisher/"><img src="https://img.shields.io/cocoapods/v/Kingfisher.svg?style=flat"></a>
+<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/onevcat/Kingfisher/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/Kingfisher.svg?style=flat"></a>
+<a target="_blank" rel="noopener" href="http://onevcat.github.io/Kingfisher/"><img src="https://img.shields.io/cocoapods/p/Kingfisher.svg?style=flat"></a>
+<a target="_blank" rel="noopener" href="https://codebeat.co/projects/github-com-onevcat-kingfisher"><img alt="codebeat badge" src="https://codebeat.co/assets/svg/badges/A-398b39-669406e9e1b136187b91af587d4092b0160370f271f66a651f444b990c2730e9.svg" /></a>
+<img src="https://img.shields.io/badge/made%20with-%3C3-orange.svg">
+</p>
+
+<ul>
+<li>家喻户晓的 Alamofire</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Alamofire/Alamofire/assets/alamofire.png" alt="Alamofire: Elegant Networking in Swift"></p>
+<p><a target="_blank" rel="noopener" href="https://travis-ci.org/Alamofire/Alamofire"><img src="https://travis-ci.org/Alamofire/Alamofire.svg?branch=master" alt="Build Status"></a><br><a target="_blank" rel="noopener" href="https://img.shields.io/cocoapods/v/Alamofire.svg"><img src="https://img.shields.io/cocoapods/v/Alamofire.svg" alt="CocoaPods Compatible"></a><br><a target="_blank" rel="noopener" href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible"></a><br><a target="_blank" rel="noopener" href="http://cocoadocs.org/docsets/Alamofire"><img src="https://img.shields.io/cocoapods/p/Alamofire.svg?style=flat" alt="Platform"></a><br><a target="_blank" rel="noopener" href="http://twitter.com/AlamofireSF"><img src="https://img.shields.io/badge/twitter-@AlamofireSF-blue.svg?style=flat" alt="Twitter"></a><br><a target="_blank" rel="noopener" href="https://gitter.im/Alamofire/Alamofire?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/Alamofire/Alamofire.svg" alt="Gitter"></a></p>
+<p>徽标并不是添加的越多越好，合理地选择适合项目的徽标做具有针对性地添加才是理性的做法，像 <a target="_blank" rel="noopener" href="https://github.com/EyreFree/EFQRCode">EFQRCode</a> 这样堆积徽标的无脑行为并不是十分可取，在这里提出这一点，希望大家不要盲目追求数量。</p>
+<ul>
+<li>腊鸡 EFQRCode</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/EyreFree/EFQRCode/assets/EFQRCode.jpg"></p>
+<p align="center">
+<a target="_blank" rel="noopener" href="https://travis-ci.org/EyreFree/EFQRCode"><img src="http://img.shields.io/travis/EyreFree/EFQRCode.svg"></a>
+<a target="_blank" rel="noopener" href="https://codecov.io/gh/EyreFree/EFQRCode"><img src="https://codecov.io/gh/EyreFree/EFQRCode/branch/master/graph/badge.svg"></a>
+<a target="_blank" rel="noopener" href="https://github.com/Carthage/Carthage/"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
+<a target="_blank" rel="noopener" href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-ready-orange.svg"></a>
+<a target="_blank" rel="noopener" href="http://cocoapods.org/pods/EFQRCode"><img src="https://img.shields.io/cocoapods/v/EFQRCode.svg?style=flat"></a>
+<a target="_blank" rel="noopener" href="http://cocoapods.org/pods/EFQRCode"><img src="https://img.shields.io/cocoapods/p/EFQRCode.svg?style=flat"></a>
+<a target="_blank" rel="noopener" href="https://github.com/apple/swift"><img src="https://img.shields.io/badge/language-swift-orange.svg"></a>
+<a target="_blank" rel="noopener" href="https://codebeat.co/projects/github-com-eyrefree-efqrcode-master"><img src="https://codebeat.co/badges/01f53e9d-542c-4c22-adc7-d1dbff0d2a6f"></a>
+<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/EyreFree/EFQRCode/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/EFQRCode.svg?style=flat"></a>
+<a target="_blank" rel="noopener" href="https://gitter.im/EFQRCode/Lobby"><img src="https://badges.gitter.im/EyreFree/EFQRCode.svg"></a>
+<a target="_blank" rel="noopener" href="https://twitter.com/EyreFree777"><img src="https://img.shields.io/badge/twitter-@EyreFree777-blue.svg?style=flat"></a>
+<a target="_blank" rel="noopener" href="http://weibo.com/eyrefree777"><img src="https://img.shields.io/badge/weibo-@EyreFree-red.svg?style=flat"></a>
+</p>
+
+<p>当然如果个人比较喜欢的话，请随意添加。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1018190-bd12202658a6a391.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="请随意"></p>
+<h1 id="二-常用徽标添加"><a href="#二-常用徽标添加" class="headerlink" title="二. 常用徽标添加"></a>二. 常用徽标添加</h1><p>常用的徽标主要有持续集成状态、项目版本信息、代码测试覆盖率、项目支持平台、项目语言、代码分析等，下面我萌就来依次添加这些可爱的徽标！</p>
+<h2 id="1-持续集成状态"><a href="#1-持续集成状态" class="headerlink" title="1. 持续集成状态"></a>1. 持续集成状态</h2><p>持续集成的话推荐 <a target="_blank" rel="noopener" href="https://travis-ci.org/">Travis CI</a>，针对开源项目免费，所以你的私有项目无法享受到免费的持续构建服务，不过我们的目的貌似就是给开源项目添加徽标。</p>
+<p>同类型的产品还有 <a target="_blank" rel="noopener" href="https://circleci.com/">CircleCI</a>，不过目前跑 OS X 项目需要额外付费，免费版提供一个 Linux 项目队列，作为非付费用户在这里不多做评价，大佬们可以自己试下。其他还有诸如 <a target="_blank" rel="noopener" href="https://jenkins.io/">Jenkins</a><br> 和 <a target="_blank" rel="noopener" href="https://codeship.com/">Codeship</a> 等，大家可以在 <a target="_blank" rel="noopener" href="http://shields.io/">http://shields.io/</a> 的 <code>Build</code> 这一栏自行翻阅。</p>
+<p>接下来就是 Travis CI 的集成工作了，首先打开 <a target="_blank" rel="noopener" href="https://travis-ci.org/">https://travis-ci.org/</a> 注册一个 Travis-CI 账号，可以通过 GitHub 账户直接登陆。</p>
+<p>然后参考 <a target="_blank" rel="noopener" href="https://docs.travis-ci.com/user/getting-started/">官方文档</a>，根据你的项目语言或类型选择具体的配置方式，主要就是在项目中添加一个 <code>.travis.yml</code> 配置文件，告诉 Travis CI 怎样对你的项目进行编译或测试。这里有一个 Swift CocoaPods 库的集成示例，可以参考一下：<a target="_blank" rel="noopener" href="http://www.jianshu.com/p/beaa9ec9183d">http://www.jianshu.com/p/beaa9ec9183d</a>。</p>
+<p>然后徽标图片地址是这个样子的：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">http://img.shields.io/travis/&#123;GitHub 用户名&#125;/&#123;项目名称&#125;.svg</span><br></pre></td></tr></table></figure>
+
+<p>将上面 URL 中的 {GitHub 用户名} 和 {项目名称} 替换为你的即可，再加上该项目在 Travis CI 上的地址，以 Alamofire 为例，最后集成完成的 Markdown 代码和效果大概是这个样子：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">![</span>](<span class="link">https://travis-ci.org/Alamofire/Alamofire.svg?branch=master</span>)](<span class="link">https://travis-ci.org/Alamofire/Alamofire</span>)</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://travis-ci.org/Alamofire/Alamofire"><img src="https://travis-ci.org/Alamofire/Alamofire.svg?branch=master"></a></p>
+<p>当然如果你的编译没跑过或者发生错误之类的，会出现其他的状态，比如酱紫的：</p>
+<p><img src="https://img.shields.io/codeship/d6c1ddd0-16a3-0132-5f85-2e35c05e22b1.svg"></p>
+<p><img src="https://img.shields.io/vso/build/larsbrinkhoff/953a34b9-5966-4923-a48a-c41874cfb5f5/1.svg"></p>
+<p><img src="https://img.shields.io/snap-ci/ThoughtWorksStudios/eb_deployer/master.svg"></p>
+<p>这里需要指出的是，开源项目的 Travis CI 也是公开的，包括日志和历史记录在内，都是针对所有人可见的，所以小伙伴们一定不要把密码、私钥等重要信息暴露了。</p>
+<h2 id="2-项目下载量"><a href="#2-项目下载量" class="headerlink" title="2. 项目下载量"></a>2. 项目下载量</h2><p>项目被下载的次数，这个的话各个平台的统计都是独立的，比如发布在 CocoaPods 的项目下载量徽标图片地址如下，以 AFNetworking 为例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">总下载量：https://img.shields.io/cocoapods/dt/AFNetworking.svg</span><br><span class="line">月下载量：https://img.shields.io/cocoapods/dm/AFNetworking.svg</span><br><span class="line">周下载量：https://img.shields.io/cocoapods/dw/AFNetworking.svg</span><br></pre></td></tr></table></figure>
+
+<p>效果如下：</p>
+<p><img src="https://img.shields.io/cocoapods/dt/AFNetworking.svg"><br><img src="https://img.shields.io/cocoapods/dm/AFNetworking.svg"><br><img src="https://img.shields.io/cocoapods/dw/AFNetworking.svg"></p>
+<p>如果你的库已经发布到 CocoaPods 的话，我们只要把上面的 AFNetworking 改为自己的项目名称即可。更多其他发布方式如 apm、npm、Gem 等可查阅 <a target="_blank" rel="noopener" href="http://shields.io/">http://shields.io/</a> 的 <code>Downloads</code> 一栏。</p>
+<h2 id="3-项目版本信息"><a href="#3-项目版本信息" class="headerlink" title="3. 项目版本信息"></a>3. 项目版本信息</h2><p>这个的话，因为我的 iOS 库是发布在 CocoaPods 的，我用的是 CocoaPods 提供的，URL 如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://img.shields.io/cocoapods/v/&#123;项目名称&#125;.svg?style=flat</span><br></pre></td></tr></table></figure>
+
+<p>以 Alamofire 为例，Markdown 代码和效果如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![](<span class="link">https://img.shields.io/cocoapods/v/Alamofire.svg?style=flat</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img.shields.io/cocoapods/v/Alamofire.svg?style=flat"></p>
+<p>如果你的库已经发布到 CocoaPods 的话，我们只要把上面的 Alamofire 改为自己的项目名称即可。更多其他发布方式如 apm、npm、Gem 等可查阅 <a target="_blank" rel="noopener" href="http://shields.io/">http://shields.io/</a> 的 <code>Version</code> 一栏，这里提供一个可以查询已发布的各种包的版本号徽标地址的网站 <a target="_blank" rel="noopener" href="https://badge.fury.io/">https://badge.fury.io/</a>，可以轻松获取对应包的徽标代码，如下图所示</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1018190-a6257e9b997c4a7f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>如果你的发布工具不提供项目版本信息的徽标的话，可以用自定义徽标的方式实现，具体可参考下文自定义徽标一节，这里给出徽标代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/&#123;发布方式&#125;-&#123;版本号&#125;-519dd9.svg</span><br></pre></td></tr></table></figure>
+
+<p>将 {发布方式} 和 {版本号} 替换为你的项目目前的发布方式和版本号即可，例如通过 360 应用商店发布，发布版本号为 v1.2.3：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![](https://img.shields.io/badge/360_store-v1.2.3-519dd9.svg)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img.shields.io/badge/360_store-v1.2.3-519dd9.svg"></p>
+<h2 id="4-代码测试覆盖率"><a href="#4-代码测试覆盖率" class="headerlink" title="4. 代码测试覆盖率"></a>4. 代码测试覆盖率</h2><p>代码测试覆盖率的话推荐 <a target="_blank" rel="noopener" href="https://codecov.io/">Codecov</a>。同类产品有 <a target="_blank" rel="noopener" href="https://coveralls.io/">Coveralls</a>，不过网站风格略复古，文档也不详细，安装过程也复杂，需要配置一大堆奇怪的东西，遂不推荐。</p>
+<p>同样的，Codecov 可以直接使用 GitHub 账号登陆，需要结合 Travis CI 使用，在 <code>.travis.yml</code> 文件中添加一个回调触发 Codecov 的刷新，同时需要打开工程中的测试覆盖信息收集，XCode 中的设置如下</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1018190-a1fceb0028ce645a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>更多信息可参考 <a target="_blank" rel="noopener" href="https://docs.codecov.io/docs">官方文档</a> 和 <a target="_blank" rel="noopener" href="https://github.com/codecov">示例</a>。</p>
+<p>然后，我们就可以在 Setting 中的 Badge 一栏找到添加图标的代码啦：</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1018190-95306d0d263235c2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p>最终效果如下：</p>
+<p><a target="_blank" rel="noopener" href="https://codecov.io/gh/EyreFree/EFQRCode"><img src="https://codecov.io/gh/EyreFree/EFQRCode/branch/master/graph/badge.svg" alt="codecov"></a></p>
+<h2 id="5-项目支持平台"><a href="#5-项目支持平台" class="headerlink" title="5. 项目支持平台"></a>5. 项目支持平台</h2><p>这个的话，因为我的 iOS 库是发布在 CocoaPods 的，我用的是 CocoaPods 提供的，URL 如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://img.shields.io/cocoapods/p/&#123;项目名称&#125;.svg?style=flat</span><br></pre></td></tr></table></figure>
+
+<p>以 Alamofire 为例，Markdown 代码和效果如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![](<span class="link">https://img.shields.io/cocoapods/p/Alamofire.svg?style=flat</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img.shields.io/cocoapods/p/Alamofire.svg?style=flat"></p>
+<p>如果你的库已经发布到 CocoaPods 的话，我们只要把上面的 Alamofire 改为自己的项目名称即可。如果你的发布工具不提供项目支持平台的徽标的话，可以用自定义徽标的方式实现，具体可参考下文自定义徽标一节，这里给出徽标代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/platform-&#123;项目支持平台&#125;-lightgrey.svg</span><br></pre></td></tr></table></figure>
+
+<p>将 {项目支持平台} 替换为你的项目目前的版本号即可，例如 ios：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![](https://img.shields.io/badge/platform-ios-lightgrey.svg)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img.shields.io/badge/platform-ios-lightgrey.svg"></p>
+<h2 id="6-项目语言"><a href="#6-项目语言" class="headerlink" title="6. 项目语言"></a>6. 项目语言</h2><p>嗯，这个完全是用自定义徽标实现的，具体可参考下文自定义徽标一节，这里给出徽标代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/language-&#123;项目语言&#125;-&#123;背景色&#125;.svg</span><br></pre></td></tr></table></figure>
+
+<p>将 {项目语言} 和 {背景色} 替换为你的项目目前的语言和你想要的背景色即可，这里以 Swift 为例，我们用上 Swift 官方橘色：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![](https://img.shields.io/badge/language-swift-orange.svg)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img.shields.io/badge/language-swift-orange.svg"></p>
+<p>完美!</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1018190-7aaab9c7de41a78c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Swift"></p>
+<h2 id="7-代码分析"><a href="#7-代码分析" class="headerlink" title="7. 代码分析"></a>7. 代码分析</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://codebeat.co/">Codebeat</a> 可以计算全局项目评分、GPA、和不同命名空间的等级来帮助您量化技术债务和发现重构机会，你唯一需要做的就是连接你的 Github 库，获得反馈就好了。</p>
+</blockquote>
+<p>嗯，上面是官方自述，大概意思就是每次 push 或者 merge 之后会对代码进行分，给出评分，然后告诉你哪些地方复杂度过高需要进行重构之类的。用 GitHub 登陆后绑定项目即可，无需对原有项目进行修改（其实是 codebeat 在你的项目设置里加了一个 Webhook，通知它重新计算评分）。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1018190-271c429613a8d34e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Webhooks"></p>
+<p>照着引导巴拉巴拉一顿操作之后就可以获取图标啦，在项目的 Setting 中可以获取徽标代码，自己复制出来就可以。</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/1018190-080b0705f241d072.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Setting"></p>
+<p>最终效果如下：</p>
+<p><a target="_blank" rel="noopener" href="https://codebeat.co/projects/github-com-eyrefree-efqrcode-master"><img src="https://codebeat.co/badges/01f53e9d-542c-4c22-adc7-d1dbff0d2a6f" alt="codebeat badge"></a></p>
+<h2 id="8-开源协议类型"><a href="#8-开源协议类型" class="headerlink" title="8. 开源协议类型"></a>8. 开源协议类型</h2><p>这个的话，因为我的 iOS 库是发布在 CocoaPods 的，我用的是 CocoaPods 提供的，URL 如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://img.shields.io/cocoapods/l/&#123;项目名称&#125;.svg?style=flat</span><br></pre></td></tr></table></figure>
+
+<p>以 Alamofire 为例，Markdown 代码和效果如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![](<span class="link">https://img.shields.io/cocoapods/l/Alamofire.svg?style=flat</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img.shields.io/cocoapods/l/Alamofire.svg?style=flat"></p>
+<p>如果你的库已经发布到 CocoaPods 的话，我们只要把上面的 Alamofire 改为自己的项目名称即可。如果你的发布工具不提供开源协议类型的徽标的话，可以用自定义徽标的方式实现，具体可参考下文自定义徽标一节，这里给出徽标代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/license-&#123;协议名称&#125;-000000.svg</span><br></pre></td></tr></table></figure>
+
+<p>将 {协议名称} 替换为你的项目所使用的协议名称即可，例如 MIT：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![](https://img.shields.io/badge/license-MIT-000000.svg)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img.shields.io/badge/license-MIT-000000.svg"></p>
+<h1 id="三-自定义徽标"><a href="#三-自定义徽标" class="headerlink" title="三. 自定义徽标"></a>三. 自定义徽标</h1><h2 id="1-标题／内容／颜色／链接"><a href="#1-标题／内容／颜色／链接" class="headerlink" title="1. 标题／内容／颜色／链接"></a>1. 标题／内容／颜色／链接</h2><p>如果以上这些徽标没有满足你的需求，我们还可以定制自己的个性化徽标，<code>shields.io</code> 提供了添加自定义徽标的功能，通过修改如下 URL 即可获取自定义徽标图片：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/&#123;徽标标题&#125;-&#123;徽标内容&#125;-&#123;徽标颜色&#125;.svg</span><br></pre></td></tr></table></figure>
+
+<p>{徽标标题}：徽标左半部分的文本（短线：–，下划线：__，空格： 或_）；  <br>{徽标内容}：徽标右半部分的文本，同上；  <br>{徽标颜色}：徽标右半部分背景颜色，可以是 red、green、blue 等颜色英文单词，也可以直接写十六进制的颜色值，如 ff69b4，示例如下：</p>
+<p><img src="https://img.shields.io/badge/color-brightgreen-brightgreen.svg?maxAge=2592000"><br><img src="https://img.shields.io/badge/color-green-green.svg?maxAge=2592000"><br><img src="https://img.shields.io/badge/color-yellowgreen-yellowgreen.svg?maxAge=2592000"><br><img src="https://img.shields.io/badge/color-yellow-yellow.svg?maxAge=2592000"><br><img src="https://img.shields.io/badge/color-orange-orange.svg?maxAge=2592000"><br><img src="https://img.shields.io/badge/color-red-red.svg?maxAge=2592000"><br><img src="https://img.shields.io/badge/color-lightgrey-lightgrey.svg?maxAge=2592000"><br><img src="https://img.shields.io/badge/color-blue-blue.svg?maxAge=2592000"><br><img src="https://img.shields.io/badge/color-ff69b4-ff69b4.svg?maxAge=2592000"></p>
+<p>将其中的 {徽标标题}、{徽标内容}、{徽标颜色} 分别替换为需要的内容即可，例如我的微博徽标图片地址如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://img.shields.io/badge/weibo-@EyreFree-red.svg</span><br></pre></td></tr></table></figure>
+
+<p>再结合我的微博地址 <a target="_blank" rel="noopener" href="http://weibo.com/eyrefree777">http://weibo.com/eyrefree777</a> 后完整徽标代码和效果如下（如果这段代码用在 GitHub 的话，点击该徽标会打开对应的 URL 地址，即直接跳到我的微博）：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">![</span>](<span class="link">https://img.shields.io/badge/weibo-@EyreFree-red.svg</span>)](<span class="link">http://weibo.com/eyrefree777</span>)</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="http://weibo.com/eyrefree777"><img src="https://img.shields.io/badge/weibo-@EyreFree-red.svg"></a></p>
+<p>同理我的推特徽标代码和效果如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">![</span>](<span class="link">https://img.shields.io/badge/twitter-@EyreFree777-blue.svg</span>)](<span class="link">https://twitter.com/EyreFree777</span>)</span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://twitter.com/EyreFree777"><img src="https://img.shields.io/badge/twitter-@EyreFree777-blue.svg"></a></p>
+<h2 id="2-附加参数"><a href="#2-附加参数" class="headerlink" title="2. 附加参数"></a>2. 附加参数</h2><p>可以在徽标图片 URL 后面带上一些参数来控制徽标的样式，这一部分是可选的，不想折腾的话默认的样式就挺好了，可以不看这里的。</p>
+<p>使用方法就是在徽标图片 URL 后面跟上 <code>?&#123;参数名&#125;=&#123;参数值&#125;</code></p>
+<p>多个参数联用的话就是 <code>?&#123;参数名1&#125;=&#123;参数值1&#125;&amp;&#123;参数名2&#125;=&#123;参数值2&#125;...</code></p>
+<h3 id="1-style"><a href="#1-style" class="headerlink" title="1. style"></a>1. style</h3><p>style 控制徽标的主体样式，有四种，不设置的话默认是 <code>flat</code> 的，示例代码和效果如下：</p>
+<h4 id="plastic"><a href="#plastic" class="headerlink" title="plastic"></a>plastic</h4><p>塑料？大概是指立体效果</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![](<span class="link">https://img.shields.io/cocoapods/v/Alamofire.svg?style=plastic</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img.shields.io/cocoapods/v/Alamofire.svg?style=plastic"></p>
+<h4 id="flat"><a href="#flat" class="headerlink" title="flat"></a>flat</h4><p>正常的样子，扁平化</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![](<span class="link">https://img.shields.io/cocoapods/v/Alamofire.svg?style=flat</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img.shields.io/cocoapods/v/Alamofire.svg?style=flat"></p>
+<h4 id="flat-square"><a href="#flat-square" class="headerlink" title="flat-square"></a>flat-square</h4><p>扁平化 + 去除圆角</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![](<span class="link">https://img.shields.io/cocoapods/v/Alamofire.svg?style=flat-square</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img.shields.io/cocoapods/v/Alamofire.svg?style=flat-square"></p>
+<h4 id="social"><a href="#social" class="headerlink" title="social"></a>social</h4><p>社交样式</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![](<span class="link">https://img.shields.io/cocoapods/v/Alamofire.svg?style=social</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img.shields.io/cocoapods/v/Alamofire.svg?style=social"></p>
+<h3 id="2-label"><a href="#2-label" class="headerlink" title="2. label"></a>2. label</h3><p>该参数可以用来强制覆盖原有的徽标标题文字，效果如下，原有的 pod 字样已经被覆盖了：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![](<span class="link">https://img.shields.io/cocoapods/v/Alamofire.svg?label=healthinesses</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img.shields.io/cocoapods/v/Alamofire.svg?label=healthinesses"></p>
+<h3 id="3-logo"><a href="#3-logo" class="headerlink" title="3. logo"></a>3. logo</h3><p>该参数可以用来为徽标添加 logo，logo 图片会出现在左半部分的徽标标题左边，logo 图片高度必须 ≥ 14px，logo 图片需要先转为 base64 编码然后直接插入到 URL 中（可以用 <a target="_blank" rel="noopener" href="http://b64.io/">http://b64.io/</a> 将图片转为 base64 编码的字符串），格式如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">?logo=&#123;base64 编码后的图片数据&#125;</span><br></pre></td></tr></table></figure>
+
+<p>示例代码和效果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![](https://img.shields.io/badge/gadget-Raspberry%20Pi-pink.svg?logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAACJ0lEQVR4AW2Qy0tUfxjGv3Pm3O%2BXGec3jnMZZ9Rxxp%2BWkYpJ2QkVIzDpkkoGBSOpBZmWgRIkWSs30SJchC26B9aijKLaFET9Be1q46ayRVDU5uk9Q8seeOG8X573eT%2FnZbwQqo5l5Rube52PQdH3BcaY4SbEiy2%2B%2FWFLv7ueblJv0luJmRHBHzqfwuyDRkzfKqB8pRZeQnwzuZynvgHTtwsYvZRBs2%2BVGSU5nfsjX2bocexqDsMLKXgZCQfmkzi6lK0EDJxOfNJdoYORQl5O3OeXY5%2BH59PI5XXUMh3RuIQR6v2J2Ld8h3488FXMBWb2TJkNPw9GUzirF3HX2oZFrQUD0Rqc84rfVcaPs0D%2FcTK%2FQ6y6N6eVsJX3MCglcUzJYVytw6CYxKRSj1Elu0bWCBNCXCnPGz96pTieOTvxyN6OIm%2Fhid2Nx1SzWhGxsLwR4aQ9rFOMPl8lwwQlvXZ78NLZhRbBwZrTjReOjzuENKc1YUTOrLJ%2BKf7%2BsrEJhIL7dhfOaI34n7cxpRWwYnbghFqPMmENyelXzOLE0d1SNbrFGOKcgmDwnduH61Y7zJCAvVINDisZJMPqNEuHVeOQnPr11u3FESWLa2ZbBecp8VNaZXBBb15njHUxmxPC7YK3uGS0YkzNo1VwcZJWtwkeThHKMg33SfEVMqsskBeSjLqwMZYKa18ppXKRwESIv0u8NVPFyRb7hxK0ZYX%2BfIPO95D6KBXH%2FuoPnu%2FBfZ7Zxb0AAAAASUVORK5CYII)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img.shields.io/badge/gadget-Raspberry%20Pi-pink.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAACJ0lEQVR4AW2Qy0tUfxjGv3Pm3O+XGec3jnMZZ9Rxxp+WkYpJ2QkVIzDpkkoGBSOpBZmWgRIkWSs30SJchC26B9aijKLaFET9Be1q46ayRVDU5uk9Q8seeOG8X573eT/nZbwQqo5l5Rube52PQdH3BcaY4SbEiy2+/WFLv7ueblJv0luJmRHBHzqfwuyDRkzfKqB8pRZeQnwzuZynvgHTtwsYvZRBs2+VGSU5nfsjX2bocexqDsMLKXgZCQfmkzi6lK0EDJxOfNJdoYORQl5O3OeXY5+H59PI5XXUMh3RuIQR6v2J2Ld8h3488FXMBWb2TJkNPw9GUzirF3HX2oZFrQUD0Rqc84rfVcaPs0D/cTK/Q6y6N6eVsJX3MCglcUzJYVytw6CYxKRSj1Elu0bWCBNCXCnPGz96pTieOTvxyN6OIm/hid2Nx1SzWhGxsLwR4aQ9rFOMPl8lwwQlvXZ78NLZhRbBwZrTjReOjzuENKc1YUTOrLJ+Kf7+srEJhIL7dhfOaI34n7cxpRWwYnbghFqPMmENyelXzOLE0d1SNbrFGOKcgmDwnduH61Y7zJCAvVINDisZJMPqNEuHVeOQnPr11u3FESWLa2ZbBecp8VNaZXBBb15njHUxmxPC7YK3uGS0YkzNo1VwcZJWtwkeThHKMg33SfEVMqsskBeSjLqwMZYKa18ppXKRwESIv0u8NVPFyRb7hxK0ZYX+fIPO95D6KBXH/uoPnu/BfZ7Zxb0AAAAASUVORK5CYII"></p>
+<h3 id="4-logoWidth"><a href="#4-logoWidth" class="headerlink" title="4. logoWidth"></a>4. logoWidth</h3><p>该参数可以设置在上一个参数 logo 中添加的图标的宽度，设为 0 的话即为忽略该参数，示例代码和效果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![](https://img.shields.io/badge/gadget-Raspberry%20Pi-pink.svg?logoWidth=100&amp;logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAACJ0lEQVR4AW2Qy0tUfxjGv3Pm3O%2BXGec3jnMZZ9Rxxp%2BWkYpJ2QkVIzDpkkoGBSOpBZmWgRIkWSs30SJchC26B9aijKLaFET9Be1q46ayRVDU5uk9Q8seeOG8X573eT%2FnZbwQqo5l5Rube52PQdH3BcaY4SbEiy2%2B%2FWFLv7ueblJv0luJmRHBHzqfwuyDRkzfKqB8pRZeQnwzuZynvgHTtwsYvZRBs2%2BVGSU5nfsjX2bocexqDsMLKXgZCQfmkzi6lK0EDJxOfNJdoYORQl5O3OeXY5%2BH59PI5XXUMh3RuIQR6v2J2Ld8h3488FXMBWb2TJkNPw9GUzirF3HX2oZFrQUD0Rqc84rfVcaPs0D%2FcTK%2FQ6y6N6eVsJX3MCglcUzJYVytw6CYxKRSj1Elu0bWCBNCXCnPGz96pTieOTvxyN6OIm%2Fhid2Nx1SzWhGxsLwR4aQ9rFOMPl8lwwQlvXZ78NLZhRbBwZrTjReOjzuENKc1YUTOrLJ%2BKf7%2BsrEJhIL7dhfOaI34n7cxpRWwYnbghFqPMmENyelXzOLE0d1SNbrFGOKcgmDwnduH61Y7zJCAvVINDisZJMPqNEuHVeOQnPr11u3FESWLa2ZbBecp8VNaZXBBb15njHUxmxPC7YK3uGS0YkzNo1VwcZJWtwkeThHKMg33SfEVMqsskBeSjLqwMZYKa18ppXKRwESIv0u8NVPFyRb7hxK0ZYX%2BfIPO95D6KBXH%2FuoPnu%2FBfZ7Zxb0AAAAASUVORK5CYII)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img.shields.io/badge/gadget-Raspberry%20Pi-pink.svg?logoWidth=100&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAACJ0lEQVR4AW2Qy0tUfxjGv3Pm3O+XGec3jnMZZ9Rxxp+WkYpJ2QkVIzDpkkoGBSOpBZmWgRIkWSs30SJchC26B9aijKLaFET9Be1q46ayRVDU5uk9Q8seeOG8X573eT/nZbwQqo5l5Rube52PQdH3BcaY4SbEiy2+/WFLv7ueblJv0luJmRHBHzqfwuyDRkzfKqB8pRZeQnwzuZynvgHTtwsYvZRBs2+VGSU5nfsjX2bocexqDsMLKXgZCQfmkzi6lK0EDJxOfNJdoYORQl5O3OeXY5+H59PI5XXUMh3RuIQR6v2J2Ld8h3488FXMBWb2TJkNPw9GUzirF3HX2oZFrQUD0Rqc84rfVcaPs0D/cTK/Q6y6N6eVsJX3MCglcUzJYVytw6CYxKRSj1Elu0bWCBNCXCnPGz96pTieOTvxyN6OIm/hid2Nx1SzWhGxsLwR4aQ9rFOMPl8lwwQlvXZ78NLZhRbBwZrTjReOjzuENKc1YUTOrLJ+Kf7+srEJhIL7dhfOaI34n7cxpRWwYnbghFqPMmENyelXzOLE0d1SNbrFGOKcgmDwnduH61Y7zJCAvVINDisZJMPqNEuHVeOQnPr11u3FESWLa2ZbBecp8VNaZXBBb15njHUxmxPC7YK3uGS0YkzNo1VwcZJWtwkeThHKMg33SfEVMqsskBeSjLqwMZYKa18ppXKRwESIv0u8NVPFyRb7hxK0ZYX+fIPO95D6KBXH/uoPnu/BfZ7Zxb0AAAAASUVORK5CYII"></p>
+<h3 id="5-link"><a href="#5-link" class="headerlink" title="5. link"></a>5. link</h3><p>据说该参数是用来设置 style 为 social 类型点击后跳转的 URL 的（嗯，俗称超链接），并且应该能够设置左右两边为不同的 URL，官方描述如下：</p>
+<ul>
+<li>Specify what clicking on the left&#x2F;right of a badge should do (esp. for social badge style)</li>
+</ul>
+<p>如果把 URL 贴到浏览器中直接访问的确是这样的，比如直接在浏览器中打开下面这个链接，点击左半部分会跳到百度，右半部分则跳到 Google（感谢 <a target="_blank" rel="noopener" href="https://github.com/yuzhouwww">@yuzhouwww</a> 同学的提示）：</p>
+<p><a target="_blank" rel="noopener" href="https://img.shields.io/badge/weibo-@EyreFree-red.svg?style=social&link=https://www.baidu.com&link=https://www.google.com">https:&#x2F;&#x2F;img.shields.io&#x2F;badge&#x2F;weibo-@EyreFree-red.svg?style=social&link=https://www.baidu.com&link=https://www.google.com</a></p>
+<p>不过如果直接添加在 Markdown 中显示貌似没啥效果？如果有大佬知道的求指点，感谢！</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">![](https://img.shields.io/badge/weibo-@EyreFree-red.svg?style=social&amp;link=https://www.baidu.com&amp;link=https://www.google.com)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img.shields.io/badge/weibo-@EyreFree-red.svg?style=social&link=https://www.baidu.com&link=https://www.google.com"></p>
+<h3 id="6-colorA"><a href="#6-colorA" class="headerlink" title="6. colorA"></a>6. colorA</h3><p>该参数用来控制徽标左半部分的背景色，只能用十六进制的颜色作为参数哦，不能直接写 red、green、blue 之类的，这里将左半部分的背景色改为 0xabcdef，代码和效果如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![](<span class="link">https://img.shields.io/badge/twitter-@EyreFree777-blue.svg?colorA=abcdef</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img.shields.io/badge/twitter-@EyreFree777-blue.svg?colorA=abcdef"></p>
+<h3 id="7-colorB"><a href="#7-colorB" class="headerlink" title="7. colorB"></a>7. colorB</h3><p>该参数用来控制徽标右半部分的背景色，同上，只能用十六进制的颜色作为参数哦，不能直接写 red、green、blue 之类的，这里将右半部分的背景色改为 0xabcdef，代码和效果如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![](<span class="link">https://img.shields.io/badge/twitter-@EyreFree777-blue.svg?colorB=abcdef</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://img.shields.io/badge/twitter-@EyreFree777-blue.svg?colorB=abcdef"></p>
+<h3 id="8-maxAge"><a href="#8-maxAge" class="headerlink" title="8. maxAge"></a>8. maxAge</h3><p>该参数用来设置 HTTP 缓存时间，以秒为单位，直接在 svg 地址后跟 <code>?maxAge=&#123;缓存秒数&#125;</code> 即可，好像没啥好预览的，不放效果图了。</p>
+<h3 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h3><p>这里需要注意的是，如果你是引用的第三方 svg 然后添加自己的样式，如果该样式之前已经被第三方添加过，是不一定会覆盖第三方的设置的，也就是说自己设置的属性不一定会生效…例如下面的代码设置 colorB 就没生效：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![](<span class="link">https://img.shields.io/cocoapods/v/Alamofire.svg?colorB=000000</span>)</span><br></pre></td></tr></table></figure>
+
+<p>右半部分应该变成黑色，但是毫无效果的说：</p>
+<p><img src="https://img.shields.io/cocoapods/v/Alamofire.svg?colorB=000000"></p>
+<h1 id="四-其他"><a href="#四-其他" class="headerlink" title="四. 其他"></a>四. 其他</h1><p>默认的徽标是居左排列的，如果需要居中排列需要使用 HTML 的方式来插入徽标，可参考 <a target="_blank" rel="noopener" href="https://github.com/onevcat/Kingfisher">Kingfisher</a>，代码和效果如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">align</span>=<span class="string">&quot;center&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://travis-ci.org/onevcat/Kingfisher&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://img.shields.io/travis/onevcat/Kingfisher/master.svg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://github.com/Carthage/Carthage/&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://swift.org/package-manager/&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://img.shields.io/badge/SPM-ready-orange.svg&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://onevcat.github.io/Kingfisher/&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://img.shields.io/cocoapods/v/Kingfisher.svg?style=flat&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://raw.githubusercontent.com/onevcat/Kingfisher/master/LICENSE&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://img.shields.io/cocoapods/l/Kingfisher.svg?style=flat&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;http://onevcat.github.io/Kingfisher/&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://img.shields.io/cocoapods/p/Kingfisher.svg?style=flat&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://codebeat.co/projects/github-com-onevcat-kingfisher&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">img</span> <span class="attr">alt</span>=<span class="string">&quot;codebeat badge&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://codebeat.co/assets/svg/badges/A-398b39-669406e9e1b136187b91af587d4092b0160370f271f66a651f444b990c2730e9.svg&quot;</span> /&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p align="center">
+<a target="_blank" rel="noopener" href="https://travis-ci.org/onevcat/Kingfisher"><img src="https://img.shields.io/travis/onevcat/Kingfisher/master.svg"></a>
+<a target="_blank" rel="noopener" href="https://github.com/Carthage/Carthage/"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
+<a target="_blank" rel="noopener" href="https://swift.org/package-manager/"><img src="https://img.shields.io/badge/SPM-ready-orange.svg"></a>
+<a target="_blank" rel="noopener" href="http://onevcat.github.io/Kingfisher/"><img src="https://img.shields.io/cocoapods/v/Kingfisher.svg?style=flat"></a>
+<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/onevcat/Kingfisher/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/Kingfisher.svg?style=flat"></a>
+<a target="_blank" rel="noopener" href="http://onevcat.github.io/Kingfisher/"><img src="https://img.shields.io/cocoapods/p/Kingfisher.svg?style=flat"></a>
+<a target="_blank" rel="noopener" href="https://codebeat.co/projects/github-com-onevcat-kingfisher"><img alt="codebeat badge" src="https://codebeat.co/assets/svg/badges/A-398b39-669406e9e1b136187b91af587d4092b0160370f271f66a651f444b990c2730e9.svg" /></a>
+</p>
+
+<p>没了，🙄</p>
+<hr>
+<blockquote>
+<p>如有任何知识产权、版权问题或理论错误，还请指正。<br><a href="https://www.eyrefree.org/2017/05/01/GitHub-Badge-Introduction">https://www.eyrefree.org/2017/05/01/GitHub-Badge-Introduction</a><br>如文中无特殊说明，本站均使用以下协议保护：<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">署名-非商业性使用-禁止演绎</a>。   </p>
+</blockquote>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">给 EyreFree 投食，QAQ</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/WeChat.png" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/AliPay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2017/03/23/UIFont-TTF/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2017/07/06/GitHub-Wiki-Introduction/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/project/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              项目
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'eyrefree';
+    
+    var disqus_url = 'http://www.eyrefree.org/2017/05/01/GitHub-Badge-Introduction/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//eyrefree.disqus.com/count.js" async></script>
+
+
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

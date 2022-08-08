@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>iOS 集成广点通移动 App 激活数据统计 API 上报方案 | EyreFree</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Nothing," />
+  
+
+  <meta name="description" content="iOS 集成广点通移动 App 激活数据统计 API 上报方案。 Demo 地址：https:&#x2F;&#x2F;github.com&#x2F;EyreFree&#x2F;EFGuangDianTongDemo  一，获取参数1，Apple IDApple ID 是一个数字，每一个 iOS 应用都有一个 Apple ID，打开 iTunesConnect，点击我们所需要集成广点通的 App 进入详情页面，点击左边的“App 信息”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS 集成广点通移动 App 激活数据统计 API 上报方案">
+<meta property="og:url" content="http://www.eyrefree.org/2016/02/18/iOS-GuangDianTong/index.html">
+<meta property="og:site_name" content="EyreFree">
+<meta property="og:description" content="iOS 集成广点通移动 App 激活数据统计 API 上报方案。 Demo 地址：https:&#x2F;&#x2F;github.com&#x2F;EyreFree&#x2F;EFGuangDianTongDemo  一，获取参数1，Apple IDApple ID 是一个数字，每一个 iOS 应用都有一个 Apple ID，打开 iTunesConnect，点击我们所需要集成广点通的 App 进入详情页面，点击左边的“App 信息”">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-02-18T07:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-25T08:23:41.246Z">
+<meta property="article:author" content="EyreFree">
+<meta property="article:tag" content="Nothing">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?638f7245dab1e13e3d8fbdd9cc3b0895";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="EyreFree" type="application/atom+xml">
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/project/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            项目
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%EF%BC%8C%E8%8E%B7%E5%8F%96%E5%8F%82%E6%95%B0"><span class="toc-text">一，获取参数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%EF%BC%8CApple-ID"><span class="toc-text">1，Apple ID</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%EF%BC%8CUID"><span class="toc-text">2，UID</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%EF%BC%8CEncryptKey-%E5%92%8C-SignKey"><span class="toc-text">3，EncryptKey 和 SignKey</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%EF%BC%8C%E5%AE%9E%E7%8E%B0-API-%E4%B8%8A%E6%8A%A5%E6%96%B9%E6%A1%88"><span class="toc-text">二，实现 API 上报方案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%EF%BC%8C%E8%B0%83%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-text">三，调用方式</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%EF%BC%8C%E6%B7%BB%E5%8A%A0%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93"><span class="toc-text">1，添加第三方库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%EF%BC%8C%E6%B7%BB%E5%8A%A0%E5%A4%B4%E6%96%87%E4%BB%B6"><span class="toc-text">2，添加头文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%EF%BC%8C%E6%B7%BB%E5%8A%A0%E5%AE%9E%E7%8E%B0%E4%BB%A3%E7%A0%81"><span class="toc-text">3，添加实现代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%EF%BC%8C%E8%B0%83%E7%94%A8-API-%E4%B8%8A%E6%8A%A5%E6%96%B9%E6%B3%95"><span class="toc-text">4，调用 API 上报方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%EF%BC%8C%E6%9F%A5%E7%9C%8B%E8%BF%94%E5%9B%9E%E7%8A%B6%E6%80%81"><span class="toc-text">5，查看返回状态</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%EF%BC%8C%E5%A4%87%E6%B3%A8"><span class="toc-text">四，备注</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-iOS-GuangDianTong" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">iOS 集成广点通移动 App 激活数据统计 API 上报方案</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.02.18</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>EyreFree</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/iOS/">iOS</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://www.eyrefree.org/2016/02/18/iOS-GuangDianTong/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>iOS 集成广点通移动 App 激活数据统计 API 上报方案。</p>
+<p>Demo 地址：<a target="_blank" rel="noopener" href="https://github.com/EyreFree/EFGuangDianTongDemo">https://github.com/EyreFree/EFGuangDianTongDemo</a></p>
+<hr>
+<h1 id="一，获取参数"><a href="#一，获取参数" class="headerlink" title="一，获取参数"></a>一，获取参数</h1><h2 id="1，Apple-ID"><a href="#1，Apple-ID" class="headerlink" title="1，Apple ID"></a>1，Apple ID</h2><p>Apple ID 是一个数字，每一个 iOS 应用都有一个 Apple ID，打开 <a target="_blank" rel="noopener" href="http://itunesconnect.apple.com/">iTunesConnect</a>，点击我们所需要集成广点通的 App 进入详情页面，点击左边的“App 信息”，找到其中的“综合信息”一项，其中包含我们需要的 Apple ID，如下图所示：</p>
+<center>
+![iOS-GuangDianTong-1](/images/iOS-GuangDianTong-1.png)
+</center>
+
+<h2 id="2，UID"><a href="#2，UID" class="headerlink" title="2，UID"></a>2，UID</h2><p>UID 是一个数字，它是我们在广点通的账户 ID，打开<a target="_blank" rel="noopener" href="http://e.qq.com/">广点通</a>进入管理平台，在最顶部的显示的账户信息中的“账户 ID”就是我们需要的 UID，如下图所示：</p>
+<center>
+![iOS-GuangDianTong-2](/images/iOS-GuangDianTong-2.png)
+</center>
+
+<h2 id="3，EncryptKey-和-SignKey"><a href="#3，EncryptKey-和-SignKey" class="headerlink" title="3，EncryptKey 和 SignKey"></a>3，EncryptKey 和 SignKey</h2><p>每一个 AppID 广点通会分配给我们一个加密密钥 encrypt_key 和一个签名密钥 sign_key，打开<a target="_blank" rel="noopener" href="http://e.qq.com/">广点通</a>进入管理平台，点击左边的“工具箱”然后选择“转化跟踪”，然后点击“创建新转化”，依次输入信息创建对应 App 的转化，注意“转化方案”一项选择“API方案二”，提交后会在列表中出现一个我们新创建的转化，点击“查看”，就会得到我们需要的 encrypt_key 和 sign_key，如下图所示：</p>
+<center>
+![iOS-GuangDianTong-3](/images/iOS-GuangDianTong-3.png)
+</center>
+
+<h1 id="二，实现-API-上报方案"><a href="#二，实现-API-上报方案" class="headerlink" title="二，实现 API 上报方案"></a>二，实现 API 上报方案</h1><p>根据文档实现了 API 上报方案流程，代码参见：<a target="_blank" rel="noopener" href="https://github.com/EyreFree/EFGuangDianTongDemo/blob/master/EFGuangDianTongDemo/EFGuangDianTong.swift">https://github.com/EyreFree/EFGuangDianTongDemo/blob/master/EFGuangDianTongDemo/EFGuangDianTong.swift</a></p>
+<h1 id="三，调用方式"><a href="#三，调用方式" class="headerlink" title="三，调用方式"></a>三，调用方式</h1><h2 id="1，添加第三方库"><a href="#1，添加第三方库" class="headerlink" title="1，添加第三方库"></a>1，添加第三方库</h2><p>需要添加 Alamofire 用于网络操作，Demo 中是通过 CocoaPods 的方式引用，所以在将 Demo Clone 下来后要先进行 pod install 操作，具体内容可参考这篇博文：<a target="_blank" rel="noopener" href="http://code4app.com/article/cocoapods-install-usage">CocoaPods安装和使用教程</a></p>
+<h2 id="2，添加头文件"><a href="#2，添加头文件" class="headerlink" title="2，添加头文件"></a>2，添加头文件</h2><p>由于实现 API 上报方案的过程中需要用到 MD5 加密，所以需要添加相应的 Objective-C 头文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#import &lt;CommonCrypto/CommonDigest.h&gt;</span><br></pre></td></tr></table></figure>
+
+<p>由于我们这里是 Swift 工程，所以添加 OC 头文件需要通过给项目添加一个用于桥接的头文件，具体过程可参考：<a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_8d1bc23f0102v5tl.html">IOS — OC与Swift混编</a></p>
+<h2 id="3，添加实现代码"><a href="#3，添加实现代码" class="headerlink" title="3，添加实现代码"></a>3，添加实现代码</h2><p>将 Demo 中的 EFGuangDianTong.swift 文件添加到需要集成广点通统计的项目中。</p>
+<h2 id="4，调用-API-上报方法"><a href="#4，调用-API-上报方法" class="headerlink" title="4，调用 API 上报方法"></a>4，调用 API 上报方法</h2><p>在 AppDelegate 的 didFinishLaunchingWithOptions 方法中合适的地方添加如下代码：</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="type">EFGuangDianTong</span>.sharedInstance.<span class="type">Schema2</span>(</span><br><span class="line">      appid: <span class="number">111111111</span>,              <span class="comment">//替换为我们的 Apple ID</span></span><br><span class="line">      uid: <span class="number">222222</span>,                   <span class="comment">//替换为我们的 UID</span></span><br><span class="line">      signKey: <span class="string">&quot;xxxxxxxxxxxxxxxx&quot;</span>,   <span class="comment">//替换为我们的 sign_key</span></span><br><span class="line">      encryptKey: <span class="string">&quot;zzzzzzzzzzzzzzzz&quot;</span> <span class="comment">//替换为我们的 encrypt_key</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h2 id="5，查看返回状态"><a href="#5，查看返回状态" class="headerlink" title="5，查看返回状态"></a>5，查看返回状态</h2><p>若上报成功，则 XCode 下方的控制台会输出“广点通上报:成功”；<br>若失败则会根据返回码输出具体失败原因，可以根据输出的错误信息来做相应的检查。</p>
+<h1 id="四，备注"><a href="#四，备注" class="headerlink" title="四，备注"></a>四，备注</h1><p>集成广点通需要使用 IDFA，请在 App 提交审核时注意勾选相应选项，否则容易导致二进制文件被拒绝。</p>
+<hr>
+<blockquote>
+<p>如有任何知识产权、版权问题或理论错误，还请指正。<br><a href="https://www.eyrefree.org/2016/02/18/iOS-GuangDianTong">https://www.eyrefree.org/2016/02/18/iOS-GuangDianTong</a><br>如文中无特殊说明，本站均使用以下协议保护：<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">署名-非商业性使用-禁止演绎</a>。   </p>
+</blockquote>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">给 EyreFree 投食，QAQ</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/WeChat.png" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/AliPay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2015/09/10/Swift-UIColor-Hex/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2016/03/01/Jekyll-Coding-Pages/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/project/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              项目
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'eyrefree';
+    
+    var disqus_url = 'http://www.eyrefree.org/2016/02/18/iOS-GuangDianTong/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//eyrefree.disqus.com/count.js" async></script>
+
+
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

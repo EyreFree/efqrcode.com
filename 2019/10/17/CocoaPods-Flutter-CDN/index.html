@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>CocoaPods installed but not initialized. Skipping pod install | EyreFree</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="CocoaPods," />
+  
+
+  <meta name="description" content="流水账警告，⚠️  CocoaPods 1.8.0 支持了 CDN，速度比以前快了很多，这么棒当然是赶紧用起来了，于是推动组内升到了 1.8.3 并移除了无用的 repo，然后 Jenkins 打包就炸了，发现报错： &#x2F;Users&#x2F;XXX&#x2F;Desktop&#x2F;jenkinsWorkspace&#x2F;workspace&#x2F;x_iOS&#x2F;XXX&#x2F;XXX-Bridging-Header.h:60:9: &amp;#x27;F">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CocoaPods installed but not initialized. Skipping pod install">
+<meta property="og:url" content="http://www.eyrefree.org/2019/10/17/CocoaPods-Flutter-CDN/index.html">
+<meta property="og:site_name" content="EyreFree">
+<meta property="og:description" content="流水账警告，⚠️  CocoaPods 1.8.0 支持了 CDN，速度比以前快了很多，这么棒当然是赶紧用起来了，于是推动组内升到了 1.8.3 并移除了无用的 repo，然后 Jenkins 打包就炸了，发现报错： &#x2F;Users&#x2F;XXX&#x2F;Desktop&#x2F;jenkinsWorkspace&#x2F;workspace&#x2F;x_iOS&#x2F;XXX&#x2F;XXX-Bridging-Header.h:60:9: &amp;#x27;F">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.eyrefree.org/images/CocoaPods-Flutter-CDN-1.png">
+<meta property="article:published_time" content="2019-10-17T07:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-25T08:23:41.239Z">
+<meta property="article:author" content="EyreFree">
+<meta property="article:tag" content="CocoaPods">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.eyrefree.org/images/CocoaPods-Flutter-CDN-1.png">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?638f7245dab1e13e3d8fbdd9cc3b0895";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="EyreFree" type="application/atom+xml">
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/project/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            项目
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-CocoaPods-Flutter-CDN" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">CocoaPods installed but not initialized. Skipping pod install</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2019.10.17</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>EyreFree</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/iOS/">iOS</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://www.eyrefree.org/2019/10/17/CocoaPods-Flutter-CDN/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>流水账警告，⚠️</p>
+<hr>
+<p>CocoaPods <a target="_blank" rel="noopener" href="http://blog.cocoapods.org/CocoaPods-1.8.0-beta/">1.8.0</a> 支持了 CDN，速度比以前快了很多，这么棒当然是赶紧用起来了，于是推动组内升到了 1.8.3 并移除了无用的 repo，然后 Jenkins 打包就炸了，发现报错：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/Users/XXX/Desktop/jenkinsWorkspace/workspace/x_iOS/XXX/XXX-Bridging-Header.h:60:9: &#x27;FlutterPluginRegistrant/GeneratedPluginRegistrant.h&#x27; file not found</span><br></pre></td></tr></table></figure>
+
+<p>唔，看起来是依赖的 Flutter 模块炸了，去 Flutter 的打包日志看看，找到如下报错：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Build...</span><br><span class="line">Warning: Building for device with codesigning disabled. You will have to manually codesign before deploying to device.</span><br><span class="line">Building com.x w s.XXX for device (ios-release)...</span><br><span class="line">Warning: CocoaPods installed but not initialized. Skipping pod install.</span><br><span class="line">  CocoaPods is used to retrieve the iOS platform side&#x27;s plugin code that responds to your plugin usage on the Dart side.</span><br><span class="line">  Without resolving iOS dependencies with CocoaPods, plugins will not work on iOS.</span><br><span class="line">  For more info, see https://flutter.io/platform-plugins</span><br><span class="line">To initialize CocoaPods, run:</span><br><span class="line">  pod setup</span><br><span class="line">once to finalize CocoaPods&#x27; installation.</span><br><span class="line">Running Xcode build...                                          </span><br><span class="line">Xcode build done.                                           57.4s</span><br><span class="line">Failed to build iOS app</span><br><span class="line">Error output from Xcode build:</span><br><span class="line">↳</span><br><span class="line">    ** BUILD FAILED **</span><br></pre></td></tr></table></figure>
+
+<p>噫，<code>pod install</code> 被跳过了？切到打包机执行了 <code>flutter doctor</code> 命令，查看一下是不是 flutter 环境坏掉了：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Doctor summary (to see all details, run flutter doctor -v):</span><br><span class="line">[✓] Flutter (Channel beta, v1.3.8, on Mac OS X 10.14.6 18G95, locale zh-Hans-CN)</span><br><span class="line">[✓] Android toolchain - develop for Android devices (Android SDK version 28.0.3)</span><br><span class="line">[!] iOS toolchain - develop for iOS devices (Xcode 11.1)</span><br><span class="line">    ✗ CocoaPods installed but not initialized.</span><br><span class="line">        CocoaPods is used to retrieve the iOS platform side&#x27;s plugin code that responds to your plugin usage on the Dart side.</span><br><span class="line">        Without resolving iOS dependencies with CocoaPods, plugins will not work on iOS.</span><br><span class="line">        For more info, see https://flutter.io/platform-plugins</span><br><span class="line">      To initialize CocoaPods, run:</span><br><span class="line">        pod setup</span><br><span class="line">      once to finalize CocoaPods&#x27; installation.</span><br><span class="line">[✓] Android Studio (version 3.2)</span><br><span class="line">[!] Connected device</span><br><span class="line">    ! No devices available</span><br></pre></td></tr></table></figure>
+
+<p>唔，出现了一样的报错，看起来是升级 CocoaPods 导致的异常。按日志的提示我们执行了 <code>pod setup</code>，操作成功！ <code>flutter doctor</code> 报错依旧。咦，怎么肥事？经过 <a target="_blank" rel="noopener" href="https://github.com/flutter/flutter/issues/41291">一番搜索</a> 发现，CocoaPods 1.8.x 以下在 setup 时初始化的 repo 是 <code>master</code>，而 1.8.x 已经不再是这个了：</p>
+<p><img src="/images/CocoaPods-Flutter-CDN-1.png"></p>
+<p>但不知道是 flutter 还是 CocoaPods 的问题（可能是因为我们用的 flutter 版本低了，是 1.3.8），打包过程会通过检测旧版本的主 repo 是否存在来判断 CocoaPods 是否已经初始化，所以我们需要先切换到 1.7.5，然后执行 <code>pod setup</code>，再切回 1.8.3 即可，<code>flutter doctor</code> 显示正常，打包也恢复正常了。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo gem uninstall cocoapods</span><br><span class="line">sudo gem install cocoapods -v 1.7.5</span><br><span class="line">pod setup</span><br></pre></td></tr></table></figure>
+
+<p>然后再安装最新版 CocoaPods 就可以了：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo gem install cocoapods</span><br></pre></td></tr></table></figure>
+
+<p>提示：记住这里千万不要删除多余的 repo，不然你就会像我一样需要白忙活 2 个小时，首尾呼应，完结撒花。</p>
+<hr>
+<blockquote>
+<p>如有任何知识产权、版权问题或理论错误，还请指正。<br><a href="https://www.eyrefree.org/2019/10/17/CocoaPods-Flutter-CDN">https://www.eyrefree.org/2019/10/17/CocoaPods-Flutter-CDN</a><br>如文中无特殊说明，本站均使用以下协议保护：<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">署名-非商业性使用-禁止演绎</a>。   </p>
+</blockquote>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">给 EyreFree 投食，QAQ</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/WeChat.png" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/AliPay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2019/04/06/GitHub-ReadMe-Apps/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2020/09/27/NFC-AppClips/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/project/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              项目
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'eyrefree';
+    
+    var disqus_url = 'http://www.eyrefree.org/2019/10/17/CocoaPods-Flutter-CDN/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//eyrefree.disqus.com/count.js" async></script>
+
+
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

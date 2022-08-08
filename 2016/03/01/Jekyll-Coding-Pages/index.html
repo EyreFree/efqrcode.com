@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>OS X 下使用 Jekyll 和 Coding Pages 搭建静态博客 | EyreFree</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Jekyll," />
+  
+
+  <meta name="description" content="Jekyll 是一个免费的简单静态网页生成工具，可以配合第三方服务例如 Disqus 实现一些扩展功能，不需要数据库支持。并且 Jekyll 可以部署在Github 或 Coding 上，可以绑定自己的域名，而且目前这是完全免费的。  1，Git 安装搭建博客需要用到 git，git –version 命令可查看本机是否已安装 git，若未安装可参考这篇博文进行安装。 2，Gem 安装&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OS X 下使用 Jekyll 和 Coding Pages 搭建静态博客">
+<meta property="og:url" content="http://www.eyrefree.org/2016/03/01/Jekyll-Coding-Pages/index.html">
+<meta property="og:site_name" content="EyreFree">
+<meta property="og:description" content="Jekyll 是一个免费的简单静态网页生成工具，可以配合第三方服务例如 Disqus 实现一些扩展功能，不需要数据库支持。并且 Jekyll 可以部署在Github 或 Coding 上，可以绑定自己的域名，而且目前这是完全免费的。  1，Git 安装搭建博客需要用到 git，git –version 命令可查看本机是否已安装 git，若未安装可参考这篇博文进行安装。 2，Gem 安装&#x2F;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-03-01T07:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-25T08:23:41.242Z">
+<meta property="article:author" content="EyreFree">
+<meta property="article:tag" content="Jekyll">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?638f7245dab1e13e3d8fbdd9cc3b0895";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="EyreFree" type="application/atom+xml">
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/project/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            项目
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1%EF%BC%8CGit-%E5%AE%89%E8%A3%85"><span class="toc-text">1，Git 安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%EF%BC%8CGem-%E5%AE%89%E8%A3%85-x2F-%E8%AE%BE%E7%BD%AE"><span class="toc-text">2，Gem 安装&#x2F;设置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3%EF%BC%8C%E5%AE%89%E8%A3%85-Jekyll-%E5%88%B0%E6%9C%AC%E5%9C%B0"><span class="toc-text">3，安装 Jekyll 到本地</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4%EF%BC%8C%E6%9C%AC%E5%9C%B0%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2"><span class="toc-text">4，本地建立博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5%EF%BC%8C%E6%9C%AC%E5%9C%B0%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88"><span class="toc-text">5，本地效果预览</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6%EF%BC%8C%E4%B8%8A%E4%BC%A0%E5%88%B0-Coding-Pages"><span class="toc-text">6，上传到 Coding Pages</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7%EF%BC%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88"><span class="toc-text">7，服务器效果预览</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8%EF%BC%8C%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="toc-text">8，绑定域名</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9%EF%BC%8C%E7%BC%96%E5%86%99%E5%8D%9A%E6%96%87"><span class="toc-text">9，编写博文</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Jekyll-Coding-Pages" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">OS X 下使用 Jekyll 和 Coding Pages 搭建静态博客</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.03.01</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>EyreFree</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/Blog/">Blog</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://www.eyrefree.org/2016/03/01/Jekyll-Coding-Pages/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>Jekyll 是一个免费的简单静态网页生成工具，可以配合第三方服务例如 Disqus 实现一些扩展功能，不需要数据库支持。并且 Jekyll 可以部署在Github 或 Coding 上，可以绑定自己的域名，而且目前这是完全免费的。</p>
+<hr>
+<h1 id="1，Git-安装"><a href="#1，Git-安装" class="headerlink" title="1，Git 安装"></a>1，Git 安装</h1><p>搭建博客需要用到 git，git –version 命令可查看本机是否已安装 git，若未安装可参考<a target="_blank" rel="noopener" href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000/">这篇博文</a>进行安装。</p>
+<h1 id="2，Gem-安装-x2F-设置"><a href="#2，Gem-安装-x2F-设置" class="headerlink" title="2，Gem 安装&#x2F;设置"></a>2，Gem 安装&#x2F;设置</h1><p>安装 Jekyll 需要用到包管理器 gem，gem -v 命令可查看本机是否已安装 gem，若未安装请自行安装。<br>由于众所周知的原因，国内访问官方默认 gem sources 源速度不是十分理想，所以建议切换成国内的，利用 gem sources -l 命令可查看当前 gem sources 源：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gem sources --remove http://rubygems.org/</span><br></pre></td></tr></table></figure>
+<p>然后利用以下命令将其替换为淘宝的（注意：这里的 <a target="_blank" rel="noopener" href="http://rubygems.org/">http://rubygems.org/</a> 替换成当前 gem sources 源地址）： </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">gem sources -a https://ruby.taobao.org/</span><br></pre></td></tr></table></figure>
+
+<h1 id="3，安装-Jekyll-到本地"><a href="#3，安装-Jekyll-到本地" class="headerlink" title="3，安装 Jekyll 到本地"></a>3，安装 Jekyll 到本地</h1><p>因为打算在 Coding Pages 上搭建，根据 <a target="_blank" rel="noopener" href="https://coding.net/help/doc/pages/index.html">Coding 帮助文档</a>，Coding Pages 目前支持 jekyll 2.4.0，所以我们需要指定版本安装 Jekyll，终端执行以下命令： </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo gem install jekyll -v <span class="string">&#x27;2.4.0&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>输入密码后等待安装完成，执行以下命令尝试查看 Jekyll 版本号： </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">jekyll -v</span><br></pre></td></tr></table></figure>
+<p>若能正确显示版本号 jekyll 2.4.0 表示安装成功。 </p>
+<h1 id="4，本地建立博客"><a href="#4，本地建立博客" class="headerlink" title="4，本地建立博客"></a>4，本地建立博客</h1><p>从零开始手动编写的话可以参考：<a target="_blank" rel="noopener" href="http://www.blogways.net/blog/2013/04/13/jekyll-usage.html">这篇博文</a>，同时网上有大量开发者们分享的模板可供选择使用：<br><a target="_blank" rel="noopener" href="http://jekyllthemes.org/">Jekyll Themes</a><br><a target="_blank" rel="noopener" href="https://github.com/jekyll/jekyll/wiki/Sites">Github Jekyll Sites</a><br>本博客的搭建我选择了在该<a target="_blank" rel="noopener" href="https://github.com/sl4m/skim.cc">模板</a>的基础上进行修改，在这里对原作者表示感谢，🙏<br>在终端中切换到合适的目录下执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/sl4m/skim.cc.git</span><br></pre></td></tr></table></figure>
+<p>将模板 git 仓库下载到本地。</p>
+<h1 id="5，本地效果预览"><a href="#5，本地效果预览" class="headerlink" title="5，本地效果预览"></a>5，本地效果预览</h1><p>终端中用 cd 命令切换到本地博客所在目录，即 skim.cc 目录下，执行 jekyll server 命令启动本地服务器，若启动成功可在浏览器中访问 <a target="_blank" rel="noopener" href="http://0.0.0.0:4000/">http://0.0.0.0:4000/</a> 进行预览。 </p>
+<h1 id="6，上传到-Coding-Pages"><a href="#6，上传到-Coding-Pages" class="headerlink" title="6，上传到 Coding Pages"></a>6，上传到 Coding Pages</h1><p>在 Coding 新建一个项目，将博客所在项目 push 到新建的项目中，推荐的做法是创建一个新的 coding-pages 分支来作为启动 Coding Pages 之用（其他分支名也可以），然后切换到 Pages 标签，开启 pages 服务，分支名填写为我们需要的分支，这里是 coding-pages。</p>
+<h1 id="7，服务器效果预览"><a href="#7，服务器效果预览" class="headerlink" title="7，服务器效果预览"></a>7，服务器效果预览</h1><p>这时 Coding 会提供一个类似 {user_name}.coding.me&#x2F;{project_name} 的链接用于访问，例如本博客的是： </p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[http://eyrefree.coding.me/blog.eyrefree.org](http://eyrefree.coding.me/blog.eyrefree.org)</span><br></pre></td></tr></table></figure>
+
+<h1 id="8，绑定域名"><a href="#8，绑定域名" class="headerlink" title="8，绑定域名"></a>8，绑定域名</h1><p>默认提供的链接可能过长或者不便于日常使用，我们也可以绑定自己的域名。<br>首先，需要提前准备一个域名，然后打开自己的域名控制面板，新建一个 CNAME 解析到 {user_name}.coding.me，例如我的是将 blog.eyrefree.org 解析到 eyrefree.coding.me；<br>然后，打开 Coding 项目页面切换到 pages 项，填入刚才的设置解析的域名 blog.eyrefree.org，点击“添加域名绑定”按钮即可，在浏览器中直接访问 blog.eyrefree.org 就能成功打开。<br>有时可能由于缓存或者解析时间的问题，稍等片刻即可。 </p>
+<h1 id="9，编写博文"><a href="#9，编写博文" class="headerlink" title="9，编写博文"></a>9，编写博文</h1><p>接下来就是日常的博文编写啦，这里是使用 markdown 格式的，编写完成后添加到 _posts 目录下 push 到 Coding 服务器即可，具体可参考<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000000406013">这篇博文</a>。</p>
+<hr>
+<p>嘛，大概就是这些内容了，有遗漏的话后期会继续补充，😝，<a href="http://www.eyrefree.org/">我的博客</a>在原模版基础上将 Google 统计，Disqus 评论，feedburner 等替换为了自己的，其他的一些修改详情参见我的 Coding 仓库的 Jekyll 分支：<br><a target="_blank" rel="noopener" href="https://coding.net/u/eyrefree/p/blog.eyrefree.org/git">https://coding.net/u/eyrefree/p/blog.eyrefree.org/git</a></p>
+<hr>
+<blockquote>
+<p>如有任何知识产权、版权问题或理论错误，还请指正。<br><a href="https://www.eyrefree.org/2016/03/01/Jekyll-Coding-Pages">https://www.eyrefree.org/2016/03/01/Jekyll-Coding-Pages</a><br>如文中无特殊说明，本站均使用以下协议保护：<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">署名-非商业性使用-禁止演绎</a>。</p>
+</blockquote>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">给 EyreFree 投食，QAQ</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/WeChat.png" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/AliPay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2016/02/18/iOS-GuangDianTong/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2016/03/08/iOS-Build-Info/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/project/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              项目
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'eyrefree';
+    
+    var disqus_url = 'http://www.eyrefree.org/2016/03/01/Jekyll-Coding-Pages/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//eyrefree.disqus.com/count.js" async></script>
+
+
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

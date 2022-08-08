@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Windows 7 下 QT 5.1.1 for Android 开发环境的搭建与配置 | EyreFree</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Qt," />
+  
+
+  <meta name="description" content="Qt 是诺基亚开发的一个跨平台的 C++ 图形用户界面应用程序框架，对于一些想要开发 Android 的应用但是又不想学习 Java 的开发人员而言，Qt 是一个很好选择。 本次使用的操作系统为 Windows 7 64 位，用的是 32 位的安装包，32 位系统没有验证过。    一、下载安装包首先下载以下安装包，如果提供的链接失效请自行下载： （1）Android SDK （Windows 3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows 7 下 QT 5.1.1 for Android 开发环境的搭建与配置">
+<meta property="og:url" content="http://www.eyrefree.org/2013/11/08/Windows7-QT-Android/index.html">
+<meta property="og:site_name" content="EyreFree">
+<meta property="og:description" content="Qt 是诺基亚开发的一个跨平台的 C++ 图形用户界面应用程序框架，对于一些想要开发 Android 的应用但是又不想学习 Java 的开发人员而言，Qt 是一个很好选择。 本次使用的操作系统为 Windows 7 64 位，用的是 32 位的安装包，32 位系统没有验证过。    一、下载安装包首先下载以下安装包，如果提供的链接失效请自行下载： （1）Android SDK （Windows 3">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2013-11-08T07:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-25T08:23:41.244Z">
+<meta property="article:author" content="EyreFree">
+<meta property="article:tag" content="Qt">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?638f7245dab1e13e3d8fbdd9cc3b0895";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="EyreFree" type="application/atom+xml">
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/project/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            项目
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85"><span class="toc-text">一、下载安装包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85%E5%8C%85%E7%9A%84%E8%A7%A3%E5%8E%8B%E4%B8%8E%E5%AE%89%E8%A3%85"><span class="toc-text">二、安装包的解压与安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%AE%BE%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">三、设置环境变量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%EF%BC%8C%E6%B7%BB%E5%8A%A0%E6%96%B0%E7%9A%84%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="toc-text">1，添加新的环境变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%EF%BC%8C%E4%BF%AE%E6%94%B9%E7%B3%BB%E7%BB%9F%E5%8F%98%E9%87%8F"><span class="toc-text">2，修改系统变量</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81Qt-Creator-%E8%AE%BE%E7%BD%AE"><span class="toc-text">四、Qt Creator 设置</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%B7%BB%E5%8A%A0%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-text">五、添加虚拟机</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E5%BB%BA%E7%AB%8B%E6%B5%8B%E8%AF%95%E5%B7%A5%E7%A8%8B"><span class="toc-text">六、建立测试工程</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Windows7-QT-Android" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Windows 7 下 QT 5.1.1 for Android 开发环境的搭建与配置</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2013.11.08</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>EyreFree</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/Environment/">Environment</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://www.eyrefree.org/2013/11/08/Windows7-QT-Android/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>Qt 是诺基亚开发的一个跨平台的 C++ 图形用户界面应用程序框架，对于一些想要开发 Android 的应用但是又不想学习 Java 的开发人员而言，Qt 是一个很好选择。</p>
+<p>本次使用的操作系统为 Windows 7 64 位，用的是 32 位的安装包，32 位系统没有验证过。  </p>
+<hr>
+<h1 id="一、下载安装包"><a href="#一、下载安装包" class="headerlink" title="一、下载安装包"></a>一、下载安装包</h1><p>首先下载以下安装包，如果提供的链接失效请自行下载：</p>
+<p>（1）Android SDK （Windows 32-bit ADT版）：</p>
+<p>【直接下载】<a target="_blank" rel="noopener" href="http://dl.google.com/android/adt/adt-bundle-windows-x86-20131030.zip">http://dl.google.com/android/adt/adt-bundle-windows-x86-20131030.zip</a></p>
+<p>（2）Android NDK（Windows 32-bit）：</p>
+<p>【直接下载】<a target="_blank" rel="noopener" href="http://dl.google.com/android/ndk/android-ndk-r9b-windows-x86.zip">http://dl.google.com/android/ndk/android-ndk-r9b-windows-x86.zip</a></p>
+<p>（3）Java JDK（Windows 32-bit）：</p>
+<p>【手动下载】<a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html">http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html</a></p>
+<p>（4）Apache-Ant：</p>
+<p>【直接下载】<a target="_blank" rel="noopener" href="http://mirrors.cnnic.cn/apache//ant/binaries/apache-ant-1.9.2-bin.zip">http://mirrors.cnnic.cn/apache//ant/binaries/apache-ant-1.9.2-bin.zip</a></p>
+<p>（5）QT 5.1.1 for Android （Windows 32-bit  离线版）：</p>
+<p>【直接下载】<a target="_blank" rel="noopener" href="http://mirrors.hustunique.com/qt/official_releases/qt/5.1/5.1.1/qt-windows-opensource-5.1.1-android-x86-win32-offline.exe">http://mirrors.hustunique.com/qt/official_releases&#x2F;qt&#x2F;5.1&#x2F;5.1.1&#x2F;qt-windows-opensource-5.1.1-android-x86-win32-offline.exe</a>  </p>
+<h1 id="二、安装包的解压与安装"><a href="#二、安装包的解压与安装" class="headerlink" title="二、安装包的解压与安装"></a>二、安装包的解压与安装</h1><p>接下来解压、安装下载好的各安装包：</p>
+<p>（1）Android SDK：【解压】解压到  D:\ADT 目录下<br>（2）Android NDK：【解压】解压到 D:\NDK 目录下<br>（3）Java JDK（Windows 35-bit）：【安装】安装过程中有两次要选择安装路径，注意请根据自己安装的版本自行修改，后面设置环境变量需要用到，这里我第一次填写：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\Java\jdk1.7.0_45  </span><br></pre></td></tr></table></figure>
+
+<p>第二次填写：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\Java\jre7  </span><br></pre></td></tr></table></figure>
+
+<p>（4）Apache-Ant：【解压】解压到 D:\ANT 目录下<br>（5）QT 5.1.1 for Android（Windows 35-bit 离线版）：【安装】安装到 D:\QT 目录下  </p>
+<h1 id="三、设置环境变量"><a href="#三、设置环境变量" class="headerlink" title="三、设置环境变量"></a>三、设置环境变量</h1><p>根据第二步中的相关路径，设置系统环境变量：  </p>
+<h2 id="1，添加新的环境变量"><a href="#1，添加新的环境变量" class="headerlink" title="1，添加新的环境变量"></a>1，添加新的环境变量</h2><p>右键单击 我的电脑 -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量，在系统变量中新建以下变量：</p>
+<p>（1）变量名：JAVA_HOME，变量值：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\Java\jdk1.7.0_45  </span><br></pre></td></tr></table></figure>
+
+<p>（2）变量名：CLASSPATH，变量值：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar;  </span><br></pre></td></tr></table></figure>
+
+<p>【注意最前面的点号 . 和最后面的分号 ; 不能漏掉】<br>（3）变量名：ANDROID_SDK_HOME，变量值：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\ADT\sdk\  </span><br></pre></td></tr></table></figure>
+
+<p>（4）变量名：ANT_HOME，变量值：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\ANT  </span><br></pre></td></tr></table></figure>
+
+<h2 id="2，修改系统变量"><a href="#2，修改系统变量" class="headerlink" title="2，修改系统变量"></a>2，修改系统变量</h2><p>在系统变量里找到变量 Path ，选择”编辑“，在最后面添加：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;%ANDROID_SDK_HOME%;  </span><br></pre></td></tr></table></figure>
+
+<p>【注意最后面的分号 ; 不能漏掉】  </p>
+<center>
+![Windows7-QT-Android-1](/images/Windows7-QT-Android-1.jpeg)
+</center>
+
+<h1 id="四、Qt-Creator-设置"><a href="#四、Qt-Creator-设置" class="headerlink" title="四、Qt Creator 设置"></a>四、Qt Creator 设置</h1><p>打开Qt Creator，单击 工具 -&gt; 选项，出现选项界面后选择 Android，分别做如下设置：</p>
+<p>（1）Android-SDK的路径：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\ADT\sdk  </span><br></pre></td></tr></table></figure>
+
+<p>（2）Android NDK的路径：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\NDK  </span><br></pre></td></tr></table></figure>
+
+<p>（3）ANT的路径： </p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\ANT\bin\ant.bat  </span><br></pre></td></tr></table></figure>
+
+<p>（4）JDK location：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">D:\Java\jdk1.7.0_45  </span><br></pre></td></tr></table></figure>
+
+<center>
+![Windows7-QT-Android-2](/images/Windows7-QT-Android-2.jpeg)
+</center>
+
+<h1 id="五、添加虚拟机"><a href="#五、添加虚拟机" class="headerlink" title="五、添加虚拟机"></a>五、添加虚拟机</h1><p>单击 启动Android AVD管理器，出现Android Virtual Device Manager界面，单击 New 创建一个Android虚拟设备。</p>
+<center>
+![Windows7-QT-Android-3](/images/Windows7-QT-Android-3.jpeg)
+</center>
+
+<h1 id="六、建立测试工程"><a href="#六、建立测试工程" class="headerlink" title="六、建立测试工程"></a>六、建立测试工程</h1><p>经过以上这些步骤，开发环境基本配置完成，接下来我们建立一个简单的工程来验证配置是否正确：</p>
+<p>（1）重新打开Qt Creator，选择 文件 -&gt; 新建文件或项目，出现项目创建向导，选择 QT Gui 应用：  </p>
+<center>
+![Windows7-QT-Android-4](/images/Windows7-QT-Android-4.jpeg)
+</center>
+
+<p>（2）然后下一步，工程路径任选。<br>【但是切记，绝对不要在路径内包含任何空格，这里我使用的是D:\QT-WorkSpace，否则会出现各种意想不到的编译错误！】<br>（3）然后下一步，选择 Android for arm：  </p>
+<center>
+![Windows7-QT-Android-5](/images/Windows7-QT-Android-5.jpeg)
+</center>
+
+<p>（4）后面的信息暂时不需要过多关注，直接下一步即可，直至完成项目创建。  </p>
+<center>
+![Windows7-QT-Android-6](/images/Windows7-QT-Android-6.jpeg)
+</center>
+
+<p>（5）项目创建完毕后，右键 项目，选择 构建，若成功则继续下一步，否则请对照上文寻找可能的出错步骤进行相应修改或返回本文开头尝试重新开始配置过程。  </p>
+<center>
+![Windows7-QT-Android-7](/images/Windows7-QT-Android-7.jpeg)
+</center>
+
+<p>（6）项目构建成功后，右键<br>项目，选择 运行，Android虚拟设备将会自动打开，启动过程过程较慢，耐心等候。<br>（7）若无意外，将会成功运行该空项目生成的apk，因为这里是个空的项目，什么也没写，所以当然什么也没有，效果如图，表明环境配置成功。  </p>
+<center>
+![Windows7-QT-Android-8](/images/Windows7-QT-Android-8.jpeg)
+</center>
+
+<hr>
+<p>到这里就应该已经完成了，接下来可以使用 C++ 动手开始 QT for Android 开发了，😝。</p>
+<hr>
+<blockquote>
+<p>如有任何知识产权、版权问题或理论错误，还请指正。<br><a href="https://www.eyrefree.org/2013/11/08/Windows7-QT-Android">https://www.eyrefree.org/2013/11/08/Windows7-QT-Android</a><br>如文中无特殊说明，本站均使用以下协议保护：<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">署名-非商业性使用-禁止演绎</a>。   </p>
+</blockquote>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">给 EyreFree 投食，QAQ</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/WeChat.png" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/AliPay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="hide pull-left" href="/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2015/04/09/Git-Commands/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/project/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              项目
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'eyrefree';
+    
+    var disqus_url = 'http://www.eyrefree.org/2013/11/08/Windows7-QT-Android/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//eyrefree.disqus.com/count.js" async></script>
+
+
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

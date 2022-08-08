@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>iOS 在 App 中获取 XCode 构建信息 | EyreFree</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Nothing," />
+  
+
+  <meta name="description" content="iOS 在 App 中获取当前版本的构建时间和 Git Hash 值，Demo 地址：  https:&#x2F;&#x2F;github.com&#x2F;EyreFree&#x2F;EFBuildInfoDemo  1.添加 Run Script打开需要获取构建信息的工程，选中工程，切换到 Build Phases 选项卡，点击左边的“+”号选择“New Run Script Phase”一项添加一个新的 Run Script：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS 在 App 中获取 XCode 构建信息">
+<meta property="og:url" content="http://www.eyrefree.org/2016/03/08/iOS-Build-Info/index.html">
+<meta property="og:site_name" content="EyreFree">
+<meta property="og:description" content="iOS 在 App 中获取当前版本的构建时间和 Git Hash 值，Demo 地址：  https:&#x2F;&#x2F;github.com&#x2F;EyreFree&#x2F;EFBuildInfoDemo  1.添加 Run Script打开需要获取构建信息的工程，选中工程，切换到 Build Phases 选项卡，点击左边的“+”号选择“New Run Script Phase”一项添加一个新的 Run Script：">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-03-08T07:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-25T08:23:41.245Z">
+<meta property="article:author" content="EyreFree">
+<meta property="article:tag" content="Nothing">
+<meta name="twitter:card" content="summary">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?638f7245dab1e13e3d8fbdd9cc3b0895";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="EyreFree" type="application/atom+xml">
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/project/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            项目
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E6%B7%BB%E5%8A%A0-Run-Script"><span class="toc-text">1.添加 Run Script</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E4%B8%BA-Run-Script-%E6%B7%BB%E5%8A%A0%E4%BB%A3%E7%A0%81"><span class="toc-text">2.为 Run Script 添加代码</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E7%94%9F%E6%88%90-BuildConfig-plist-%E6%96%87%E4%BB%B6"><span class="toc-text">3.生成 BuildConfig.plist 文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E8%8E%B7%E5%8F%96-BuildConfig-plist-%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="toc-text">4.获取 BuildConfig.plist 文件内容</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-iOS-Build-Info" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">iOS 在 App 中获取 XCode 构建信息</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.03.08</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>EyreFree</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/iOS/">iOS</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://www.eyrefree.org/2016/03/08/iOS-Build-Info/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>iOS 在 App 中获取当前版本的构建时间和 Git Hash 值，Demo 地址：  <br><a target="_blank" rel="noopener" href="https://github.com/EyreFree/EFBuildInfoDemo">https://github.com/EyreFree/EFBuildInfoDemo</a></p>
+<hr>
+<h1 id="1-添加-Run-Script"><a href="#1-添加-Run-Script" class="headerlink" title="1.添加 Run Script"></a>1.添加 Run Script</h1><p>打开需要获取构建信息的工程，选中工程，切换到 Build Phases 选项卡，点击左边的“+”号选择“New Run Script Phase”一项添加一个新的 Run Script：</p>
+<center>
+![iOS-Build-Info-1](/images/iOS-Build-Info-1.png)
+</center>
+
+<p>并将其命名为“Build Config”，然后将其拖动到“Target Dependencies”的下面：</p>
+<center>
+![iOS-Build-Info-2](/images/iOS-Build-Info-2.png)
+</center>
+
+<h1 id="2-为-Run-Script-添加代码"><a href="#2-为-Run-Script-添加代码" class="headerlink" title="2.为 Run Script 添加代码"></a>2.为 Run Script 添加代码</h1><p>点开“Build Config”左边的小三角，在其中填写如下代码：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">myFile=<span class="string">&quot;BuildConfig.plist&quot;</span></span><br><span class="line"></span><br><span class="line">myDate=`<span class="built_in">date</span> +%Y-%m-%dT%H:%M:%S%z`</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$myDate</span></span><br><span class="line">myHash=`git rev-parse --short HEAD`</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$myHash</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ ! -f <span class="string">&quot;<span class="variable">$myFile</span>&quot;</span> ]; <span class="keyword">then</span></span><br><span class="line">    /usr/libexec/PlistBuddy -c <span class="string">&quot;Add :BUILD_TIME string <span class="variable">$myDate</span>&quot;</span> <span class="string">&quot;<span class="variable">$myFile</span>&quot;</span></span><br><span class="line">    /usr/libexec/PlistBuddy -c <span class="string">&quot;Add :GIT_SHA string <span class="variable">$myHash</span>&quot;</span> <span class="string">&quot;<span class="variable">$myFile</span>&quot;</span></span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    /usr/libexec/PlistBuddy -c <span class="string">&quot;Set :BUILD_TIME <span class="variable">$myDate</span>&quot;</span> <span class="string">&quot;<span class="variable">$myFile</span>&quot;</span></span><br><span class="line">    /usr/libexec/PlistBuddy -c <span class="string">&quot;Set :GIT_SHA <span class="variable">$myHash</span>&quot;</span> <span class="string">&quot;<span class="variable">$myFile</span>&quot;</span></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+
+<center>
+![iOS-Build-Info-3](/images/iOS-Build-Info-3.png)
+</center>
+
+<h1 id="3-生成-BuildConfig-plist-文件"><a href="#3-生成-BuildConfig-plist-文件" class="headerlink" title="3.生成 BuildConfig.plist 文件"></a>3.生成 BuildConfig.plist 文件</h1><p>然后我们编译一次就可以发现，这段代码会在编译时在工程所在目录下生成一个 BuildConfig.plist 文件，其中包含了本次构建的时间和当前版本的 GitHash，以后每一次 XCode 构建时都会自动更新该文件，详细内容如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span>?&gt;</span><br><span class="line">&lt;!DOCTYPE plist PUBLIC <span class="string">&quot;-//Apple//DTD PLIST 1.0//EN&quot;</span> <span class="string">&quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;</span>&gt;</span><br><span class="line">&lt;plist version=<span class="string">&quot;1.0&quot;</span>&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">        &lt;key&gt;BUILD_TIME&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;2016-03-30T09:38:04+0800&lt;/string&gt;</span><br><span class="line">        &lt;key&gt;GIT_SHA&lt;/key&gt;</span><br><span class="line">        &lt;string&gt;3e4d213&lt;/string&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;/plist&gt;</span><br></pre></td></tr></table></figure>
+
+<center>
+![iOS-Build-Info-4](/images/iOS-Build-Info-4.png)
+</center>
+
+<h1 id="4-获取-BuildConfig-plist-文件内容"><a href="#4-获取-BuildConfig-plist-文件内容" class="headerlink" title="4.获取 BuildConfig.plist 文件内容"></a>4.获取 BuildConfig.plist 文件内容</h1><p>将 BuildConfig.plist 添加到我们的工程中：</p>
+<center>
+![iOS-Build-Info-5](/images/iOS-Build-Info-5.png)
+</center>
+
+<p>然后在需要获取构建信息的位置添加如下代码就能成功获取构建时间和 Git Hash 值：</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="comment">//输出构建信息</span></span><br><span class="line"><span class="keyword">var</span> bulidTime: <span class="type">String</span>!</span><br><span class="line"><span class="keyword">var</span> gitSha: <span class="type">String</span>!</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">let</span> buildConfigFilePath <span class="operator">=</span> <span class="type">NSBundle</span>.mainBundle()</span><br><span class="line">    .pathForResource(<span class="string">&quot;BuildConfig&quot;</span>, ofType: <span class="string">&quot;plist&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> dict <span class="operator">=</span> <span class="type">NSDictionary</span>(contentsOfFile: buildConfigFilePath) &#123;</span><br><span class="line">        bulidTime <span class="operator">=</span> dict[<span class="string">&quot;BUILD_TIME&quot;</span>] <span class="keyword">as?</span> <span class="type">String</span> <span class="operator">??</span> <span class="string">&quot;未知&quot;</span></span><br><span class="line">        gitSha <span class="operator">=</span> dict[<span class="string">&quot;GIT_SHA&quot;</span>] <span class="keyword">as?</span> <span class="type">String</span> <span class="operator">??</span> <span class="string">&quot;未知&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;BUILD_TIME: <span class="subst">\(bulidTime)</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;GIT_SHA: <span class="subst">\(gitSha)</span>&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>结果如图所示：</p>
+<center>
+![iOS-Build-Info-6](/images/iOS-Build-Info-6.png)
+</center>
+
+<hr>
+<blockquote>
+<p>如有任何知识产权、版权问题或理论错误，还请指正。<br><a href="https://www.eyrefree.org/2016/03/08/iOS-Build-Info">https://www.eyrefree.org/2016/03/08/iOS-Build-Info</a><br>如文中无特殊说明，本站均使用以下协议保护：<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">署名-非商业性使用-禁止演绎</a>。   </p>
+</blockquote>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">给 EyreFree 投食，QAQ</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/WeChat.png" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/AliPay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2016/03/01/Jekyll-Coding-Pages/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2016/03/23/Hexo-Coding-Pages/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/project/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              项目
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'eyrefree';
+    
+    var disqus_url = 'http://www.eyrefree.org/2016/03/08/iOS-Build-Info/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//eyrefree.disqus.com/count.js" async></script>
+
+
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>怎样将信息发布 / 记录到 ETH 网络？ | EyreFree</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="ETH," />
+  
+
+  <meta name="description" content="现在各行各业都在“上链”，大家说的“上链”到底是什么呢？今天，咱就来实际操作一把…  阅读本文前，请先确保您：  具备科学上网能力；    有钱，能兑换成 ETH 虚拟币用来支付以太坊转账费手续费；    有一定的英文阅读能力。   1. 下载 &#x2F; 安装 Chrome下载谷歌浏览器并安装，官网地址：https:&#x2F;&#x2F;www.google.com&#x2F;intl&#x2F;zh-CN_ALL&#x2F;ch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="怎样将信息发布 &#x2F; 记录到 ETH 网络？">
+<meta property="og:url" content="http://www.eyrefree.org/2018/07/25/ETHTransactionData/index.html">
+<meta property="og:site_name" content="EyreFree">
+<meta property="og:description" content="现在各行各业都在“上链”，大家说的“上链”到底是什么呢？今天，咱就来实际操作一把…  阅读本文前，请先确保您：  具备科学上网能力；    有钱，能兑换成 ETH 虚拟币用来支付以太坊转账费手续费；    有一定的英文阅读能力。   1. 下载 &#x2F; 安装 Chrome下载谷歌浏览器并安装，官网地址：https:&#x2F;&#x2F;www.google.com&#x2F;intl&#x2F;zh-CN_ALL&#x2F;ch">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1018190-ebc9cd894d955ba7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1018190-31d82c6a4c6dd257.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1018190-5a971e2759060a55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1018190-0466beb4abcea283.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1018190-e4207d8a72600521.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1018190-a84204c59e10d4dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1018190-96ba6002d9f3ab2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1018190-96390e6e4d7c14a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1018190-ae93d36b52890b79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1018190-806b97ab28a7070b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1018190-d094cb44fa8ebdb5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1018190-4c47251c48893fd9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/1018190-409c6b0a8383e8a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="article:published_time" content="2018-07-25T07:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-25T08:23:41.240Z">
+<meta property="article:author" content="EyreFree">
+<meta property="article:tag" content="ETH">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/1018190-ebc9cd894d955ba7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?638f7245dab1e13e3d8fbdd9cc3b0895";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="EyreFree" type="application/atom+xml">
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/project/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            项目
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%8B%E8%BD%BD-x2F-%E5%AE%89%E8%A3%85-Chrome"><span class="toc-text">1. 下载 &#x2F; 安装 Chrome</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85-MetaMask-%E6%8F%92%E4%BB%B6"><span class="toc-text">2. 安装 MetaMask 插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%B3%A8%E5%86%8C-ETH-%E9%92%B1%E5%8C%85"><span class="toc-text">3. 注册 ETH 钱包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E7%BB%99-ETH-%E8%B4%A6%E5%8F%B7%E6%89%93%E9%92%B1"><span class="toc-text">4. 给 ETH 账号打钱</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%87%86%E5%A4%87%E9%9C%80%E8%A6%81%E5%8F%91%E5%B8%83%E7%9A%84%E4%BF%A1%E6%81%AF"><span class="toc-text">5. 准备需要发布的信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E7%94%9F%E6%88%90%E4%B8%80%E7%AC%94%E4%BA%A4%E6%98%93%E8%AE%B0%E5%BD%95"><span class="toc-text">6. 生成一笔交易记录</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-ETHTransactionData" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">怎样将信息发布 / 记录到 ETH 网络？</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2018.07.25</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>EyreFree</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/BlockChain/">BlockChain</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://www.eyrefree.org/2018/07/25/ETHTransactionData/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>现在各行各业都在“上链”，大家说的“上链”到底是什么呢？今天，咱就来实际操作一把…</p>
+<hr>
+<p>阅读本文前，请先确保您：</p>
+<ol>
+<li>具备科学上网能力；   </li>
+<li>有钱，能兑换成 ETH 虚拟币用来支付以太坊转账费手续费；   </li>
+<li>有一定的英文阅读能力。</li>
+</ol>
+<hr>
+<h2 id="1-下载-x2F-安装-Chrome"><a href="#1-下载-x2F-安装-Chrome" class="headerlink" title="1. 下载 &#x2F; 安装 Chrome"></a>1. 下载 &#x2F; 安装 Chrome</h2><p>下载谷歌浏览器并安装，官网地址：<a target="_blank" rel="noopener" href="https://www.google.com/intl/zh-CN_ALL/chrome/">https://www.google.com/intl/zh-CN_ALL&#x2F;chrome&#x2F;</a></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1018190-ebc9cd894d955ba7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="2-安装-MetaMask-插件"><a href="#2-安装-MetaMask-插件" class="headerlink" title="2. 安装 MetaMask 插件"></a>2. 安装 MetaMask 插件</h2><p>打开 Chrome 网上应用店，下载 MetaMask 插件 <a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=zh-CN">https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=zh-CN</a>，这是一个运行在 ETH 网络上的 DAPP，感兴趣的同学可以研究一下它的源码：<a target="_blank" rel="noopener" href="https://github.com/MetaMask/metamask-extension">https://github.com/MetaMask/metamask-extension</a>。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1018190-31d82c6a4c6dd257.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>然后在 Chrome 内打开 MetaMask，左上角下拉列表可以选择网络类型，我们要用的是第一个 Main Ethereum Network（其他的都是测试网络…）：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1018190-5a971e2759060a55.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="3-注册-ETH-钱包"><a href="#3-注册-ETH-钱包" class="headerlink" title="3. 注册 ETH 钱包"></a>3. 注册 ETH 钱包</h2><p>接下来在 MetaMask 内根据提示注册 ETH 钱包（同时也会成为你的 MetaMask 账号），注意将公钥、私钥、助记词、密码之类的信息记录在可靠的地方，丢失的话，你的 ETH 钱包（主要是里面包含的虚拟币）就没啦。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1018190-0466beb4abcea283.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="4-给-ETH-账号打钱"><a href="#4-给-ETH-账号打钱" class="headerlink" title="4. 给 ETH 账号打钱"></a>4. 给 ETH 账号打钱</h2><p>新建的 ETH 钱包是木有钱的，而接下来的我们发布信息的操作需要执行转账动作。有的同学可能会问，我们进行一笔总价为 0 ETH 的交易不就行了么？没错，这样的确可以不产生实际的虚拟币转账，不过仍然需要手续费来驱使矿工们将这一笔为 0 的交易记录写入到区块内，也就是每一笔交易只有支付了手续费才有可能发生（手续费是交易发起者自定的，如果手续费过低，可能会出现交易失败）。</p>
+<p>ETH 网络上用到的手续费肯定就是 ETH（以太坊）啦，来源的话，一般是去 <a target="_blank" rel="noopener" href="https://www.binance.com/?ref=27965336">币安</a>、<a target="_blank" rel="noopener" href="https://otcbtc.com/referrals/EYREFREE">OTCBTC</a> 之类的交易所购买然后从交易所提币到自己的钱包，过程比较繁琐，可以自行研究，这里不多做赘述。</p>
+<p>只是了解 &#x2F; 试用一下，不打算大批量购买的话，找一个有 ETH 的朋友让他转你 0.01 ETH（现价大概 3208.36 * 0.01 &#x3D; 32 RMB）一般就够用了…</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1018190-e4207d8a72600521.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="5-准备需要发布的信息"><a href="#5-准备需要发布的信息" class="headerlink" title="5. 准备需要发布的信息"></a>5. 准备需要发布的信息</h2><p>接下来就是准备我们需要发布的信息啦，因为需要转码成 Hex String，所以直接试用中文大概是不资瓷的啦，需要先转成拼音，比如我们随便找一段文字，像这样：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">烂是有原因的，[微笑]。大家都愿意吃屎，你不吃，就是你的过错了，[微笑]。***写得再烂，至少还愿意认错，[微笑]。****不止烂，还嘴硬，[微笑]</span><br></pre></td></tr></table></figure>
+
+<p>然后用 <a target="_blank" rel="noopener" href="https://www.chineseconverter.com/zh-cn/convert/chinese-to-pinyin">汉字转拼音工具</a> 转为拼音（注意全角标点符号要自己改成半角哦，然后风格大家可以自选…）：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">lan4 shi4 you3 yuan2 yin1 di2 , [ wei1 xiao4 ] . da4 jia1 du1 yuan4 yi4 chi1 shi3 , ni3 bu4 chi1 , jiu4 shi4 ni3 di2 guo4 cuo4 liao3 , [ wei1 xiao4 ] . * * * xie3 de2 zai4 lan4 , zhi4 shao3 huan2 yuan4 yi4 ren4 cuo4 , [ wei1 xiao4 ] . * * * * bu4 zhi3 lan4 , huan2 zui3 ying4 , [ wei1 xiao4 ] .</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/1018190-a84204c59e10d4dc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>接下来再用 <a target="_blank" rel="noopener" href="https://codebeautify.org/string-hex-converter">String 转 Hex 工具</a> 转为 Hex String 即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">6c616e34207368693420796f7533207975616e322079696e3120646932202c205b2077656931207869616f34205d202e20646134206a69613120647531207975616e342079693420636869312073686933202c206e6933206275342063686931202c206a6975342073686934206e6933206469322067756f342063756f34206c69616f33202c205b2077656931207869616f34205d202e202a202a202a207869653320646532207a616934206c616e34202c207a686934207368616f33206875616e32207975616e34207969342072656e342063756f34202c205b2077656931207869616f34205d202e202a202a202a202a20627534207a686933206c616e34202c206875616e32207a7569332079696e6734202c205b2077656931207869616f34205d202e</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://upload-images.jianshu.io/upload_images/1018190-96ba6002d9f3ab2e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>最后可以用 <a target="_blank" rel="noopener" href="https://codebeautify.org/hex-string-converter">Hex 转 String 工具</a> 试试看能不能再转回来确认一下有无问题：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1018190-96390e6e4d7c14a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<h2 id="6-生成一笔交易记录"><a href="#6-生成一笔交易记录" class="headerlink" title="6. 生成一笔交易记录"></a>6. 生成一笔交易记录</h2><p>然后我们继续回到 MetaMask，点击 SEND 按钮开始一笔转账：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1018190-ae93d36b52890b79.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>随便填入一个有效的 ETH 接收地址，这里我用的是 0xa666b081583dbe8018af7c7c6e8bb6954c8984d2，然后交易数额填 0，TRANSACTION DATA 就填写刚才生成的 Hex String，然后点击 SEND 就行啦：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1018190-806b97ab28a7070b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>接下来是交易确认界面，我们需要将 Gas Price 修改为 2，这样容易更快完成交易：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1018190-d094cb44fa8ebdb5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>然后点击 SUBMIT 按钮即可，然后过一会就能在列表中看到这一条交易已完成啦：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1018190-4c47251c48893fd9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>点击可以查看详情，比如这一条交易记录可以在这个页面进行查看：<a target="_blank" rel="noopener" href="https://etherscan.io/tx/0xff61b121aef8065e6e0a2aeeff5d9fce738b1ba0cbe5e1cd8b51b3509faff903">https://etherscan.io/tx/0xff61b121aef8065e6e0a2aeeff5d9fce738b1ba0cbe5e1cd8b51b3509faff903</a>，翻到下面详情中的 Input Data 选择以 UTF-8 方式预览即可：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/1018190-409c6b0a8383e8a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>然后全球所有的 ETH 钱包这时应该都已经同步了这条信息啦，好玩吧，这，就是传说中的，上链。</p>
+<p>还不赶紧自己动手实践一下？​</p>
+<hr>
+<blockquote>
+<p>如有任何知识产权、版权问题或理论错误，还请指正。<br><a href="https://www.eyrefree.org/2018/07/25/ETHTransactionData">https://www.eyrefree.org/2018/07/25/ETHTransactionData</a><br>如文中无特殊说明，本站均使用以下协议保护：<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">署名-非商业性使用-禁止演绎</a>。   </p>
+</blockquote>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">给 EyreFree 投食，QAQ</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/WeChat.png" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/AliPay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2018/01/20/LPDBusinessiOS/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2019/04/06/GitHub-ReadMe-Apps/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/project/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              项目
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'eyrefree';
+    
+    var disqus_url = 'http://www.eyrefree.org/2018/07/25/ETHTransactionData/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//eyrefree.disqus.com/count.js" async></script>
+
+
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

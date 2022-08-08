@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>利用 CodeBeat 为你在 GitHub 上的项目进行代码质量管理 | EyreFree</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="CodeBeat," />
+  
+
+  <meta name="description" content="CodeBeat 是一个免费为开源项目进行代码质量管理的工具（付费可以支持私有项目），目前已经支持的编程语言有 Swift、Objective-C、Go、Ruby、Python、Java、Kotlin、Javascript、Typescript、Elixir，无需对原有项目进行任何修改即可获取针对项目的完整质量分析，方便快捷。 前言当我们在 GitHub 上的代码仓库发生变更后，会通知 CodeB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="利用 CodeBeat 为你在 GitHub 上的项目进行代码质量管理">
+<meta property="og:url" content="http://www.eyrefree.org/2017/12/13/CodeBeat-GitHub/index.html">
+<meta property="og:site_name" content="EyreFree">
+<meta property="og:description" content="CodeBeat 是一个免费为开源项目进行代码质量管理的工具（付费可以支持私有项目），目前已经支持的编程语言有 Swift、Objective-C、Go、Ruby、Python、Java、Kotlin、Javascript、Typescript、Elixir，无需对原有项目进行任何修改即可获取针对项目的完整质量分析，方便快捷。 前言当我们在 GitHub 上的代码仓库发生变更后，会通知 CodeB">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/12/13/1604ec0b248e6fda?w=1184&h=673&f=png&s=98888">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/12/13/1604ec0b27e29b81?w=1168&h=411&f=png&s=35896">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/12/13/1604ec0b27f26013?w=1145&h=493&f=png&s=54810">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/12/13/1604ec0b294a4d04?w=916&h=360&f=png&s=77638">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/12/13/1604ec0b2da5c683?w=1162&h=401&f=png&s=70133">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/12/13/1604ec0b2d2ad569?w=1148&h=340&f=png&s=35402">
+<meta property="article:published_time" content="2017-12-13T07:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-25T08:23:41.240Z">
+<meta property="article:author" content="EyreFree">
+<meta property="article:tag" content="CodeBeat">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2017/12/13/1604ec0b248e6fda?w=1184&h=673&f=png&s=98888">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?638f7245dab1e13e3d8fbdd9cc3b0895";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="EyreFree" type="application/atom+xml">
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/project/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            项目
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%B3%A8%E5%86%8C-CodeBeat-%E8%B4%A6%E5%8F%B7"><span class="toc-text">1. 注册 CodeBeat 账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BB%8E-GitHub-%E6%B7%BB%E5%8A%A0%E9%A1%B9%E7%9B%AE"><span class="toc-text">2. 从 GitHub 添加项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%BC%80%E5%90%AF%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86"><span class="toc-text">3. 开启代码质量管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%9F%A5%E7%9C%8B%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C"><span class="toc-text">4. 查看代码质量分析结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B2%A1%E4%BA%86"><span class="toc-text">没了</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-CodeBeat-GitHub" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">利用 CodeBeat 为你在 GitHub 上的项目进行代码质量管理</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.12.13</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>EyreFree</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/GitHub/">GitHub</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://www.eyrefree.org/2017/12/13/CodeBeat-GitHub/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>CodeBeat 是一个免费为开源项目进行代码质量管理的工具（付费可以支持私有项目），目前已经支持的编程语言有 Swift、Objective-C、Go、Ruby、Python、Java、Kotlin、Javascript、Typescript、Elixir，无需对原有项目进行任何修改即可获取针对项目的完整质量分析，方便快捷。</p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>当我们在 GitHub 上的代码仓库发生变更后，会通知 CodeBeat 执行分析操作刷新项目代码质量评分，并在完成后刷新项目评级 &#x2F; 评分的状态或结果，如图所示：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/12/13/1604ec0b248e6fda?w=1184&h=673&f=png&s=98888" alt="代码质量效果预览"></p>
+<p>CodeBeat 的同类产品有 Code Climate，目前支持 Ruby、Python、PHP、JavaScript、Java、TypeScript，不过官网显示<br> Swift、Go、Objective-C 的支持在计划中，因为我是 iOS 开发，所以暂时用不了这个，在一个 <a target="_blank" rel="noopener" href="https://github.com/BigKeeper/bigstash">Ruby 项目</a>有试过这个，看起来还好，有兴趣的同学也可以一试。</p>
+<p>本文以 <a target="_blank" rel="noopener" href="https://github.com/EyreFree/EFQRCode">EFQRCode</a>(一个使用 Swift 作为开发语言的二维码库) 为例，简述怎样为自己的开源项目添加代码质量管理功能。</p>
+<h2 id="1-注册-CodeBeat-账号"><a href="#1-注册-CodeBeat-账号" class="headerlink" title="1. 注册 CodeBeat 账号"></a>1. 注册 CodeBeat 账号</h2><p>打开 <a target="_blank" rel="noopener" href="https://codebeat.co/">https://codebeat.co/</a> 注册一个 CodeBeat 账号，也可以通过 GitHub 账户直接登陆。CodeBeat 服务对开源项目是免费的，所以你的私有项目无法享受到免费的持续构建服务。唔，当然，每月支付 20 美刀成为付费用户后可以解锁无限数量私有库的功能。</p>
+<h2 id="2-从-GitHub-添加项目"><a href="#2-从-GitHub-添加项目" class="headerlink" title="2. 从 GitHub 添加项目"></a>2. 从 GitHub 添加项目</h2><p>登陆完成后，点击右边的 <code>Add Repository</code> 按钮即可开始添加自己的 Git 仓库，支持各种 Git 托管平台，甚至自建的也可以：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/12/13/1604ec0b27e29b81?w=1168&h=411&f=png&s=35896" alt="Add Repository"></p>
+<h2 id="3-开启代码质量管理"><a href="#3-开启代码质量管理" class="headerlink" title="3. 开启代码质量管理"></a>3. 开启代码质量管理</h2><p>第一次项目导入后会立即进行一次分析，试了一下速度还是比较快的（反正比持续集成快多了），反正我的项目导入以后刷新一下页面就出结果了。</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/12/13/1604ec0b27f26013?w=1145&h=493&f=png&s=54810"></p>
+<p>唔，细心的同学可能会发现，这一步操作完成后我们在 GitHub 项目 Setting 中的 <code>Webhooks</code> 已经添加了一个属于 <code>codebeat.co</code> 的 Webhook，没错，以后项目代码发生更改后就会自动触发代码质量分析，不需要我们手动操作了。感兴趣的同学可以点击 <code>Edit</code> 按钮查看一下 CodeBeat 具体干了啥：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/12/13/1604ec0b294a4d04?w=916&h=360&f=png&s=77638" alt="Webhooks"></p>
+<p>关于 Webhook 感兴趣的同学可以查看 GitHub 官方的资料：<a target="_blank" rel="noopener" href="https://developer.github.com/webhooks/">https://developer.github.com/webhooks/</a>。</p>
+<h2 id="4-查看代码质量分析结果"><a href="#4-查看代码质量分析结果" class="headerlink" title="4. 查看代码质量分析结果"></a>4. 查看代码质量分析结果</h2><p>点击进入该项目的分析结果，可以查看到具体的问题，如代码复杂性、代码风格、代码重复等，点击 <code>Quick Wins</code> 这一栏可以查看优先推荐修复的项目，如下图所示：</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/12/13/1604ec0b2da5c683?w=1162&h=401&f=png&s=70133"></p>
+<p>我们可以对应分析出的代码质量问题对我们的工程代码进行修改，改完直接提交到仓库即可，Webhook 会通知 CodeBeat 进行刷新。</p>
+<h2 id="没了"><a href="#没了" class="headerlink" title="没了"></a>没了</h2><p>在  的项目设置中可以看到更多有意思的玩法，比如将代码质量变化通知发送到 Slack 或邮箱等，也可以将代码质量评级徽标添加到自己的项目 README 中，大佬们可以自行研究…</p>
+<p><img src="https://user-gold-cdn.xitu.io/2017/12/13/1604ec0b2d2ad569?w=1148&h=340&f=png&s=35402" alt="Setting"></p>
+<p>祝操作顺利，🌈</p>
+<hr>
+<blockquote>
+<p>如有任何知识产权、版权问题或理论错误，还请指正。<br><a href="https://www.eyrefree.org/2017/12/13/CodeBeat-GitHub">https://www.eyrefree.org/2017/12/13/CodeBeat-GitHub</a><br>如文中无特殊说明，本站均使用以下协议保护：<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">署名-非商业性使用-禁止演绎</a>。   </p>
+</blockquote>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">给 EyreFree 投食，QAQ</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/WeChat.png" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/AliPay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2017/12/12/AppStore-macOS/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2017/12/25/Git-Push/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/project/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              项目
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'eyrefree';
+    
+    var disqus_url = 'http://www.eyrefree.org/2017/12/13/CodeBeat-GitHub/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//eyrefree.disqus.com/count.js" async></script>
+
+
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

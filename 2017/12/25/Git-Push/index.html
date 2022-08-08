@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Git 踩坑：Git Push 远端无分支不提示 | EyreFree</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="Git," />
+  
+
+  <meta name="description" content="上周遇到一个 Git 配置导致的问题，踩坑过程如下。 一. 问题描述 首先找一个远端 Git 仓库，clone 到本地； 在本地新建一个分支 test（名字随意，只要远端不存在这个分支即可）并切换到该分支； 执行 git push 命令后会发现终端显示了 Everything up-to-date，会让人误以为该分支成功推到了远端； 实际上问题已经出现了，这里 git push 指令并没有正确提示">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git 踩坑：Git Push 远端无分支不提示">
+<meta property="og:url" content="http://www.eyrefree.org/2017/12/25/Git-Push/index.html">
+<meta property="og:site_name" content="EyreFree">
+<meta property="og:description" content="上周遇到一个 Git 配置导致的问题，踩坑过程如下。 一. 问题描述 首先找一个远端 Git 仓库，clone 到本地； 在本地新建一个分支 test（名字随意，只要远端不存在这个分支即可）并切换到该分支； 执行 git push 命令后会发现终端显示了 Everything up-to-date，会让人误以为该分支成功推到了远端； 实际上问题已经出现了，这里 git push 指令并没有正确提示">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/12/25/1608c4ec3e087cf1?w=585&h=366&f=png&s=55199">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/12/25/1608c4ec3c4f77f6?w=805&h=381&f=png&s=63849">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/12/25/1608c4ec3c565841?w=804&h=396&f=png&s=69369">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/12/25/1608c4ec3c6b61bd?w=518&h=103&f=png&s=11300">
+<meta property="article:published_time" content="2017-12-25T07:00:00.000Z">
+<meta property="article:modified_time" content="2021-09-25T08:23:41.241Z">
+<meta property="article:author" content="EyreFree">
+<meta property="article:tag" content="Git">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2017/12/25/1608c4ec3e087cf1?w=585&h=366&f=png&s=55199">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
+
+
+  
+    
+<link rel="stylesheet" href="/css/personal-style.css">
+
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?638f7245dab1e13e3d8fbdd9cc3b0895";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
+
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="EyreFree" type="application/atom+xml">
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/project/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            项目
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-text">一. 问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="toc-text">二. 问题解决</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Git-Push" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Git 踩坑：Git Push 远端无分支不提示</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.12.25</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>EyreFree</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/Git/">Git</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://www.eyrefree.org/2017/12/25/Git-Push/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>上周遇到一个 Git 配置导致的问题，踩坑过程如下。</p>
+<h2 id="一-问题描述"><a href="#一-问题描述" class="headerlink" title="一. 问题描述"></a>一. 问题描述</h2><ol>
+<li>首先找一个远端 Git 仓库，clone 到本地；</li>
+<li>在本地新建一个分支 test（名字随意，只要远端不存在这个分支即可）并切换到该分支；</li>
+<li>执行 <code>git push</code> 命令后会发现终端显示了 <code>Everything up-to-date</code>，会让人误以为该分支成功推到了远端；</li>
+<li>实际上问题已经出现了，这里 <code>git push</code> 指令并没有正确提示我们远端不存在该分支。我们可以检查一下远端 Git 仓库，的确没有把 test 分支推上去；</li>
+</ol>
+<p><img src="https://user-gold-cdn.xitu.io/2017/12/25/1608c4ec3e087cf1?w=585&h=366&f=png&s=55199"></p>
+<ol start="5">
+<li>这个问题有多坑呢？假设没察觉这里回显不对，而是把本地分支删了干别的去了，估计就哭了。</li>
+</ol>
+<h2 id="二-问题解决"><a href="#二-问题解决" class="headerlink" title="二. 问题解决"></a>二. 问题解决</h2><ol>
+<li>查了 N 多资料；</li>
+<li>对比了 N 多类似案例；</li>
+<li>耗费了无数脑细胞；</li>
+<li>终于在 <a target="_blank" rel="noopener" href="http://timothyqiu.com/">TimothyQiu</a> 大大告诉我解决方法之后解决了该问题，😂；</li>
+<li>问题原因大概是因为 <code>gitconfig</code> 中的 参数设置异常导致的，我们可以执行 <code>git config -l</code>  命令查看当前的 Git 配置，可以看到 <code>push.default</code> 的值为 <code>matching</code>：</li>
+</ol>
+<p><img src="https://user-gold-cdn.xitu.io/2017/12/25/1608c4ec3c4f77f6?w=805&h=381&f=png&s=63849"></p>
+<ol start="6">
+<li>用 <code>git config --global push.default simple</code> 命令把它改成 <code>simple</code> 即可：</li>
+</ol>
+<p><img src="https://user-gold-cdn.xitu.io/2017/12/25/1608c4ec3c565841?w=804&h=396&f=png&s=69369"></p>
+<ol start="7">
+<li>然后执行 <code>git push</code> 命令就可以正常获取错误提示信息啦：</li>
+</ol>
+<p><img src="https://user-gold-cdn.xitu.io/2017/12/25/1608c4ec3c6b61bd?w=518&h=103&f=png&s=11300"></p>
+<hr>
+<blockquote>
+<p>如有任何知识产权、版权问题或理论错误，还请指正。<br><a href="https://www.eyrefree.org/2017/12/25/Git-Push">https://www.eyrefree.org/2017/12/25/Git-Push</a><br>如文中无特殊说明，本站均使用以下协议保护：<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">署名-非商业性使用-禁止演绎</a>。   </p>
+</blockquote>
+
+    
+  </div>
+
+</article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">给 EyreFree 投食，QAQ</div>
+        <ul>
+        
+          <li class="item">
+            
+              <span>微信扫一扫</span>
+            
+            <img src="/WeChat.png" alt="">
+          </li>
+        
+          <li class="item">
+            
+              <span>支付宝扫一扫</span>
+            
+            <img src="/AliPay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2017/12/13/CodeBeat-GitHub/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2018/01/20/LPDBusinessiOS/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
+
+
+
+</div>
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/project/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              项目
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'eyrefree';
+    
+    var disqus_url = 'http://www.eyrefree.org/2017/12/25/Git-Push/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//eyrefree.disqus.com/count.js" async></script>
+
+
+
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
