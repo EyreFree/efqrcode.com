@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/about/index.html</loc>
+    <loc>http://www.eyrefree.org/category/index.html</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/category/index.html</loc>
+    <loc>http://www.eyrefree.org/about/index.html</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -236,15 +236,6 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2017/07/06/GitHub-Wiki-Introduction/</loc>
-    
-    <lastmod>2021-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.eyrefree.org/2016/03/23/Hexo-Coding-Pages/</loc>
     
     <lastmod>2021-09-25</lastmod>
@@ -255,6 +246,15 @@
   
   <url>
     <loc>http://www.eyrefree.org/2016/03/01/Jekyll-Coding-Pages/</loc>
+    
+    <lastmod>2021-09-25</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.eyrefree.org/2017/07/06/GitHub-Wiki-Introduction/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -448,13 +448,6 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/Wiki/</loc>
-    <lastmod>2022-08-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://www.eyrefree.org/tags/Hexo/</loc>
     <lastmod>2022-08-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -463,6 +456,13 @@
   
   <url>
     <loc>http://www.eyrefree.org/tags/Jekyll/</loc>
+    <lastmod>2022-08-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.eyrefree.org/tags/Wiki/</loc>
     <lastmod>2022-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -511,14 +511,14 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/WordPress/</loc>
+    <loc>http://www.eyrefree.org/tags/Qt/</loc>
     <lastmod>2022-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/Qt/</loc>
+    <loc>http://www.eyrefree.org/tags/WordPress/</loc>
     <lastmod>2022-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -604,14 +604,14 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/categories/OS-X/</loc>
+    <loc>http://www.eyrefree.org/categories/Environment/</loc>
     <lastmod>2022-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/categories/Environment/</loc>
+    <loc>http://www.eyrefree.org/categories/OS-X/</loc>
     <lastmod>2022-08-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

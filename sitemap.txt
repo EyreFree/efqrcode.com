@@ -9,8 +9,8 @@ http://www.eyrefree.org/2016/02/18/iOS-GuangDianTong/
 http://www.eyrefree.org/2015/06/01/iOS-LaunchImage/
 http://www.eyrefree.org/2016/03/30/iOS-WiFi-Info/
 http://www.eyrefree.org/2015/08/14/iOS7-Alamofire/
-http://www.eyrefree.org/about/index.html
 http://www.eyrefree.org/category/index.html
+http://www.eyrefree.org/about/index.html
 http://www.eyrefree.org/2015/05/31/WordPress-Notes/
 http://www.eyrefree.org/2016/07/19/Wrap-Count/
 http://www.eyrefree.org/2015/09/06/XCode-Swift-Objective-C-C-C++/
@@ -24,9 +24,9 @@ http://www.eyrefree.org/2018/01/20/LPDBusinessiOS/
 http://www.eyrefree.org/2017/03/09/NEHotspotHelper/
 http://www.eyrefree.org/2020/09/27/NFC-AppClips/
 http://www.eyrefree.org/2017/08/15/Swift-Enum/
-http://www.eyrefree.org/2017/07/06/GitHub-Wiki-Introduction/
 http://www.eyrefree.org/2016/03/23/Hexo-Coding-Pages/
 http://www.eyrefree.org/2016/03/01/Jekyll-Coding-Pages/
+http://www.eyrefree.org/2017/07/06/GitHub-Wiki-Introduction/
 http://www.eyrefree.org/2015/04/09/Git-Commands/
 http://www.eyrefree.org/2017/12/25/Git-Push/
 http://www.eyrefree.org/2017/05/01/GitHub-Badge-Introduction/
@@ -50,17 +50,17 @@ http://www.eyrefree.org/tags/Swift/
 http://www.eyrefree.org/tags/Git/
 http://www.eyrefree.org/tags/Badge/
 http://www.eyrefree.org/tags/GitHub/
-http://www.eyrefree.org/tags/Wiki/
 http://www.eyrefree.org/tags/Hexo/
 http://www.eyrefree.org/tags/Jekyll/
+http://www.eyrefree.org/tags/Wiki/
 http://www.eyrefree.org/tags/NEHotspotHelper/
 http://www.eyrefree.org/tags/Life/
 http://www.eyrefree.org/tags/Enum/
 http://www.eyrefree.org/tags/Other/
 http://www.eyrefree.org/tags/Travis-CI/
 http://www.eyrefree.org/tags/TTF/
-http://www.eyrefree.org/tags/WordPress/
 http://www.eyrefree.org/tags/Qt/
+http://www.eyrefree.org/tags/WordPress/
 http://www.eyrefree.org/tags/Alamofire/
 http://www.eyrefree.org/categories/iOS/
 http://www.eyrefree.org/categories/AppStore/
@@ -72,5 +72,5 @@ http://www.eyrefree.org/categories/Markdown/
 http://www.eyrefree.org/categories/Blog/
 http://www.eyrefree.org/categories/Life/
 http://www.eyrefree.org/categories/Other/
-http://www.eyrefree.org/categories/OS-X/
 http://www.eyrefree.org/categories/Environment/
+http://www.eyrefree.org/categories/OS-X/
