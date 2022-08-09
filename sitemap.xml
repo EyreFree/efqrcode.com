@@ -2,7 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.eyrefree.org/2016/09/22/3D-Touch/</loc>
+    <loc>http://www.efqrcode.com/about/index.html</loc>
+    
+    <lastmod>2022-08-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.efqrcode.com/categories/index.html</loc>
+    
+    <lastmod>2022-08-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.efqrcode.com/search/index.html</loc>
+    
+    <lastmod>2022-08-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.efqrcode.com/tags/index.html</loc>
+    
+    <lastmod>2022-08-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.efqrcode.com/2016/09/22/3D-Touch/</loc>
     
     <lastmod>2022-08-08</lastmod>
     
@@ -11,7 +47,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2021/11/10/Shanghai-Remote-Medical-Treatment/</loc>
+    <loc>http://www.efqrcode.com/2021/11/10/Shanghai-Remote-Medical-Treatment/</loc>
     
     <lastmod>2021-11-10</lastmod>
     
@@ -20,7 +56,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2021/09/25/Before-Hospitalization/</loc>
+    <loc>http://www.efqrcode.com/2021/09/25/Before-Hospitalization/</loc>
     
     <lastmod>2021-10-08</lastmod>
     
@@ -29,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tag/index.html</loc>
+    <loc>http://www.efqrcode.com/2016/02/18/iOS-GuangDianTong/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -38,7 +74,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/project/index.html</loc>
+    <loc>http://www.efqrcode.com/2015/06/01/iOS-LaunchImage/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -47,7 +83,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/search/index.html</loc>
+    <loc>http://www.efqrcode.com/2016/03/30/iOS-WiFi-Info/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -56,7 +92,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/link/index.html</loc>
+    <loc>http://www.efqrcode.com/2015/08/14/iOS7-Alamofire/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -65,7 +101,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2015/06/01/iOS-LaunchImage/</loc>
+    <loc>http://www.efqrcode.com/2015/05/31/WordPress-Notes/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -74,7 +110,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2015/08/14/iOS7-Alamofire/</loc>
+    <loc>http://www.efqrcode.com/2016/07/19/Wrap-Count/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -83,7 +119,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2016/03/30/iOS-WiFi-Info/</loc>
+    <loc>http://www.efqrcode.com/2015/09/06/XCode-Swift-Objective-C-C-C++/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -92,7 +128,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2016/02/18/iOS-GuangDianTong/</loc>
+    <loc>http://www.efqrcode.com/2016/03/08/iOS-Build-Info/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -101,7 +137,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/category/index.html</loc>
+    <loc>http://www.efqrcode.com/2015/09/10/Swift-UIColor-Hex/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -110,7 +146,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/about/index.html</loc>
+    <loc>http://www.efqrcode.com/2021/02/22/Tea/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -119,7 +155,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2015/05/31/WordPress-Notes/</loc>
+    <loc>http://www.efqrcode.com/2017/03/16/Travis-CI/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -128,7 +164,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2016/07/19/Wrap-Count/</loc>
+    <loc>http://www.efqrcode.com/2017/03/23/UIFont-TTF/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -137,7 +173,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2015/09/06/XCode-Swift-Objective-C-C-C++/</loc>
+    <loc>http://www.efqrcode.com/2013/11/08/Windows7-QT-Android/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -146,7 +182,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2016/03/08/iOS-Build-Info/</loc>
+    <loc>http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -155,7 +191,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2015/09/10/Swift-UIColor-Hex/</loc>
+    <loc>http://www.efqrcode.com/2017/03/09/NEHotspotHelper/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -164,7 +200,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2021/02/22/Tea/</loc>
+    <loc>http://www.efqrcode.com/2020/09/27/NFC-AppClips/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -173,7 +209,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2017/03/16/Travis-CI/</loc>
+    <loc>http://www.efqrcode.com/2017/08/15/Swift-Enum/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -182,7 +218,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2017/03/23/UIFont-TTF/</loc>
+    <loc>http://www.efqrcode.com/2017/07/06/GitHub-Wiki-Introduction/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -191,7 +227,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2013/11/08/Windows7-QT-Android/</loc>
+    <loc>http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -200,7 +236,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2018/01/20/LPDBusinessiOS/</loc>
+    <loc>http://www.efqrcode.com/2016/03/01/Jekyll-Coding-Pages/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -209,7 +245,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2017/03/09/NEHotspotHelper/</loc>
+    <loc>http://www.efqrcode.com/2015/04/09/Git-Commands/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -218,7 +254,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2020/09/27/NFC-AppClips/</loc>
+    <loc>http://www.efqrcode.com/2017/12/25/Git-Push/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -227,7 +263,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2017/08/15/Swift-Enum/</loc>
+    <loc>http://www.efqrcode.com/2017/05/01/GitHub-Badge-Introduction/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -236,7 +272,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2016/03/23/Hexo-Coding-Pages/</loc>
+    <loc>http://www.efqrcode.com/2019/04/06/GitHub-ReadMe-Apps/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -245,7 +281,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2017/07/06/GitHub-Wiki-Introduction/</loc>
+    <loc>http://www.efqrcode.com/2017/12/05/CocoaPods-Swift4/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -254,7 +290,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2016/03/01/Jekyll-Coding-Pages/</loc>
+    <loc>http://www.efqrcode.com/2017/12/13/CodeBeat-GitHub/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -263,7 +299,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2015/04/09/Git-Commands/</loc>
+    <loc>http://www.efqrcode.com/2016/11/24/Coding-Emoji/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -272,7 +308,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2017/12/25/Git-Push/</loc>
+    <loc>http://www.efqrcode.com/2018/07/25/ETHTransactionData/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -281,7 +317,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2017/05/01/GitHub-Badge-Introduction/</loc>
+    <loc>http://www.efqrcode.com/2020/11/17/Flutter-Bitcode/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -290,7 +326,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2019/04/06/GitHub-ReadMe-Apps/</loc>
+    <loc>http://www.efqrcode.com/2017/12/12/AppStore-macOS/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -299,61 +335,7 @@
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/2017/12/05/CocoaPods-Swift4/</loc>
-    
-    <lastmod>2021-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.eyrefree.org/2017/12/13/CodeBeat-GitHub/</loc>
-    
-    <lastmod>2021-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.eyrefree.org/2016/11/24/Coding-Emoji/</loc>
-    
-    <lastmod>2021-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.eyrefree.org/2018/07/25/ETHTransactionData/</loc>
-    
-    <lastmod>2021-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.eyrefree.org/2020/11/17/Flutter-Bitcode/</loc>
-    
-    <lastmod>2021-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.eyrefree.org/2019/10/17/CocoaPods-Flutter-CDN/</loc>
-    
-    <lastmod>2021-09-25</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.eyrefree.org/2017/12/12/AppStore-macOS/</loc>
+    <loc>http://www.efqrcode.com/2019/10/17/CocoaPods-Flutter-CDN/</loc>
     
     <lastmod>2021-09-25</lastmod>
     
@@ -363,7 +345,7 @@
   
 
   <url>
-    <loc>http://www.eyrefree.org/</loc>
+    <loc>http://www.efqrcode.com/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -371,161 +353,161 @@
 
   
   <url>
-    <loc>http://www.eyrefree.org/tags/3D-Touch/</loc>
+    <loc>http://www.efqrcode.com/tags/3D-Touch/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/Nothing/</loc>
+    <loc>http://www.efqrcode.com/tags/macOS/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/CocoaPods/</loc>
+    <loc>http://www.efqrcode.com/tags/Nothing/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/macOS/</loc>
+    <loc>http://www.efqrcode.com/tags/CocoaPods/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/CodeBeat/</loc>
+    <loc>http://www.efqrcode.com/tags/CodeBeat/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/Sticker/</loc>
+    <loc>http://www.efqrcode.com/tags/Sticker/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/ETH/</loc>
+    <loc>http://www.efqrcode.com/tags/ETH/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/Swift/</loc>
+    <loc>http://www.efqrcode.com/tags/Swift/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/Git/</loc>
+    <loc>http://www.efqrcode.com/tags/Git/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/Badge/</loc>
+    <loc>http://www.efqrcode.com/tags/Badge/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/GitHub/</loc>
+    <loc>http://www.efqrcode.com/tags/GitHub/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/Hexo/</loc>
+    <loc>http://www.efqrcode.com/tags/Wiki/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/Wiki/</loc>
+    <loc>http://www.efqrcode.com/tags/Hexo/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/Jekyll/</loc>
+    <loc>http://www.efqrcode.com/tags/Jekyll/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/NEHotspotHelper/</loc>
+    <loc>http://www.efqrcode.com/tags/NEHotspotHelper/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/Life/</loc>
+    <loc>http://www.efqrcode.com/tags/Life/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/Enum/</loc>
+    <loc>http://www.efqrcode.com/tags/Enum/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/Other/</loc>
+    <loc>http://www.efqrcode.com/tags/Other/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/Travis-CI/</loc>
+    <loc>http://www.efqrcode.com/tags/Travis-CI/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/TTF/</loc>
+    <loc>http://www.efqrcode.com/tags/TTF/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/Qt/</loc>
+    <loc>http://www.efqrcode.com/tags/Qt/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/WordPress/</loc>
+    <loc>http://www.efqrcode.com/tags/WordPress/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/tags/Alamofire/</loc>
+    <loc>http://www.efqrcode.com/tags/Alamofire/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -534,84 +516,84 @@
 
   
   <url>
-    <loc>http://www.eyrefree.org/categories/iOS/</loc>
+    <loc>http://www.efqrcode.com/categories/iOS/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/categories/AppStore/</loc>
+    <loc>http://www.efqrcode.com/categories/AppStore/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/categories/Swift/</loc>
+    <loc>http://www.efqrcode.com/categories/Swift/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/categories/GitHub/</loc>
+    <loc>http://www.efqrcode.com/categories/GitHub/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/categories/BlockChain/</loc>
+    <loc>http://www.efqrcode.com/categories/BlockChain/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/categories/Git/</loc>
+    <loc>http://www.efqrcode.com/categories/Git/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/categories/Markdown/</loc>
+    <loc>http://www.efqrcode.com/categories/Markdown/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/categories/Blog/</loc>
+    <loc>http://www.efqrcode.com/categories/Blog/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/categories/Life/</loc>
+    <loc>http://www.efqrcode.com/categories/Life/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/categories/Other/</loc>
+    <loc>http://www.efqrcode.com/categories/Other/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/categories/Environment/</loc>
+    <loc>http://www.efqrcode.com/categories/Environment/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://www.eyrefree.org/categories/OS-X/</loc>
+    <loc>http://www.efqrcode.com/categories/OS-X/</loc>
     <lastmod>2022-08-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

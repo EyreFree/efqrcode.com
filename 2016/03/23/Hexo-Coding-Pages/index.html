@@ -1,24 +1,15 @@
 <!DOCTYPE html>
-
-
-  <html class="light page-post">
-
-
+<html lang=zh>
 <head>
-  <meta charset="utf-8">
-  
-  <title>OS X 下使用 Hexo 和 Coding Pages 搭建静态博客 | EyreFree</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  
-    <meta name="keywords" content="Hexo," />
-  
-
-  <meta name="description" content="Hexo 是一款基于 Node.js 的静态博客框架, 目前在 GitHub 上已有 9133 star 和 1499 fork。Hexo 生成的静态页面可以部署在 Github 或 Coding 上，并且能够免费绑定自己的域名，可以用来很方便地搭建个人博客。  1，Git 安装搭建博客需要用到 git，下面这条命令可查看本机是否已安装 git，若未安装可参考这篇博文进行安装。 git --ver">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Hexo 是一款基于 Node.js 的静态博客框架, 目前在 GitHub 上已有 9133 star 和 1499 fork。Hexo 生成的静态页面可以部署在 Github 或 Coding 上，并且能够免费绑定自己的域名，可以用来很方便地搭建个人博客。  1，Git 安装搭建博客需要用到 git，下面这条命令可查看本机是否已安装 git，若未安装可参考这篇博文进行安装。 git --ver">
 <meta property="og:type" content="article">
 <meta property="og:title" content="OS X 下使用 Hexo 和 Coding Pages 搭建静态博客">
-<meta property="og:url" content="http://www.eyrefree.org/2016/03/23/Hexo-Coding-Pages/index.html">
+<meta property="og:url" content="http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/index.html">
 <meta property="og:site_name" content="EyreFree">
 <meta property="og:description" content="Hexo 是一款基于 Node.js 的静态博客框架, 目前在 GitHub 上已有 9133 star 和 1499 fork。Hexo 生成的静态页面可以部署在 Github 或 Coding 上，并且能够免费绑定自己的域名，可以用来很方便地搭建个人博客。  1，Git 安装搭建博客需要用到 git，下面这条命令可查看本机是否已安装 git，若未安装可参考这篇博文进行安装。 git --ver">
 <meta property="og:locale" content="zh_CN">
@@ -27,228 +18,149 @@
 <meta property="article:author" content="EyreFree">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
-
-  
-
-  
-    <link rel="icon" href="/favicon.ico">
-  
-
-  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
-
-
-  
     
-<link rel="stylesheet" href="/css/personal-style.css">
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>OS X 下使用 Hexo 和 Coding Pages 搭建静态博客</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
 
-  
-
-  
-
-  
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?638f7245dab1e13e3d8fbdd9cc3b0895";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
-
-  
-  <script type="text/javascript">
-	(function(){
-	    var bp = document.createElement('script');
-	    var curProtocol = window.location.protocol.split(':')[0];
-	    if (curProtocol === 'https') {
-	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-	    }
-	    else {
-	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-	    }
-	    var s = document.getElementsByTagName("script")[0];
-	    s.parentNode.insertBefore(bp, s);
-	})();
-  </script>
-
-
-
-  
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  
-
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
 <meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="EyreFree" type="application/atom+xml">
 </head>
 
-<body>
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2016/03/30/iOS-WiFi-Info/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2016/03/08/iOS-Build-Info/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&text=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&title=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&is_video=false&description=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客&body=Check out this article: http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&title=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&title=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&title=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&title=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&name=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&t=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
 
-
-  
-    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
-  
-
-  <div class="post-header CENTER">
-   
-  <div class="toolbox">
-    <a class="toolbox-entry" href="/">
-      <span class="toolbox-entry-text">盒子</span>
-      <i class="icon-angle-down"></i>
-      <i class="icon-home"></i>
-    </a>
-    <ul class="list-toolbox">
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/archives/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            博客
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/category/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            分类
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/tag/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            标签
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/project/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            项目
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/link/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            友链
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/about/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            关于
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/atom.xml"
-            rel="noopener noreferrer"
-            target="_blank"
-            >
-            RSS
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/search/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            搜索
-          </a>
-        </li>
-      
-    </ul>
-  </div>
-
-
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1%EF%BC%8CGit-%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">1，Git 安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%EF%BC%8C%E5%AE%89%E8%A3%85-Node-js"><span class="toc-number">2.</span> <span class="toc-text">2，安装 Node.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3%EF%BC%8C%E5%B0%86-npm-%E7%9A%84%E6%BA%90%E6%9B%BF%E6%8D%A2%E6%88%90%E6%B7%98%E5%AE%9D%E7%9A%84%E6%BA%90"><span class="toc-number">3.</span> <span class="toc-text">3，将 npm 的源替换成淘宝的源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4%EF%BC%8C%E5%AE%89%E8%A3%85-Hexo"><span class="toc-number">4.</span> <span class="toc-text">4，安装 Hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5%EF%BC%8C%E6%9C%AC%E5%9C%B0%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2"><span class="toc-number">5.</span> <span class="toc-text">5，本地建立博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6%EF%BC%8C%E5%AE%89%E8%A3%85-Server-%E7%BB%84%E4%BB%B6"><span class="toc-number">6.</span> <span class="toc-text">6，安装 Server 组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7%EF%BC%8C%E5%AE%89%E8%A3%85-RSS-%E6%8F%92%E4%BB%B6%EF%BC%88%E5%8F%AF%E5%BF%BD%E7%95%A5%EF%BC%89"><span class="toc-number">7.</span> <span class="toc-text">7，安装 RSS 插件（可忽略）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8%EF%BC%8C%E6%9C%AC%E5%9C%B0%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88"><span class="toc-number">8.</span> <span class="toc-text">8，本地效果预览</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9%EF%BC%8C%E9%83%A8%E7%BD%B2%E5%88%B0-Coding-Pages"><span class="toc-number">9.</span> <span class="toc-text">9，部署到 Coding Pages</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10%EF%BC%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88"><span class="toc-number">10.</span> <span class="toc-text">10，服务器效果预览</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11%EF%BC%8C%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="toc-number">11.</span> <span class="toc-text">11，绑定域名</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12%EF%BC%8C%E7%BC%96%E5%86%99%E5%8D%9A%E6%96%87"><span class="toc-number">12.</span> <span class="toc-text">12，编写博文</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#13%EF%BC%8C%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-number">13.</span> <span class="toc-text">13，常见问题</span></a></li></ol>
+    </div>
+  </span>
 </div>
 
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        OS X 下使用 Hexo 和 Coding Pages 搭建静态博客
+    </h1>
 
-  <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1%EF%BC%8CGit-%E5%AE%89%E8%A3%85"><span class="toc-text">1，Git 安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%EF%BC%8C%E5%AE%89%E8%A3%85-Node-js"><span class="toc-text">2，安装 Node.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3%EF%BC%8C%E5%B0%86-npm-%E7%9A%84%E6%BA%90%E6%9B%BF%E6%8D%A2%E6%88%90%E6%B7%98%E5%AE%9D%E7%9A%84%E6%BA%90"><span class="toc-text">3，将 npm 的源替换成淘宝的源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4%EF%BC%8C%E5%AE%89%E8%A3%85-Hexo"><span class="toc-text">4，安装 Hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5%EF%BC%8C%E6%9C%AC%E5%9C%B0%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2"><span class="toc-text">5，本地建立博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6%EF%BC%8C%E5%AE%89%E8%A3%85-Server-%E7%BB%84%E4%BB%B6"><span class="toc-text">6，安装 Server 组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7%EF%BC%8C%E5%AE%89%E8%A3%85-RSS-%E6%8F%92%E4%BB%B6%EF%BC%88%E5%8F%AF%E5%BF%BD%E7%95%A5%EF%BC%89"><span class="toc-text">7，安装 RSS 插件（可忽略）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8%EF%BC%8C%E6%9C%AC%E5%9C%B0%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88"><span class="toc-text">8，本地效果预览</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9%EF%BC%8C%E9%83%A8%E7%BD%B2%E5%88%B0-Coding-Pages"><span class="toc-text">9，部署到 Coding Pages</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10%EF%BC%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88"><span class="toc-text">10，服务器效果预览</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11%EF%BC%8C%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="toc-text">11，绑定域名</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12%EF%BC%8C%E7%BC%96%E5%86%99%E5%8D%9A%E6%96%87"><span class="toc-text">12，编写博文</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#13%EF%BC%8C%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">13，常见问题</span></a></li></ol>
-  </div>
 
 
-
-<div class="content content-post CENTER">
-   <article id="post-Hexo-Coding-Pages" class="article article-type-post" itemprop="blogPost">
-  <header class="article-header">
-    <h1 class="post-title">OS X 下使用 Hexo 和 Coding Pages 搭建静态博客</h1>
-
-    <div class="article-meta">
-      <span>
-        <i class="icon-calendar"></i>
-        <span>2016.03.23</span>
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">EyreFree</span>
       </span>
-
       
-        <span class="article-author">
-          <i class="icon-user"></i>
-          <span>EyreFree</span>
-        </span>
+    <div class="postdate">
       
-
-      
-  <span class="article-category">
-    <i class="icon-list"></i>
-    <a class="article-category-link" href="/categories/Blog/">Blog</a>
-  </span>
-
-
-
-      
-        <span>
-          <i class="icon-comment"></i>
-          <a href="http://www.eyrefree.org/2016/03/23/Hexo-Coding-Pages/#disqus_thread"></a>
-        </span>
-      
-
-      
-      <i class="fa fa-eye"></i> 
-        <span id="busuanzi_container_page_pv">
-           &nbsp热度 <span id="busuanzi_value_page_pv">
-           <i class="fa fa-spinner fa-spin"></i></span>℃
-        </span>
-      
+        <time datetime="2016-03-23T07:00:00.000Z" itemprop="datePublished">2016-03-23</time>
+        
       
     </div>
-  </header>
 
-  <div class="article-content">
-    
-      <p><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo">Hexo</a> 是一款基于 Node.js 的静态博客框架, 目前在 GitHub 上已有 9133 star 和 1499 fork。Hexo 生成的静态页面可以部署在 Github 或 Coding 上，并且能够免费绑定自己的域名，可以用来很方便地搭建个人博客。</p>
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Blog/">Blog</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Hexo/" rel="tag">Hexo</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo">Hexo</a> 是一款基于 Node.js 的静态博客框架, 目前在 GitHub 上已有 9133 star 和 1499 fork。Hexo 生成的静态页面可以部署在 Github 或 Coding 上，并且能够免费绑定自己的域名，可以用来很方便地搭建个人博客。</p>
 <hr>
 <h1 id="1，Git-安装"><a href="#1，Git-安装" class="headerlink" title="1，Git 安装"></a>1，Git 安装</h1><p>搭建博客需要用到 git，下面这条命令可查看本机是否已安装 git，若未安装可参考<a target="_blank" rel="noopener" href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137396287703354d8c6c01c904c7d9ff056ae23da865a000/">这篇博文</a>进行安装。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
@@ -305,7 +217,7 @@
 <h1 id="10，服务器效果预览"><a href="#10，服务器效果预览" class="headerlink" title="10，服务器效果预览"></a>10，服务器效果预览</h1><p>pages 服务开启完成后，Coding 会提供一个类似 {user_name}.coding.me&#x2F;{project_name} 的链接用于访问，例如用户名为 eyrefree 项目名为 myblog 的链接应该是： </p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http://eyrefree.coding.me/myblog</span><br></pre></td></tr></table></figure>
 <p>访问该链接即可进行预览，由于我们引用的资源很多是和域名相关的，导致这里可能会有资源加载失败的情况，只能出现部分文字，接下来我们将域名绑定后即可恢复正常。</p>
-<h1 id="11，绑定域名"><a href="#11，绑定域名" class="headerlink" title="11，绑定域名"></a>11，绑定域名</h1><p>默认提供的链接可能过长或者不便于日常使用，我们也可以绑定自己的域名。  <br>首先，需要提前准备一个域名，然后打开自己的域名控制面板，新建一个 CNAME 解析到 {user_name}.coding.me，例如我的是将 <a href="http://www.eyrefree.org/">www.eyrefree.org</a> 解析到 eyrefree.coding.me；  <br>然后，打开 Coding 项目页面切换到 pages 项，填入刚才的设置解析的域名 <a target="_blank" rel="noopener" href="http://www.eyrefree.org,点击“添加域名绑定”按钮即可,在浏览器中直接访问/">www.eyrefree.org，点击“添加域名绑定”按钮即可，在浏览器中直接访问</a> <a href="http://www.eyrefree.org/">www.eyrefree.org</a> 就能成功打开。  <br>有时可能由于缓存或者解析时间的问题，稍等片刻即可。 </p>
+<h1 id="11，绑定域名"><a href="#11，绑定域名" class="headerlink" title="11，绑定域名"></a>11，绑定域名</h1><p>默认提供的链接可能过长或者不便于日常使用，我们也可以绑定自己的域名。  <br>首先，需要提前准备一个域名，然后打开自己的域名控制面板，新建一个 CNAME 解析到 {user_name}.coding.me，例如我的是将 <a target="_blank" rel="noopener" href="http://www.eyrefree.org/">www.eyrefree.org</a> 解析到 eyrefree.coding.me；  <br>然后，打开 Coding 项目页面切换到 pages 项，填入刚才的设置解析的域名 <a target="_blank" rel="noopener" href="http://www.eyrefree.org,点击“添加域名绑定”按钮即可,在浏览器中直接访问/">www.eyrefree.org，点击“添加域名绑定”按钮即可，在浏览器中直接访问</a> <a target="_blank" rel="noopener" href="http://www.eyrefree.org/">www.eyrefree.org</a> 就能成功打开。  <br>有时可能由于缓存或者解析时间的问题，稍等片刻即可。 </p>
 <h1 id="12，编写博文"><a href="#12，编写博文" class="headerlink" title="12，编写博文"></a>12，编写博文</h1><p>接下来就是日常的博文编写啦，这里是使用 markdown 格式的，编写完成后添加到 source&#x2F;_posts 目录下然后按照第 8 步的方法部署到 Coding 服务器即可，具体可参考<a target="_blank" rel="noopener" href="http://www.jianshu.com/p/3c7ddd48bfa9">这篇博文</a>，Markdown 的一些语法可以参考：  <br><a target="_blank" rel="noopener" href="http://wowubuntu.com/markdown/">http://wowubuntu.com/markdown/</a></p>
 <h1 id="13，常见问题"><a href="#13，常见问题" class="headerlink" title="13，常见问题"></a>13，常见问题</h1><p>若执行 hexo 命令时出现如下警告信息：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123; [Error: Cannot find module <span class="string">&#x27;./build/Release/DTraceProviderBindings&#x27;</span>] code: <span class="string">&#x27;MODULE_NOT_FOUND&#x27;</span> &#125;</span><br><span class="line">&#123; [Error: Cannot find module <span class="string">&#x27;./build/default/DTraceProviderBindings&#x27;</span>] code: <span class="string">&#x27;MODULE_NOT_FOUND&#x27;</span> &#125;</span><br><span class="line">&#123; [Error: Cannot find module <span class="string">&#x27;./build/Debug/DTraceProviderBindings&#x27;</span>] code: <span class="string">&#x27;MODULE_NOT_FOUND&#x27;</span> &#125;</span><br></pre></td></tr></table></figure>
@@ -313,247 +225,169 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo npm install hexo --no-optional</span><br></pre></td></tr></table></figure>
 
 <hr>
-<p>嘛，大概就是这些内容了，有遗漏的话会继续补充，😝。<a href="http://www.eyrefree.org/">我的博客</a>是用 Hexo 生成的使用了 Fexo 模版，开启了 Google 统计，Disqus 评论，RSS 订阅，站内搜索等，详情参见我的 Coding 仓库的 Hexo 分支：<br><a target="_blank" rel="noopener" href="https://coding.net/u/eyrefree/p/blog.eyrefree.org/git">https://coding.net/u/eyrefree/p/blog.eyrefree.org/git</a></p>
+<p>嘛，大概就是这些内容了，有遗漏的话会继续补充，😝。<a target="_blank" rel="noopener" href="http://www.eyrefree.org/">我的博客</a>是用 Hexo 生成的使用了 Fexo 模版，开启了 Google 统计，Disqus 评论，RSS 订阅，站内搜索等，详情参见我的 Coding 仓库的 Hexo 分支：<br><a target="_blank" rel="noopener" href="https://coding.net/u/eyrefree/p/blog.eyrefree.org/git">https://coding.net/u/eyrefree/p/blog.eyrefree.org/git</a></p>
 <hr>
 <blockquote>
-<p>如有任何知识产权、版权问题或理论错误，还请指正。<br><a href="https://www.eyrefree.org/2016/03/23/Hexo-Coding-Pages">https://www.eyrefree.org/2016/03/23/Hexo-Coding-Pages</a><br>如文中无特殊说明，本站均使用以下协议保护：<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">署名-非商业性使用-禁止演绎</a>。   </p>
+<p>如有任何知识产权、版权问题或理论错误，还请指正。<br><a target="_blank" rel="noopener" href="https://www.eyrefree.org/2016/03/23/Hexo-Coding-Pages">https://www.eyrefree.org/2016/03/23/Hexo-Coding-Pages</a><br>如文中无特殊说明，本站均使用以下协议保护：<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">署名-非商业性使用-禁止演绎</a>。   </p>
 </blockquote>
 
-    
   </div>
-
 </article>
 
 
-   
-  <div class="text-center donation">
-    <div class="inner-donation">
-      <span class="btn-donation">支持一下</span>
-      <div class="donation-body">
-        <div class="tip text-center">🚀 给 EF 刷火箭 🚀</div>
-        <ul>
+
         
-          <li class="item">
-            
-              <span>微信扫一扫</span>
-            
-            <img src="/WeChat.png" alt="">
-          </li>
-        
-          <li class="item">
-            
-              <span>支付宝扫一扫</span>
-            
-            <img src="/AliPay.png" alt="">
-          </li>
-        
-        </ul>
-      </div>
-    </div>
-  </div>
+          <div id="footer-post-container">
+  <div id="footer-post">
 
-
-   
-  <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2016/03/08/iOS-Build-Info/">
-        <i class="icon icon-angle-left"></i>
-    </a>
-    <a class="show pull-right" href="/2016/03/30/iOS-WiFi-Info/">
-        <i class="icon icon-angle-right"></i>
-    </a>
-  </div>
-
-
-
-
-</div>
-
-
-  <a id="backTop" class="back-top">
-    <i class="icon-angle-up"></i>
-  </a>
-
-
-
-
-  <div class="modal" id="modal">
-  <span id="cover" class="cover hide"></span>
-  <div id="modal-dialog" class="modal-dialog hide-dialog">
-    <div class="modal-header">
-      <span id="close" class="btn-close">关闭</span>
-    </div>
-    <hr>
-    <div class="modal-body">
-      <ul class="list-toolbox">
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/archives/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              博客
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/category/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              分类
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/tag/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              标签
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/project/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              项目
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/link/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              友链
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/about/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              关于
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/atom.xml"
-              rel="noopener noreferrer"
-              target="_blank"
-              >
-              RSS
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/search/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              搜索
-            </a>
-          </li>
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
         
       </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1%EF%BC%8CGit-%E5%AE%89%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">1，Git 安装</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%EF%BC%8C%E5%AE%89%E8%A3%85-Node-js"><span class="toc-number">2.</span> <span class="toc-text">2，安装 Node.js</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3%EF%BC%8C%E5%B0%86-npm-%E7%9A%84%E6%BA%90%E6%9B%BF%E6%8D%A2%E6%88%90%E6%B7%98%E5%AE%9D%E7%9A%84%E6%BA%90"><span class="toc-number">3.</span> <span class="toc-text">3，将 npm 的源替换成淘宝的源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4%EF%BC%8C%E5%AE%89%E8%A3%85-Hexo"><span class="toc-number">4.</span> <span class="toc-text">4，安装 Hexo</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5%EF%BC%8C%E6%9C%AC%E5%9C%B0%E5%BB%BA%E7%AB%8B%E5%8D%9A%E5%AE%A2"><span class="toc-number">5.</span> <span class="toc-text">5，本地建立博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6%EF%BC%8C%E5%AE%89%E8%A3%85-Server-%E7%BB%84%E4%BB%B6"><span class="toc-number">6.</span> <span class="toc-text">6，安装 Server 组件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7%EF%BC%8C%E5%AE%89%E8%A3%85-RSS-%E6%8F%92%E4%BB%B6%EF%BC%88%E5%8F%AF%E5%BF%BD%E7%95%A5%EF%BC%89"><span class="toc-number">7.</span> <span class="toc-text">7，安装 RSS 插件（可忽略）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8%EF%BC%8C%E6%9C%AC%E5%9C%B0%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88"><span class="toc-number">8.</span> <span class="toc-text">8，本地效果预览</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9%EF%BC%8C%E9%83%A8%E7%BD%B2%E5%88%B0-Coding-Pages"><span class="toc-number">9.</span> <span class="toc-text">9，部署到 Coding Pages</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10%EF%BC%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%95%88%E6%9E%9C%E9%A2%84%E8%A7%88"><span class="toc-number">10.</span> <span class="toc-text">10，服务器效果预览</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#11%EF%BC%8C%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D"><span class="toc-number">11.</span> <span class="toc-text">11，绑定域名</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#12%EF%BC%8C%E7%BC%96%E5%86%99%E5%8D%9A%E6%96%87"><span class="toc-number">12.</span> <span class="toc-text">12，编写博文</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#13%EF%BC%8C%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-number">13.</span> <span class="toc-text">13，常见问题</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&text=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&title=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&is_video=false&description=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客&body=Check out this article: http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&title=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&title=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&title=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&title=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&name=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://www.efqrcode.com/2016/03/23/Hexo-Coding-Pages/&t=OS X 下使用 Hexo 和 Coding Pages 搭建静态博客"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
 
     </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
   </div>
 </div>
 
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2015-2022
+    EyreFree
+  </div>
+  <div class="footer-center">
+    <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">苏ICP备15023694号-2</a>
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
 
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
 
   
-      <div class="fexo-comments comments-post">
-    
-  <section class="disqus-comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-  </section>
-
-  <script>
-    var disqus_shortname = 'eyrefree';
-    
-    var disqus_url = 'http://www.eyrefree.org/2016/03/23/Hexo-Coding-Pages/';
-    
-    (function(){
-      var dsq = document.createElement('script');
-      dsq.type = 'text/javascript';
-      dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
   </script>
 
-  <script id="dsq-count-scr" src="//eyrefree.disqus.com/count.js" async></script>
 
+<script src="/js/main.js"></script>
 
+<!-- search -->
 
-    
+<!-- Google Analytics -->
 
-    
-    
-
-    
-
-    
-    
-
-    
-
-  </div>
-
-  
+<!-- Baidu Analytics -->
 
   <script type="text/javascript">
-  function loadScript(url, callback) {
-    var script = document.createElement('script')
-    script.type = 'text/javascript';
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?638f7245dab1e13e3d8fbdd9cc3b0895";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
 
-    if (script.readyState) { //IE
-      script.onreadystatechange = function() {
-        if (script.readyState == 'loaded' ||
-          script.readyState == 'complete') {
-          script.onreadystatechange = null;
-          callback();
-        }
-      };
-    } else { //Others
-      script.onload = function() {
-        callback();
-      };
-    }
+<!-- Cloudflare Analytics -->
 
-    script.src = url;
-    document.getElementsByTagName('head')[0].appendChild(script);
-  }
+<!-- Umami Analytics -->
 
-  window.onload = function() {
-    loadScript('/js/bundle.js?235683', function() {
-      // load success
-    });
-  }
-</script>
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
 
 </body>
 </html>

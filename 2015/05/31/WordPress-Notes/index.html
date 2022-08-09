@@ -1,24 +1,15 @@
 <!DOCTYPE html>
-
-
-  <html class="light page-post">
-
-
+<html lang=zh>
 <head>
-  <meta charset="utf-8">
-  
-  <title>WordPress 使用笔记 | EyreFree</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  
-    <meta name="keywords" content="WordPress," />
-  
-
-  <meta name="description" content="最近在看一些有意思的东西，想要写一些笔记作为记录，时间久了不记得了还可以回头来看看。然后其实本来是用 CSDN 博客的，但是不知道为啥米（正文加了链接？），最近每次修改或者发布都需要审核（不嗨森），然后就想自己搭一个玩一下，嗯，酱紫！ 买了国内某服务器发现需要备案（然后百度了一下发现别人都是备好了案才买服务器的，年少无知，囧），然后备好了案发现域名服务提供商还不提供域名隐私保护（不支持.org的为">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="最近在看一些有意思的东西，想要写一些笔记作为记录，时间久了不记得了还可以回头来看看。然后其实本来是用 CSDN 博客的，但是不知道为啥米（正文加了链接？），最近每次修改或者发布都需要审核（不嗨森），然后就想自己搭一个玩一下，嗯，酱紫！ 买了国内某服务器发现需要备案（然后百度了一下发现别人都是备好了案才买服务器的，年少无知，囧），然后备好了案发现域名服务提供商还不提供域名隐私保护（不支持.org的为">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WordPress 使用笔记">
-<meta property="og:url" content="http://www.eyrefree.org/2015/05/31/WordPress-Notes/index.html">
+<meta property="og:url" content="http://www.efqrcode.com/2015/05/31/WordPress-Notes/index.html">
 <meta property="og:site_name" content="EyreFree">
 <meta property="og:description" content="最近在看一些有意思的东西，想要写一些笔记作为记录，时间久了不记得了还可以回头来看看。然后其实本来是用 CSDN 博客的，但是不知道为啥米（正文加了链接？），最近每次修改或者发布都需要审核（不嗨森），然后就想自己搭一个玩一下，嗯，酱紫！ 买了国内某服务器发现需要备案（然后百度了一下发现别人都是备好了案才买服务器的，年少无知，囧），然后备好了案发现域名服务提供商还不提供域名隐私保护（不支持.org的为">
 <meta property="og:locale" content="zh_CN">
@@ -27,228 +18,149 @@
 <meta property="article:author" content="EyreFree">
 <meta property="article:tag" content="WordPress">
 <meta name="twitter:card" content="summary">
-
-  
-
-  
-    <link rel="icon" href="/favicon.ico">
-  
-
-  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
-
-
-  
     
-<link rel="stylesheet" href="/css/personal-style.css">
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>WordPress 使用笔记</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
 
-  
-
-  
-
-  
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?638f7245dab1e13e3d8fbdd9cc3b0895";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
-
-  
-  <script type="text/javascript">
-	(function(){
-	    var bp = document.createElement('script');
-	    var curProtocol = window.location.protocol.split(':')[0];
-	    if (curProtocol === 'https') {
-	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-	    }
-	    else {
-	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-	    }
-	    var s = document.getElementsByTagName("script")[0];
-	    s.parentNode.insertBefore(bp, s);
-	})();
-  </script>
-
-
-
-  
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  
-
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
 <meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="EyreFree" type="application/atom+xml">
 </head>
 
-<body>
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2015/06/01/iOS-LaunchImage/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2015/04/09/Git-Commands/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://www.efqrcode.com/2015/05/31/WordPress-Notes/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&text=WordPress 使用笔记"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&title=WordPress 使用笔记"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&is_video=false&description=WordPress 使用笔记"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=WordPress 使用笔记&body=Check out this article: http://www.efqrcode.com/2015/05/31/WordPress-Notes/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&title=WordPress 使用笔记"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&title=WordPress 使用笔记"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&title=WordPress 使用笔记"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&title=WordPress 使用笔记"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&name=WordPress 使用笔记&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&t=WordPress 使用笔记"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
 
-
-  
-    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
-  
-
-  <div class="post-header CENTER">
-   
-  <div class="toolbox">
-    <a class="toolbox-entry" href="/">
-      <span class="toolbox-entry-text">盒子</span>
-      <i class="icon-angle-down"></i>
-      <i class="icon-home"></i>
-    </a>
-    <ul class="list-toolbox">
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/archives/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            博客
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/category/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            分类
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/tag/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            标签
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/project/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            项目
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/link/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            友链
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/about/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            关于
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/atom.xml"
-            rel="noopener noreferrer"
-            target="_blank"
-            >
-            RSS
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/search/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            搜索
-          </a>
-        </li>
-      
-    </ul>
-  </div>
-
-
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E3%80%81%E9%80%89%E6%8B%A9%E4%B8%BB%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">1、选择主题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%E3%80%81%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E5%A4%B4%E5%83%8F"><span class="toc-number">2.</span> <span class="toc-text">2、设置用户头像</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3%E3%80%81%E6%B7%BB%E5%8A%A0%E5%8F%8B%E9%93%BE"><span class="toc-number">3.</span> <span class="toc-text">3、添加友链</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4%E3%80%81%E5%8E%BB%E9%99%A4-Google-%E7%9B%B8%E5%85%B3%E5%BC%95%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">4、去除 Google 相关引用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6%E3%80%81%E6%B7%BB%E5%8A%A0%E9%82%AE%E4%BB%B6%E9%80%9A%E7%9F%A5"><span class="toc-number">5.</span> <span class="toc-text">6、添加邮件通知</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7%E3%80%81%E5%8F%8D%E6%81%B6%E6%84%8F%E6%B3%A8%E5%86%8C"><span class="toc-number">6.</span> <span class="toc-text">7、反恶意注册</span></a></li></ol>
+    </div>
+  </span>
 </div>
 
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        WordPress 使用笔记
+    </h1>
 
-  <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E3%80%81%E9%80%89%E6%8B%A9%E4%B8%BB%E9%A2%98"><span class="toc-text">1、选择主题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%E3%80%81%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E5%A4%B4%E5%83%8F"><span class="toc-text">2、设置用户头像</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3%E3%80%81%E6%B7%BB%E5%8A%A0%E5%8F%8B%E9%93%BE"><span class="toc-text">3、添加友链</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4%E3%80%81%E5%8E%BB%E9%99%A4-Google-%E7%9B%B8%E5%85%B3%E5%BC%95%E7%94%A8"><span class="toc-text">4、去除 Google 相关引用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6%E3%80%81%E6%B7%BB%E5%8A%A0%E9%82%AE%E4%BB%B6%E9%80%9A%E7%9F%A5"><span class="toc-text">6、添加邮件通知</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7%E3%80%81%E5%8F%8D%E6%81%B6%E6%84%8F%E6%B3%A8%E5%86%8C"><span class="toc-text">7、反恶意注册</span></a></li></ol>
-  </div>
 
 
-
-<div class="content content-post CENTER">
-   <article id="post-WordPress-Notes" class="article article-type-post" itemprop="blogPost">
-  <header class="article-header">
-    <h1 class="post-title">WordPress 使用笔记</h1>
-
-    <div class="article-meta">
-      <span>
-        <i class="icon-calendar"></i>
-        <span>2015.05.31</span>
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">EyreFree</span>
       </span>
-
       
-        <span class="article-author">
-          <i class="icon-user"></i>
-          <span>EyreFree</span>
-        </span>
+    <div class="postdate">
       
-
-      
-  <span class="article-category">
-    <i class="icon-list"></i>
-    <a class="article-category-link" href="/categories/Blog/">Blog</a>
-  </span>
-
-
-
-      
-        <span>
-          <i class="icon-comment"></i>
-          <a href="http://www.eyrefree.org/2015/05/31/WordPress-Notes/#disqus_thread"></a>
-        </span>
-      
-
-      
-      <i class="fa fa-eye"></i> 
-        <span id="busuanzi_container_page_pv">
-           &nbsp热度 <span id="busuanzi_value_page_pv">
-           <i class="fa fa-spinner fa-spin"></i></span>℃
-        </span>
-      
+        <time datetime="2015-05-31T06:00:00.000Z" itemprop="datePublished">2015-05-31</time>
+        
       
     </div>
-  </header>
 
-  <div class="article-content">
-    
-      <p>最近在看一些有意思的东西，想要写一些笔记作为记录，时间久了不记得了还可以回头来看看。然后其实本来是用 CSDN 博客的，但是不知道为啥米（正文加了链接？），最近每次修改或者发布都需要审核（不嗨森），然后就想自己搭一个玩一下，嗯，酱紫！<br> <br>买了国内某服务器发现需要备案（然后百度了一下发现别人都是备好了案才买服务器的，年少无知，囧），然后备好了案发现域名服务提供商还不提供域名隐私保护（不支持.org的为虾米，不嗨森），好了不管了，反正填的资料真真假假的，233333，开始玩弄 WP 吧。
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Blog/">Blog</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/WordPress/" rel="tag">WordPress</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>最近在看一些有意思的东西，想要写一些笔记作为记录，时间久了不记得了还可以回头来看看。然后其实本来是用 CSDN 博客的，但是不知道为啥米（正文加了链接？），最近每次修改或者发布都需要审核（不嗨森），然后就想自己搭一个玩一下，嗯，酱紫！<br> <br>买了国内某服务器发现需要备案（然后百度了一下发现别人都是备好了案才买服务器的，年少无知，囧），然后备好了案发现域名服务提供商还不提供域名隐私保护（不支持.org的为虾米，不嗨森），好了不管了，反正填的资料真真假假的，233333，开始玩弄 WP 吧。
  </p>
 <h1 id="1、选择主题"><a href="#1、选择主题" class="headerlink" title="1、选择主题"></a>1、选择主题</h1><p>首先，挑一个好看（或者自认为好看）的主题（什么，你问主题在哪里？外观-&gt;主题-&gt;添加 哟，是不是一下子粗来好多~，嘛，要是没出来好多，或者出来好多边框和标题但是没有看到缩略图的话，您可能需要一个梯子，别问我什么是梯子，我不懂，0_o）。
  </p>
@@ -278,244 +190,166 @@
 <p>2016 年 3 月 28 日续：<br>最近用 Hexo 搭建了自己的纯静态博客来代替 WordPress，然后在把原来的博客迁移过来，😌。</p>
 <hr>
 <blockquote>
-<p>如有任何知识产权、版权问题或理论错误，还请指正。<br><a href="https://www.eyrefree.org/2015/05/31/WordPress-Notes">https://www.eyrefree.org/2015/05/31/WordPress-Notes</a><br>如文中无特殊说明，本站均使用以下协议保护：<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">署名-非商业性使用-禁止演绎</a>。   </p>
+<p>如有任何知识产权、版权问题或理论错误，还请指正。<br><a target="_blank" rel="noopener" href="https://www.eyrefree.org/2015/05/31/WordPress-Notes">https://www.eyrefree.org/2015/05/31/WordPress-Notes</a><br>如文中无特殊说明，本站均使用以下协议保护：<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">署名-非商业性使用-禁止演绎</a>。   </p>
 </blockquote>
 
-    
   </div>
-
 </article>
 
 
-   
-  <div class="text-center donation">
-    <div class="inner-donation">
-      <span class="btn-donation">支持一下</span>
-      <div class="donation-body">
-        <div class="tip text-center">🚀 给 EF 刷火箭 🚀</div>
-        <ul>
+
         
-          <li class="item">
-            
-              <span>微信扫一扫</span>
-            
-            <img src="/WeChat.png" alt="">
-          </li>
-        
-          <li class="item">
-            
-              <span>支付宝扫一扫</span>
-            
-            <img src="/AliPay.png" alt="">
-          </li>
-        
-        </ul>
-      </div>
-    </div>
-  </div>
+          <div id="footer-post-container">
+  <div id="footer-post">
 
-
-   
-  <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2015/04/09/Git-Commands/">
-        <i class="icon icon-angle-left"></i>
-    </a>
-    <a class="show pull-right" href="/2015/06/01/iOS-LaunchImage/">
-        <i class="icon icon-angle-right"></i>
-    </a>
-  </div>
-
-
-
-
-</div>
-
-
-  <a id="backTop" class="back-top">
-    <i class="icon-angle-up"></i>
-  </a>
-
-
-
-
-  <div class="modal" id="modal">
-  <span id="cover" class="cover hide"></span>
-  <div id="modal-dialog" class="modal-dialog hide-dialog">
-    <div class="modal-header">
-      <span id="close" class="btn-close">关闭</span>
-    </div>
-    <hr>
-    <div class="modal-body">
-      <ul class="list-toolbox">
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/archives/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              博客
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/category/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              分类
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/tag/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              标签
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/project/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              项目
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/link/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              友链
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/about/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              关于
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/atom.xml"
-              rel="noopener noreferrer"
-              target="_blank"
-              >
-              RSS
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/search/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              搜索
-            </a>
-          </li>
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
         
       </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1%E3%80%81%E9%80%89%E6%8B%A9%E4%B8%BB%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">1、选择主题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2%E3%80%81%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E5%A4%B4%E5%83%8F"><span class="toc-number">2.</span> <span class="toc-text">2、设置用户头像</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3%E3%80%81%E6%B7%BB%E5%8A%A0%E5%8F%8B%E9%93%BE"><span class="toc-number">3.</span> <span class="toc-text">3、添加友链</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4%E3%80%81%E5%8E%BB%E9%99%A4-Google-%E7%9B%B8%E5%85%B3%E5%BC%95%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">4、去除 Google 相关引用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6%E3%80%81%E6%B7%BB%E5%8A%A0%E9%82%AE%E4%BB%B6%E9%80%9A%E7%9F%A5"><span class="toc-number">5.</span> <span class="toc-text">6、添加邮件通知</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7%E3%80%81%E5%8F%8D%E6%81%B6%E6%84%8F%E6%B3%A8%E5%86%8C"><span class="toc-number">6.</span> <span class="toc-text">7、反恶意注册</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://www.efqrcode.com/2015/05/31/WordPress-Notes/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&text=WordPress 使用笔记"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&title=WordPress 使用笔记"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&is_video=false&description=WordPress 使用笔记"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=WordPress 使用笔记&body=Check out this article: http://www.efqrcode.com/2015/05/31/WordPress-Notes/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&title=WordPress 使用笔记"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&title=WordPress 使用笔记"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&title=WordPress 使用笔记"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&title=WordPress 使用笔记"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&name=WordPress 使用笔记&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://www.efqrcode.com/2015/05/31/WordPress-Notes/&t=WordPress 使用笔记"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
 
     </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
   </div>
 </div>
 
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2015-2022
+    EyreFree
+  </div>
+  <div class="footer-center">
+    <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">苏ICP备15023694号-2</a>
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
 
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
 
   
-      <div class="fexo-comments comments-post">
-    
-  <section class="disqus-comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-  </section>
-
-  <script>
-    var disqus_shortname = 'eyrefree';
-    
-    var disqus_url = 'http://www.eyrefree.org/2015/05/31/WordPress-Notes/';
-    
-    (function(){
-      var dsq = document.createElement('script');
-      dsq.type = 'text/javascript';
-      dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
   </script>
 
-  <script id="dsq-count-scr" src="//eyrefree.disqus.com/count.js" async></script>
 
+<script src="/js/main.js"></script>
 
+<!-- search -->
 
-    
+<!-- Google Analytics -->
 
-    
-    
-
-    
-
-    
-    
-
-    
-
-  </div>
-
-  
+<!-- Baidu Analytics -->
 
   <script type="text/javascript">
-  function loadScript(url, callback) {
-    var script = document.createElement('script')
-    script.type = 'text/javascript';
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?638f7245dab1e13e3d8fbdd9cc3b0895";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
 
-    if (script.readyState) { //IE
-      script.onreadystatechange = function() {
-        if (script.readyState == 'loaded' ||
-          script.readyState == 'complete') {
-          script.onreadystatechange = null;
-          callback();
-        }
-      };
-    } else { //Others
-      script.onload = function() {
-        callback();
-      };
-    }
+<!-- Cloudflare Analytics -->
 
-    script.src = url;
-    document.getElementsByTagName('head')[0].appendChild(script);
-  }
+<!-- Umami Analytics -->
 
-  window.onload = function() {
-    loadScript('/js/bundle.js?235683', function() {
-      // load success
-    });
-  }
-</script>
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
 
 </body>
 </html>

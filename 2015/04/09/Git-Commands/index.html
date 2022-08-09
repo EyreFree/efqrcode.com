@@ -1,256 +1,168 @@
 <!DOCTYPE html>
-
-
-  <html class="light page-post">
-
-
+<html lang=zh>
 <head>
-  <meta charset="utf-8">
-  
-  <title>Git 常用命令 | EyreFree</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  
-    <meta name="keywords" content="Nothing," />
-  
-
-  <meta name="description" content="Git 常用命令备忘  SubModule1. 获取所有 SubModulegit submodule update --init --recursive  2. 删除某个 SubModule例如：submodule_xxx git submodule deinit submodule_xxxgit rm submodule_xxxrm -rf .git&#x2F;modules&#x2F;submodule_xxx">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Git 常用命令备忘  SubModule1. 获取所有 SubModulegit submodule update --init --recursive  2. 删除某个 SubModule例如：submodule_xxx git submodule deinit submodule_xxxgit rm submodule_xxxrm -rf .git&#x2F;modules&#x2F;submodule_xxx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git 常用命令">
-<meta property="og:url" content="http://www.eyrefree.org/2015/04/09/Git-Commands/index.html">
+<meta property="og:url" content="http://www.efqrcode.com/2015/04/09/Git-Commands/index.html">
 <meta property="og:site_name" content="EyreFree">
 <meta property="og:description" content="Git 常用命令备忘  SubModule1. 获取所有 SubModulegit submodule update --init --recursive  2. 删除某个 SubModule例如：submodule_xxx git submodule deinit submodule_xxxgit rm submodule_xxxrm -rf .git&#x2F;modules&#x2F;submodule_xxx">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://www.eyrefree.org/images/git.png">
+<meta property="og:image" content="http://www.efqrcode.com/images/git.png">
 <meta property="article:published_time" content="2015-04-09T07:00:00.000Z">
 <meta property="article:modified_time" content="2021-09-25T08:23:41.241Z">
 <meta property="article:author" content="EyreFree">
 <meta property="article:tag" content="Nothing">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://www.eyrefree.org/images/git.png">
-
-  
-
-  
-    <link rel="icon" href="/favicon.ico">
-  
-
-  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
-
-
-  
+<meta name="twitter:image" content="http://www.efqrcode.com/images/git.png">
     
-<link rel="stylesheet" href="/css/personal-style.css">
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Git 常用命令</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
 
-  
-
-  
-
-  
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?638f7245dab1e13e3d8fbdd9cc3b0895";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
-
-  
-  <script type="text/javascript">
-	(function(){
-	    var bp = document.createElement('script');
-	    var curProtocol = window.location.protocol.split(':')[0];
-	    if (curProtocol === 'https') {
-	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-	    }
-	    else {
-	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-	    }
-	    var s = document.getElementsByTagName("script")[0];
-	    s.parentNode.insertBefore(bp, s);
-	})();
-  </script>
-
-
-
-  
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  
-
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
 <meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="EyreFree" type="application/atom+xml">
 </head>
 
-<body>
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2015/05/31/WordPress-Notes/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2013/11/08/Windows7-QT-Android/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://www.efqrcode.com/2015/04/09/Git-Commands/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://www.efqrcode.com/2015/04/09/Git-Commands/&text=Git 常用命令"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://www.efqrcode.com/2015/04/09/Git-Commands/&title=Git 常用命令"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.efqrcode.com/2015/04/09/Git-Commands/&is_video=false&description=Git 常用命令"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Git 常用命令&body=Check out this article: http://www.efqrcode.com/2015/04/09/Git-Commands/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://www.efqrcode.com/2015/04/09/Git-Commands/&title=Git 常用命令"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://www.efqrcode.com/2015/04/09/Git-Commands/&title=Git 常用命令"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://www.efqrcode.com/2015/04/09/Git-Commands/&title=Git 常用命令"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://www.efqrcode.com/2015/04/09/Git-Commands/&title=Git 常用命令"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://www.efqrcode.com/2015/04/09/Git-Commands/&name=Git 常用命令&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://www.efqrcode.com/2015/04/09/Git-Commands/&t=Git 常用命令"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
 
-
-  
-    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
-  
-
-  <div class="post-header CENTER">
-   
-  <div class="toolbox">
-    <a class="toolbox-entry" href="/">
-      <span class="toolbox-entry-text">盒子</span>
-      <i class="icon-angle-down"></i>
-      <i class="icon-home"></i>
-    </a>
-    <ul class="list-toolbox">
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/archives/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            博客
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/category/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            分类
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/tag/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            标签
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/project/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            项目
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/link/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            友链
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/about/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            关于
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/atom.xml"
-            rel="noopener noreferrer"
-            target="_blank"
-            >
-            RSS
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/search/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            搜索
-          </a>
-        </li>
-      
-    </ul>
-  </div>
-
-
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SubModule"><span class="toc-number">1.</span> <span class="toc-text">SubModule</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89-SubModule"><span class="toc-number">1.1.</span> <span class="toc-text">1. 获取所有 SubModule</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%A0%E9%99%A4%E6%9F%90%E4%B8%AA-SubModule"><span class="toc-number">1.2.</span> <span class="toc-text">2. 删除某个 SubModule</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tag"><span class="toc-number">2.</span> <span class="toc-text">Tag</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%B7%BB%E5%8A%A0-Tag-%E5%B9%B6%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0-Tag-%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">2.1.</span> <span class="toc-text">1. 添加 Tag 并上传本地 Tag 到服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0-Tag-%E5%B9%B6%E5%90%8C%E6%AD%A5%E5%88%B0%E8%BF%9C%E7%A8%8B"><span class="toc-number">2.2.</span> <span class="toc-text">2. 删除本地 Tag 并同步到远程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Branch"><span class="toc-number">3.</span> <span class="toc-text">Branch</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9F%A5%E7%9C%8B%E6%89%80%E6%9C%89%E5%88%86%E6%94%AF"><span class="toc-number">3.1.</span> <span class="toc-text">1. 查看所有分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%90%8C%E6%AD%A5%E6%9C%AC%E5%9C%B0%E4%B8%8E%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">3.2.</span> <span class="toc-text">2. 同步本地与远程分支</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Commit"><span class="toc-number">4.</span> <span class="toc-text">Commit</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%90%88%E5%B9%B6%E6%9C%AC%E5%9C%B0%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%A4%E6%AC%A1-Commit"><span class="toc-number">4.1.</span> <span class="toc-text">1. 合并本地的最后两次 Commit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BF%AE%E6%94%B9%E4%B8%8A%E4%B8%80%E6%AC%A1%E7%9A%84-Commit-%E4%BF%A1%E6%81%AF"><span class="toc-number">4.2.</span> <span class="toc-text">2. 修改上一次的 Commit 信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%92%A4%E9%94%80%E6%89%80%E6%9C%89%E6%9C%AA%E6%8F%90%E4%BA%A4%E7%9A%84%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9"><span class="toc-number">4.3.</span> <span class="toc-text">3. 撤销所有未提交的本地修改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Remote"><span class="toc-number">5.</span> <span class="toc-text">Remote</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%88%A0%E9%99%A4%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="toc-number">5.1.</span> <span class="toc-text">1. 删除远程仓库地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%B7%BB%E5%8A%A0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="toc-number">5.2.</span> <span class="toc-text">2. 添加远程仓库地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Push-%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%88%B0%E6%8C%87%E5%AE%9A%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">5.3.</span> <span class="toc-text">3. Push 本地分支到指定远程分支</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Other"><span class="toc-number">6.</span> <span class="toc-text">Other</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%AE%BE%E7%BD%AE%E6%9C%AC%E5%9C%B0%E7%94%A8%E6%88%B7%E5%90%8D%E3%80%81%E9%82%AE%E7%AE%B1"><span class="toc-number">6.1.</span> <span class="toc-text">1. 设置本地用户名、邮箱</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PS"><span class="toc-number">7.</span> <span class="toc-text">PS</span></a></li></ol>
+    </div>
+  </span>
 </div>
 
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Git 常用命令
+    </h1>
 
-  <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SubModule"><span class="toc-text">SubModule</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89-SubModule"><span class="toc-text">1. 获取所有 SubModule</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%A0%E9%99%A4%E6%9F%90%E4%B8%AA-SubModule"><span class="toc-text">2. 删除某个 SubModule</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tag"><span class="toc-text">Tag</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%B7%BB%E5%8A%A0-Tag-%E5%B9%B6%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0-Tag-%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-text">1. 添加 Tag 并上传本地 Tag 到服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0-Tag-%E5%B9%B6%E5%90%8C%E6%AD%A5%E5%88%B0%E8%BF%9C%E7%A8%8B"><span class="toc-text">2. 删除本地 Tag 并同步到远程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Branch"><span class="toc-text">Branch</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9F%A5%E7%9C%8B%E6%89%80%E6%9C%89%E5%88%86%E6%94%AF"><span class="toc-text">1. 查看所有分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%90%8C%E6%AD%A5%E6%9C%AC%E5%9C%B0%E4%B8%8E%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-text">2. 同步本地与远程分支</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Commit"><span class="toc-text">Commit</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%90%88%E5%B9%B6%E6%9C%AC%E5%9C%B0%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%A4%E6%AC%A1-Commit"><span class="toc-text">1. 合并本地的最后两次 Commit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BF%AE%E6%94%B9%E4%B8%8A%E4%B8%80%E6%AC%A1%E7%9A%84-Commit-%E4%BF%A1%E6%81%AF"><span class="toc-text">2. 修改上一次的 Commit 信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%92%A4%E9%94%80%E6%89%80%E6%9C%89%E6%9C%AA%E6%8F%90%E4%BA%A4%E7%9A%84%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9"><span class="toc-text">3. 撤销所有未提交的本地修改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Remote"><span class="toc-text">Remote</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%88%A0%E9%99%A4%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="toc-text">1. 删除远程仓库地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%B7%BB%E5%8A%A0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="toc-text">2. 添加远程仓库地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Push-%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%88%B0%E6%8C%87%E5%AE%9A%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-text">3. Push 本地分支到指定远程分支</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Other"><span class="toc-text">Other</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%AE%BE%E7%BD%AE%E6%9C%AC%E5%9C%B0%E7%94%A8%E6%88%B7%E5%90%8D%E3%80%81%E9%82%AE%E7%AE%B1"><span class="toc-text">1. 设置本地用户名、邮箱</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PS"><span class="toc-text">PS</span></a></li></ol>
-  </div>
 
 
-
-<div class="content content-post CENTER">
-   <article id="post-Git-Commands" class="article article-type-post" itemprop="blogPost">
-  <header class="article-header">
-    <h1 class="post-title">Git 常用命令</h1>
-
-    <div class="article-meta">
-      <span>
-        <i class="icon-calendar"></i>
-        <span>2015.04.09</span>
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">EyreFree</span>
       </span>
-
       
-        <span class="article-author">
-          <i class="icon-user"></i>
-          <span>EyreFree</span>
-        </span>
+    <div class="postdate">
       
-
-      
-  <span class="article-category">
-    <i class="icon-list"></i>
-    <a class="article-category-link" href="/categories/Git/">Git</a>
-  </span>
-
-
-
-      
-        <span>
-          <i class="icon-comment"></i>
-          <a href="http://www.eyrefree.org/2015/04/09/Git-Commands/#disqus_thread"></a>
-        </span>
-      
-
-      
-      <i class="fa fa-eye"></i> 
-        <span id="busuanzi_container_page_pv">
-           &nbsp热度 <span id="busuanzi_value_page_pv">
-           <i class="fa fa-spinner fa-spin"></i></span>℃
-        </span>
-      
+        <time datetime="2015-04-09T07:00:00.000Z" itemprop="datePublished">2015-04-09</time>
+        
       
     </div>
-  </header>
 
-  <div class="article-content">
-    
-      <p>Git 常用命令备忘</p>
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Git/">Git</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Nothing/" rel="tag">Nothing</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Git 常用命令备忘</p>
 <hr>
 <h2 id="SubModule"><a href="#SubModule" class="headerlink" title="SubModule"></a>SubModule</h2><h3 id="1-获取所有-SubModule"><a href="#1-获取所有-SubModule" class="headerlink" title="1. 获取所有 SubModule"></a>1. 获取所有 SubModule</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git submodule update --init --recursive</span><br></pre></td></tr></table></figure>
 
@@ -281,7 +193,7 @@
 <h3 id="3-Push-本地分支到指定远程分支"><a href="#3-Push-本地分支到指定远程分支" class="headerlink" title="3. Push 本地分支到指定远程分支"></a>3. Push 本地分支到指定远程分支</h3><p>例如：Push 本地当前分支到远程仓库 origin 的 master 分支</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 
-<h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><h3 id="1-设置本地用户名、邮箱"><a href="#1-设置本地用户名、邮箱" class="headerlink" title="1. 设置本地用户名、邮箱"></a>1. 设置本地用户名、邮箱</h3><p>例如：设置用户名为 eyrefree，邮箱为 <a href="mailto:&#x65;&#121;&#114;&#x65;&#x66;&#114;&#x65;&#101;&#64;&#101;&#x79;&#114;&#101;&#x66;&#x72;&#101;&#101;&#x2e;&#x6f;&#114;&#x67;">&#x65;&#121;&#114;&#x65;&#x66;&#114;&#x65;&#101;&#64;&#101;&#x79;&#114;&#101;&#x66;&#x72;&#101;&#101;&#x2e;&#x6f;&#114;&#x67;</a></p>
+<h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><h3 id="1-设置本地用户名、邮箱"><a href="#1-设置本地用户名、邮箱" class="headerlink" title="1. 设置本地用户名、邮箱"></a>1. 设置本地用户名、邮箱</h3><p>例如：设置用户名为 eyrefree，邮箱为 <a href="mailto:&#101;&#121;&#114;&#101;&#x66;&#114;&#x65;&#101;&#x40;&#101;&#121;&#x72;&#x65;&#x66;&#x72;&#101;&#101;&#46;&#111;&#x72;&#103;">&#101;&#121;&#114;&#101;&#x66;&#114;&#x65;&#101;&#x40;&#101;&#121;&#x72;&#x65;&#x66;&#x72;&#101;&#101;&#46;&#111;&#x72;&#103;</a></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;eyrefree&quot;</span> git config --global user.email eyrefree@eyrefree.org</span><br></pre></td></tr></table></figure>
 
 <h2 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h2><p>最后，转载一张觉得挺棒的图片：</p>
@@ -290,244 +202,166 @@
 <p>更多 Git 常用命令可参考：<a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2015/12/git-cheat-sheet.html">常用 Git 命令清单</a><br>或查阅官方文档：<a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2">Pro Git book</a></p>
 <hr>
 <blockquote>
-<p>如有任何知识产权、版权问题或理论错误，还请指正。<br><a href="https://www.eyrefree.org/2015/04/09/Git-Commands">https://www.eyrefree.org/2015/04/09/Git-Commands</a><br>如文中无特殊说明，本站均使用以下协议保护：<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">署名-非商业性使用-禁止演绎</a>。   </p>
+<p>如有任何知识产权、版权问题或理论错误，还请指正。<br><a target="_blank" rel="noopener" href="https://www.eyrefree.org/2015/04/09/Git-Commands">https://www.eyrefree.org/2015/04/09/Git-Commands</a><br>如文中无特殊说明，本站均使用以下协议保护：<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">署名-非商业性使用-禁止演绎</a>。   </p>
 </blockquote>
 
-    
   </div>
-
 </article>
 
 
-   
-  <div class="text-center donation">
-    <div class="inner-donation">
-      <span class="btn-donation">支持一下</span>
-      <div class="donation-body">
-        <div class="tip text-center">🚀 给 EF 刷火箭 🚀</div>
-        <ul>
+
         
-          <li class="item">
-            
-              <span>微信扫一扫</span>
-            
-            <img src="/WeChat.png" alt="">
-          </li>
-        
-          <li class="item">
-            
-              <span>支付宝扫一扫</span>
-            
-            <img src="/AliPay.png" alt="">
-          </li>
-        
-        </ul>
-      </div>
-    </div>
-  </div>
+          <div id="footer-post-container">
+  <div id="footer-post">
 
-
-   
-  <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2013/11/08/Windows7-QT-Android/">
-        <i class="icon icon-angle-left"></i>
-    </a>
-    <a class="show pull-right" href="/2015/05/31/WordPress-Notes/">
-        <i class="icon icon-angle-right"></i>
-    </a>
-  </div>
-
-
-
-
-</div>
-
-
-  <a id="backTop" class="back-top">
-    <i class="icon-angle-up"></i>
-  </a>
-
-
-
-
-  <div class="modal" id="modal">
-  <span id="cover" class="cover hide"></span>
-  <div id="modal-dialog" class="modal-dialog hide-dialog">
-    <div class="modal-header">
-      <span id="close" class="btn-close">关闭</span>
-    </div>
-    <hr>
-    <div class="modal-body">
-      <ul class="list-toolbox">
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/archives/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              博客
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/category/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              分类
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/tag/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              标签
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/project/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              项目
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/link/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              友链
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/about/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              关于
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/atom.xml"
-              rel="noopener noreferrer"
-              target="_blank"
-              >
-              RSS
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/search/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              搜索
-            </a>
-          </li>
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
         
       </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SubModule"><span class="toc-number">1.</span> <span class="toc-text">SubModule</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89-SubModule"><span class="toc-number">1.1.</span> <span class="toc-text">1. 获取所有 SubModule</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%A0%E9%99%A4%E6%9F%90%E4%B8%AA-SubModule"><span class="toc-number">1.2.</span> <span class="toc-text">2. 删除某个 SubModule</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Tag"><span class="toc-number">2.</span> <span class="toc-text">Tag</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%B7%BB%E5%8A%A0-Tag-%E5%B9%B6%E4%B8%8A%E4%BC%A0%E6%9C%AC%E5%9C%B0-Tag-%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">2.1.</span> <span class="toc-text">1. 添加 Tag 并上传本地 Tag 到服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%A0%E9%99%A4%E6%9C%AC%E5%9C%B0-Tag-%E5%B9%B6%E5%90%8C%E6%AD%A5%E5%88%B0%E8%BF%9C%E7%A8%8B"><span class="toc-number">2.2.</span> <span class="toc-text">2. 删除本地 Tag 并同步到远程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Branch"><span class="toc-number">3.</span> <span class="toc-text">Branch</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9F%A5%E7%9C%8B%E6%89%80%E6%9C%89%E5%88%86%E6%94%AF"><span class="toc-number">3.1.</span> <span class="toc-text">1. 查看所有分支</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%90%8C%E6%AD%A5%E6%9C%AC%E5%9C%B0%E4%B8%8E%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">3.2.</span> <span class="toc-text">2. 同步本地与远程分支</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Commit"><span class="toc-number">4.</span> <span class="toc-text">Commit</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%90%88%E5%B9%B6%E6%9C%AC%E5%9C%B0%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%A4%E6%AC%A1-Commit"><span class="toc-number">4.1.</span> <span class="toc-text">1. 合并本地的最后两次 Commit</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BF%AE%E6%94%B9%E4%B8%8A%E4%B8%80%E6%AC%A1%E7%9A%84-Commit-%E4%BF%A1%E6%81%AF"><span class="toc-number">4.2.</span> <span class="toc-text">2. 修改上一次的 Commit 信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%92%A4%E9%94%80%E6%89%80%E6%9C%89%E6%9C%AA%E6%8F%90%E4%BA%A4%E7%9A%84%E6%9C%AC%E5%9C%B0%E4%BF%AE%E6%94%B9"><span class="toc-number">4.3.</span> <span class="toc-text">3. 撤销所有未提交的本地修改</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Remote"><span class="toc-number">5.</span> <span class="toc-text">Remote</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%88%A0%E9%99%A4%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="toc-number">5.1.</span> <span class="toc-text">1. 删除远程仓库地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%B7%BB%E5%8A%A0%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%9C%B0%E5%9D%80"><span class="toc-number">5.2.</span> <span class="toc-text">2. 添加远程仓库地址</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Push-%E6%9C%AC%E5%9C%B0%E5%88%86%E6%94%AF%E5%88%B0%E6%8C%87%E5%AE%9A%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF"><span class="toc-number">5.3.</span> <span class="toc-text">3. Push 本地分支到指定远程分支</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Other"><span class="toc-number">6.</span> <span class="toc-text">Other</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%AE%BE%E7%BD%AE%E6%9C%AC%E5%9C%B0%E7%94%A8%E6%88%B7%E5%90%8D%E3%80%81%E9%82%AE%E7%AE%B1"><span class="toc-number">6.1.</span> <span class="toc-text">1. 设置本地用户名、邮箱</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PS"><span class="toc-number">7.</span> <span class="toc-text">PS</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://www.efqrcode.com/2015/04/09/Git-Commands/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://www.efqrcode.com/2015/04/09/Git-Commands/&text=Git 常用命令"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://www.efqrcode.com/2015/04/09/Git-Commands/&title=Git 常用命令"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.efqrcode.com/2015/04/09/Git-Commands/&is_video=false&description=Git 常用命令"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Git 常用命令&body=Check out this article: http://www.efqrcode.com/2015/04/09/Git-Commands/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://www.efqrcode.com/2015/04/09/Git-Commands/&title=Git 常用命令"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://www.efqrcode.com/2015/04/09/Git-Commands/&title=Git 常用命令"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://www.efqrcode.com/2015/04/09/Git-Commands/&title=Git 常用命令"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://www.efqrcode.com/2015/04/09/Git-Commands/&title=Git 常用命令"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://www.efqrcode.com/2015/04/09/Git-Commands/&name=Git 常用命令&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://www.efqrcode.com/2015/04/09/Git-Commands/&t=Git 常用命令"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
 
     </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
   </div>
 </div>
 
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2015-2022
+    EyreFree
+  </div>
+  <div class="footer-center">
+    <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">苏ICP备15023694号-2</a>
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
 
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
 
   
-      <div class="fexo-comments comments-post">
-    
-  <section class="disqus-comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-  </section>
-
-  <script>
-    var disqus_shortname = 'eyrefree';
-    
-    var disqus_url = 'http://www.eyrefree.org/2015/04/09/Git-Commands/';
-    
-    (function(){
-      var dsq = document.createElement('script');
-      dsq.type = 'text/javascript';
-      dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
   </script>
 
-  <script id="dsq-count-scr" src="//eyrefree.disqus.com/count.js" async></script>
 
+<script src="/js/main.js"></script>
 
+<!-- search -->
 
-    
+<!-- Google Analytics -->
 
-    
-    
-
-    
-
-    
-    
-
-    
-
-  </div>
-
-  
+<!-- Baidu Analytics -->
 
   <script type="text/javascript">
-  function loadScript(url, callback) {
-    var script = document.createElement('script')
-    script.type = 'text/javascript';
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?638f7245dab1e13e3d8fbdd9cc3b0895";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
 
-    if (script.readyState) { //IE
-      script.onreadystatechange = function() {
-        if (script.readyState == 'loaded' ||
-          script.readyState == 'complete') {
-          script.onreadystatechange = null;
-          callback();
-        }
-      };
-    } else { //Others
-      script.onload = function() {
-        callback();
-      };
-    }
+<!-- Cloudflare Analytics -->
 
-    script.src = url;
-    document.getElementsByTagName('head')[0].appendChild(script);
-  }
+<!-- Umami Analytics -->
 
-  window.onload = function() {
-    loadScript('/js/bundle.js?235683', function() {
-      // load success
-    });
-  }
-</script>
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
 
 </body>
 </html>

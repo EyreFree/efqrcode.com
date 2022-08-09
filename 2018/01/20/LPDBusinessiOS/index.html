@@ -1,24 +1,15 @@
 <!DOCTYPE html>
-
-
-  <html class="light page-post">
-
-
+<html lang=zh>
 <head>
-  <meta charset="utf-8">
-  
-  <title>蜂鸟商家版 iOS 组件化 / 模块化实践总结 | EyreFree</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  
-    <meta name="keywords" content="Swift," />
-  
-
-  <meta name="description" content="零. 前言 “蜂鸟配送商家版”是一款针对商家打造的专业配送软件，有了这款应用，您可以使用蜂鸟商家版呼叫所有平台订单及电话订单配送，餐饮、鲜花、蛋糕、生鲜、商超均可配送。超低运费，清晰合理。海量补贴，充值返现。  以上这段对「蜂鸟商家版」的描述摘自 蜂鸟配送官网，大概可以理解为蜂鸟商家版是一个给广大商家用来发单呼叫配送员的 App。许多同学可能只听说过「饿了么」外卖应用，但是对支撑起外卖配送的后勤">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="零. 前言 “蜂鸟配送商家版”是一款针对商家打造的专业配送软件，有了这款应用，您可以使用蜂鸟商家版呼叫所有平台订单及电话订单配送，餐饮、鲜花、蛋糕、生鲜、商超均可配送。超低运费，清晰合理。海量补贴，充值返现。  以上这段对「蜂鸟商家版」的描述摘自 蜂鸟配送官网，大概可以理解为蜂鸟商家版是一个给广大商家用来发单呼叫配送员的 App。许多同学可能只听说过「饿了么」外卖应用，但是对支撑起外卖配送的后勤">
 <meta property="og:type" content="article">
 <meta property="og:title" content="蜂鸟商家版 iOS 组件化 &#x2F; 模块化实践总结">
-<meta property="og:url" content="http://www.eyrefree.org/2018/01/20/LPDBusinessiOS/index.html">
+<meta property="og:url" content="http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/index.html">
 <meta property="og:site_name" content="EyreFree">
 <meta property="og:description" content="零. 前言 “蜂鸟配送商家版”是一款针对商家打造的专业配送软件，有了这款应用，您可以使用蜂鸟商家版呼叫所有平台订单及电话订单配送，餐饮、鲜花、蛋糕、生鲜、商超均可配送。超低运费，清晰合理。海量补贴，充值返现。  以上这段对「蜂鸟商家版」的描述摘自 蜂鸟配送官网，大概可以理解为蜂鸟商家版是一个给广大商家用来发单呼叫配送员的 App。许多同学可能只听说过「饿了么」外卖应用，但是对支撑起外卖配送的后勤">
 <meta property="og:locale" content="zh_CN">
@@ -34,228 +25,149 @@
 <meta property="article:tag" content="Swift">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/1/19/1610f02b4af3f3d9?w=750&h=400&f=png&s=302366">
-
-  
-
-  
-    <link rel="icon" href="/favicon.ico">
-  
-
-  <link href="/css/styles.css?v=c114cbeddx" rel="stylesheet">
-
-
-  
     
-<link rel="stylesheet" href="/css/personal-style.css">
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>蜂鸟商家版 iOS 组件化 / 模块化实践总结</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
 
-  
-
-  
-
-  
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?638f7245dab1e13e3d8fbdd9cc3b0895";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
-
-  
-  <script type="text/javascript">
-	(function(){
-	    var bp = document.createElement('script');
-	    var curProtocol = window.location.protocol.split(':')[0];
-	    if (curProtocol === 'https') {
-	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-	    }
-	    else {
-	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-	    }
-	    var s = document.getElementsByTagName("script")[0];
-	    s.parentNode.insertBefore(bp, s);
-	})();
-  </script>
-
-
-
-  
-    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  
-
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
 <meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="EyreFree" type="application/atom+xml">
 </head>
 
-<body>
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/2018/07/25/ETHTransactionData/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2017/12/25/Git-Push/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&text=蜂鸟商家版 iOS 组件化 / 模块化实践总结"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&title=蜂鸟商家版 iOS 组件化 / 模块化实践总结"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&is_video=false&description=蜂鸟商家版 iOS 组件化 / 模块化实践总结"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=蜂鸟商家版 iOS 组件化 / 模块化实践总结&body=Check out this article: http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&title=蜂鸟商家版 iOS 组件化 / 模块化实践总结"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&title=蜂鸟商家版 iOS 组件化 / 模块化实践总结"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&title=蜂鸟商家版 iOS 组件化 / 模块化实践总结"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&title=蜂鸟商家版 iOS 组件化 / 模块化实践总结"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&name=蜂鸟商家版 iOS 组件化 / 模块化实践总结&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&t=蜂鸟商家版 iOS 组件化 / 模块化实践总结"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
 
-
-  
-    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
-  
-
-  <div class="post-header CENTER">
-   
-  <div class="toolbox">
-    <a class="toolbox-entry" href="/">
-      <span class="toolbox-entry-text">盒子</span>
-      <i class="icon-angle-down"></i>
-      <i class="icon-home"></i>
-    </a>
-    <ul class="list-toolbox">
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/archives/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            博客
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/category/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            分类
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/tag/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            标签
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/project/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            项目
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/link/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            友链
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/about/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            关于
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/atom.xml"
-            rel="noopener noreferrer"
-            target="_blank"
-            >
-            RSS
-          </a>
-        </li>
-      
-        <li class="item-toolbox">
-          <a
-            class="CIRCLE"
-            href="/search/"
-            rel="noopener noreferrer"
-            target="_self"
-            >
-            搜索
-          </a>
-        </li>
-      
-    </ul>
-  </div>
-
-
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%B6-%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">零. 前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E8%83%8C%E6%99%AF%E5%88%86%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">一. 背景分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">2.1.</span> <span class="toc-text">1. 存在的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%80%8E%E6%A0%B7%E5%8E%BB%E8%A7%A3%E5%86%B3"><span class="toc-number">2.2.</span> <span class="toc-text">2. 怎样去解决</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E7%9B%AE%E6%A0%87%E8%AE%BE%E5%AE%9A"><span class="toc-number">3.</span> <span class="toc-text">二. 目标设定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E8%AE%A1%E5%88%92%E5%88%B6%E5%AE%9A"><span class="toc-number">4.</span> <span class="toc-text">三. 计划制定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BB%84%E4%BB%B6"><span class="toc-number">4.1.</span> <span class="toc-text">1. 组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%A8%A1%E5%9D%97"><span class="toc-number">4.2.</span> <span class="toc-text">2. 模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%85%B3%E7%B3%BB"><span class="toc-number">4.3.</span> <span class="toc-text">3. 关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E5%B7%A5%E4%BD%9C%E5%AE%9E%E6%96%BD"><span class="toc-number">5.</span> <span class="toc-text">四. 工作实施</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8A%9F%E8%83%BD%E7%BB%84%E4%BB%B6%E7%8B%AC%E7%AB%8B"><span class="toc-number">5.1.</span> <span class="toc-text">1. 功能组件独立</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-LPDBOCFoundationGarbage"><span class="toc-number">5.1.1.</span> <span class="toc-text">1.1 LPDBOCFoundationGarbage</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-LPDBPublicModule"><span class="toc-number">5.1.2.</span> <span class="toc-text">1.2 LPDBPublicModule</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-LPDBNetwork"><span class="toc-number">5.1.3.</span> <span class="toc-text">1.3 LPDBNetwork</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-LPDBUIKit"><span class="toc-number">5.1.4.</span> <span class="toc-text">1.4 LPDBUIKit</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%9A%E5%8A%A1%E6%A8%A1%E5%9D%97%E6%8B%86%E5%88%86"><span class="toc-number">5.2.</span> <span class="toc-text">2. 业务模块拆分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-LPDBHistoryModule"><span class="toc-number">5.2.1.</span> <span class="toc-text">2.1 LPDBHistoryModule</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-LPDBLoginModule"><span class="toc-number">5.2.2.</span> <span class="toc-text">2.2 LPDBLoginModule</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-LPDBUserCenterModule"><span class="toc-number">5.2.3.</span> <span class="toc-text">2.3 LPDBUserCenterModule</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-%E5%85%B6%E5%AE%83"><span class="toc-number">5.2.4.</span> <span class="toc-text">2.4 其它</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%A7%A3%E9%99%A4%E8%80%A6%E5%90%88"><span class="toc-number">5.3.</span> <span class="toc-text">3. 解除耦合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-%E6%A8%A1%E5%9D%97%E9%97%B4%E7%BB%84%E4%BB%B6%E5%85%B1%E7%94%A8"><span class="toc-number">5.3.1.</span> <span class="toc-text">3.1 模块间组件共用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-%E6%A8%A1%E5%9D%97%E9%97%B4%E8%80%A6%E5%90%88"><span class="toc-number">5.3.2.</span> <span class="toc-text">3.2 模块间耦合</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94-%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86"><span class="toc-number">6.</span> <span class="toc-text">五. 问题整理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%8D%E5%90%88%E7%90%86%E7%9A%84%E5%88%86%E5%B1%82%E7%BB%93%E6%9E%84%E5%92%8C%E5%BA%93%E9%97%B4%E4%BE%9D%E8%B5%96"><span class="toc-number">6.1.</span> <span class="toc-text">1. 不合理的分层结构和库间依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%8B%86%E5%88%86%E7%B2%92%E5%BA%A6%E4%B8%8D%E9%80%82%E4%B8%AD"><span class="toc-number">6.2.</span> <span class="toc-text">2. 拆分粒度不适中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%B7%A5%E4%BD%9C%E8%BF%9B%E5%BA%A6%E9%9A%BE%E4%BB%A5%E6%8E%A7%E5%88%B6"><span class="toc-number">6.3.</span> <span class="toc-text">3. 工作进度难以控制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD-%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93"><span class="toc-number">7.</span> <span class="toc-text">六. 经验总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%B7%A5%E4%BD%9C%E5%BC%80%E5%A7%8B%E5%89%8D%E8%A6%81%E8%BF%9B%E8%A1%8C%E6%8A%80%E6%9C%AF%E8%B0%83%E7%A0%94"><span class="toc-number">7.1.</span> <span class="toc-text">1. 工作开始前要进行技术调研</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%B6%E5%AE%9A%E8%AF%A6%E7%BB%86%E6%95%B4%E4%BD%93%E8%A7%84%E5%88%92"><span class="toc-number">7.2.</span> <span class="toc-text">2. 制定详细整体规划</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%B3%A8%E6%84%8F%E5%AF%B9%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F%E7%9A%84%E6%8E%A7%E5%88%B6"><span class="toc-number">7.3.</span> <span class="toc-text">3. 注意对代码质量的控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E9%87%8D%E8%A7%86%E4%BF%A1%E6%81%AF%E7%9A%84%E6%96%87%E6%A1%A3%E5%8C%96"><span class="toc-number">7.4.</span> <span class="toc-text">4. 重视信息的文档化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83-%E5%BC%80%E6%BA%90%E6%88%90%E6%9E%9C"><span class="toc-number">8.</span> <span class="toc-text">七. 开源成果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB-%E5%90%8E%E8%AE%B0"><span class="toc-number">9.</span> <span class="toc-text">八. 后记</span></a></li></ol>
+    </div>
+  </span>
 </div>
 
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        蜂鸟商家版 iOS 组件化 / 模块化实践总结
+    </h1>
 
-  <div id="toc" class="toc-article">
-    <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%B6-%E5%89%8D%E8%A8%80"><span class="toc-text">零. 前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E8%83%8C%E6%99%AF%E5%88%86%E6%9E%90"><span class="toc-text">一. 背景分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">1. 存在的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%80%8E%E6%A0%B7%E5%8E%BB%E8%A7%A3%E5%86%B3"><span class="toc-text">2. 怎样去解决</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E7%9B%AE%E6%A0%87%E8%AE%BE%E5%AE%9A"><span class="toc-text">二. 目标设定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E8%AE%A1%E5%88%92%E5%88%B6%E5%AE%9A"><span class="toc-text">三. 计划制定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BB%84%E4%BB%B6"><span class="toc-text">1. 组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%A8%A1%E5%9D%97"><span class="toc-text">2. 模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%85%B3%E7%B3%BB"><span class="toc-text">3. 关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E5%B7%A5%E4%BD%9C%E5%AE%9E%E6%96%BD"><span class="toc-text">四. 工作实施</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8A%9F%E8%83%BD%E7%BB%84%E4%BB%B6%E7%8B%AC%E7%AB%8B"><span class="toc-text">1. 功能组件独立</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-LPDBOCFoundationGarbage"><span class="toc-text">1.1 LPDBOCFoundationGarbage</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-LPDBPublicModule"><span class="toc-text">1.2 LPDBPublicModule</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-LPDBNetwork"><span class="toc-text">1.3 LPDBNetwork</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-LPDBUIKit"><span class="toc-text">1.4 LPDBUIKit</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%9A%E5%8A%A1%E6%A8%A1%E5%9D%97%E6%8B%86%E5%88%86"><span class="toc-text">2. 业务模块拆分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-LPDBHistoryModule"><span class="toc-text">2.1 LPDBHistoryModule</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-LPDBLoginModule"><span class="toc-text">2.2 LPDBLoginModule</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-LPDBUserCenterModule"><span class="toc-text">2.3 LPDBUserCenterModule</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-%E5%85%B6%E5%AE%83"><span class="toc-text">2.4 其它</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%A7%A3%E9%99%A4%E8%80%A6%E5%90%88"><span class="toc-text">3. 解除耦合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-%E6%A8%A1%E5%9D%97%E9%97%B4%E7%BB%84%E4%BB%B6%E5%85%B1%E7%94%A8"><span class="toc-text">3.1 模块间组件共用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-%E6%A8%A1%E5%9D%97%E9%97%B4%E8%80%A6%E5%90%88"><span class="toc-text">3.2 模块间耦合</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94-%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86"><span class="toc-text">五. 问题整理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%8D%E5%90%88%E7%90%86%E7%9A%84%E5%88%86%E5%B1%82%E7%BB%93%E6%9E%84%E5%92%8C%E5%BA%93%E9%97%B4%E4%BE%9D%E8%B5%96"><span class="toc-text">1. 不合理的分层结构和库间依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%8B%86%E5%88%86%E7%B2%92%E5%BA%A6%E4%B8%8D%E9%80%82%E4%B8%AD"><span class="toc-text">2. 拆分粒度不适中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%B7%A5%E4%BD%9C%E8%BF%9B%E5%BA%A6%E9%9A%BE%E4%BB%A5%E6%8E%A7%E5%88%B6"><span class="toc-text">3. 工作进度难以控制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD-%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93"><span class="toc-text">六. 经验总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%B7%A5%E4%BD%9C%E5%BC%80%E5%A7%8B%E5%89%8D%E8%A6%81%E8%BF%9B%E8%A1%8C%E6%8A%80%E6%9C%AF%E8%B0%83%E7%A0%94"><span class="toc-text">1. 工作开始前要进行技术调研</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%B6%E5%AE%9A%E8%AF%A6%E7%BB%86%E6%95%B4%E4%BD%93%E8%A7%84%E5%88%92"><span class="toc-text">2. 制定详细整体规划</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%B3%A8%E6%84%8F%E5%AF%B9%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F%E7%9A%84%E6%8E%A7%E5%88%B6"><span class="toc-text">3. 注意对代码质量的控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E9%87%8D%E8%A7%86%E4%BF%A1%E6%81%AF%E7%9A%84%E6%96%87%E6%A1%A3%E5%8C%96"><span class="toc-text">4. 重视信息的文档化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83-%E5%BC%80%E6%BA%90%E6%88%90%E6%9E%9C"><span class="toc-text">七. 开源成果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB-%E5%90%8E%E8%AE%B0"><span class="toc-text">八. 后记</span></a></li></ol>
-  </div>
 
 
-
-<div class="content content-post CENTER">
-   <article id="post-LPDBusinessiOS" class="article article-type-post" itemprop="blogPost">
-  <header class="article-header">
-    <h1 class="post-title">蜂鸟商家版 iOS 组件化 / 模块化实践总结</h1>
-
-    <div class="article-meta">
-      <span>
-        <i class="icon-calendar"></i>
-        <span>2018.01.20</span>
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">EyreFree</span>
       </span>
-
       
-        <span class="article-author">
-          <i class="icon-user"></i>
-          <span>EyreFree</span>
-        </span>
+    <div class="postdate">
       
-
-      
-  <span class="article-category">
-    <i class="icon-list"></i>
-    <a class="article-category-link" href="/categories/iOS/">iOS</a>
-  </span>
-
-
-
-      
-        <span>
-          <i class="icon-comment"></i>
-          <a href="http://www.eyrefree.org/2018/01/20/LPDBusinessiOS/#disqus_thread"></a>
-        </span>
-      
-
-      
-      <i class="fa fa-eye"></i> 
-        <span id="busuanzi_container_page_pv">
-           &nbsp热度 <span id="busuanzi_value_page_pv">
-           <i class="fa fa-spinner fa-spin"></i></span>℃
-        </span>
-      
+        <time datetime="2018-01-20T07:00:00.000Z" itemprop="datePublished">2018-01-20</time>
+        
       
     </div>
-  </header>
 
-  <div class="article-content">
-    
-      <p><img src="https://user-gold-cdn.xitu.io/2018/1/19/1610f02b4af3f3d9?w=750&h=400&f=png&s=302366"></p>
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/iOS/">iOS</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Swift/" rel="tag">Swift</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><img src="https://user-gold-cdn.xitu.io/2018/1/19/1610f02b4af3f3d9?w=750&h=400&f=png&s=302366"></p>
 <h2 id="零-前言"><a href="#零-前言" class="headerlink" title="零. 前言"></a>零. 前言</h2><blockquote>
 <p>“蜂鸟配送商家版”是一款针对商家打造的专业配送软件，有了这款应用，您可以使用蜂鸟商家版呼叫所有平台订单及电话订单配送，餐饮、鲜花、蛋糕、生鲜、商超均可配送。超低运费，清晰合理。海量补贴，充值返现。</p>
 </blockquote>
@@ -538,244 +450,166 @@
 </ol>
 <hr>
 <blockquote>
-<p>如有任何知识产权、版权问题或理论错误，还请指正。<br><a href="https://www.eyrefree.org/2018/01/20/LPDBusinessiOS">https://www.eyrefree.org/2018/01/20/LPDBusinessiOS</a><br>如文中无特殊说明，本站均使用以下协议保护：<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">署名-非商业性使用-禁止演绎</a>。</p>
+<p>如有任何知识产权、版权问题或理论错误，还请指正。<br><a target="_blank" rel="noopener" href="https://www.eyrefree.org/2018/01/20/LPDBusinessiOS">https://www.eyrefree.org/2018/01/20/LPDBusinessiOS</a><br>如文中无特殊说明，本站均使用以下协议保护：<a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cn/">署名-非商业性使用-禁止演绎</a>。</p>
 </blockquote>
 
-    
   </div>
-
 </article>
 
 
-   
-  <div class="text-center donation">
-    <div class="inner-donation">
-      <span class="btn-donation">支持一下</span>
-      <div class="donation-body">
-        <div class="tip text-center">🚀 给 EF 刷火箭 🚀</div>
-        <ul>
+
         
-          <li class="item">
-            
-              <span>微信扫一扫</span>
-            
-            <img src="/WeChat.png" alt="">
-          </li>
-        
-          <li class="item">
-            
-              <span>支付宝扫一扫</span>
-            
-            <img src="/AliPay.png" alt="">
-          </li>
-        
-        </ul>
-      </div>
-    </div>
-  </div>
+          <div id="footer-post-container">
+  <div id="footer-post">
 
-
-   
-  <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2017/12/25/Git-Push/">
-        <i class="icon icon-angle-left"></i>
-    </a>
-    <a class="show pull-right" href="/2018/07/25/ETHTransactionData/">
-        <i class="icon icon-angle-right"></i>
-    </a>
-  </div>
-
-
-
-
-</div>
-
-
-  <a id="backTop" class="back-top">
-    <i class="icon-angle-up"></i>
-  </a>
-
-
-
-
-  <div class="modal" id="modal">
-  <span id="cover" class="cover hide"></span>
-  <div id="modal-dialog" class="modal-dialog hide-dialog">
-    <div class="modal-header">
-      <span id="close" class="btn-close">关闭</span>
-    </div>
-    <hr>
-    <div class="modal-body">
-      <ul class="list-toolbox">
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/archives/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              博客
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/category/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              分类
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/tag/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              标签
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/project/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              项目
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/link/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              友链
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/about/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              关于
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/atom.xml"
-              rel="noopener noreferrer"
-              target="_blank"
-              >
-              RSS
-            </a>
-          </li>
-        
-          <li class="item-toolbox">
-            <a
-              class="CIRCLE"
-              href="/search/"
-              rel="noopener noreferrer"
-              target="_self"
-              >
-              搜索
-            </a>
-          </li>
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/categories/">分类</a></li>
+         
+          <li><a href="/tags/">标签</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="/search/">搜索</a></li>
         
       </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9B%B6-%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">零. 前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80-%E8%83%8C%E6%99%AF%E5%88%86%E6%9E%90"><span class="toc-number">2.</span> <span class="toc-text">一. 背景分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-number">2.1.</span> <span class="toc-text">1. 存在的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%80%8E%E6%A0%B7%E5%8E%BB%E8%A7%A3%E5%86%B3"><span class="toc-number">2.2.</span> <span class="toc-text">2. 怎样去解决</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C-%E7%9B%AE%E6%A0%87%E8%AE%BE%E5%AE%9A"><span class="toc-number">3.</span> <span class="toc-text">二. 目标设定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89-%E8%AE%A1%E5%88%92%E5%88%B6%E5%AE%9A"><span class="toc-number">4.</span> <span class="toc-text">三. 计划制定</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BB%84%E4%BB%B6"><span class="toc-number">4.1.</span> <span class="toc-text">1. 组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%A8%A1%E5%9D%97"><span class="toc-number">4.2.</span> <span class="toc-text">2. 模块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%85%B3%E7%B3%BB"><span class="toc-number">4.3.</span> <span class="toc-text">3. 关系</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B-%E5%B7%A5%E4%BD%9C%E5%AE%9E%E6%96%BD"><span class="toc-number">5.</span> <span class="toc-text">四. 工作实施</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8A%9F%E8%83%BD%E7%BB%84%E4%BB%B6%E7%8B%AC%E7%AB%8B"><span class="toc-number">5.1.</span> <span class="toc-text">1. 功能组件独立</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-LPDBOCFoundationGarbage"><span class="toc-number">5.1.1.</span> <span class="toc-text">1.1 LPDBOCFoundationGarbage</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-LPDBPublicModule"><span class="toc-number">5.1.2.</span> <span class="toc-text">1.2 LPDBPublicModule</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-LPDBNetwork"><span class="toc-number">5.1.3.</span> <span class="toc-text">1.3 LPDBNetwork</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-LPDBUIKit"><span class="toc-number">5.1.4.</span> <span class="toc-text">1.4 LPDBUIKit</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%9A%E5%8A%A1%E6%A8%A1%E5%9D%97%E6%8B%86%E5%88%86"><span class="toc-number">5.2.</span> <span class="toc-text">2. 业务模块拆分</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-LPDBHistoryModule"><span class="toc-number">5.2.1.</span> <span class="toc-text">2.1 LPDBHistoryModule</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-LPDBLoginModule"><span class="toc-number">5.2.2.</span> <span class="toc-text">2.2 LPDBLoginModule</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-LPDBUserCenterModule"><span class="toc-number">5.2.3.</span> <span class="toc-text">2.3 LPDBUserCenterModule</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-%E5%85%B6%E5%AE%83"><span class="toc-number">5.2.4.</span> <span class="toc-text">2.4 其它</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%A7%A3%E9%99%A4%E8%80%A6%E5%90%88"><span class="toc-number">5.3.</span> <span class="toc-text">3. 解除耦合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-%E6%A8%A1%E5%9D%97%E9%97%B4%E7%BB%84%E4%BB%B6%E5%85%B1%E7%94%A8"><span class="toc-number">5.3.1.</span> <span class="toc-text">3.1 模块间组件共用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-%E6%A8%A1%E5%9D%97%E9%97%B4%E8%80%A6%E5%90%88"><span class="toc-number">5.3.2.</span> <span class="toc-text">3.2 模块间耦合</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94-%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86"><span class="toc-number">6.</span> <span class="toc-text">五. 问题整理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%8D%E5%90%88%E7%90%86%E7%9A%84%E5%88%86%E5%B1%82%E7%BB%93%E6%9E%84%E5%92%8C%E5%BA%93%E9%97%B4%E4%BE%9D%E8%B5%96"><span class="toc-number">6.1.</span> <span class="toc-text">1. 不合理的分层结构和库间依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%8B%86%E5%88%86%E7%B2%92%E5%BA%A6%E4%B8%8D%E9%80%82%E4%B8%AD"><span class="toc-number">6.2.</span> <span class="toc-text">2. 拆分粒度不适中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%B7%A5%E4%BD%9C%E8%BF%9B%E5%BA%A6%E9%9A%BE%E4%BB%A5%E6%8E%A7%E5%88%B6"><span class="toc-number">6.3.</span> <span class="toc-text">3. 工作进度难以控制</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD-%E7%BB%8F%E9%AA%8C%E6%80%BB%E7%BB%93"><span class="toc-number">7.</span> <span class="toc-text">六. 经验总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%B7%A5%E4%BD%9C%E5%BC%80%E5%A7%8B%E5%89%8D%E8%A6%81%E8%BF%9B%E8%A1%8C%E6%8A%80%E6%9C%AF%E8%B0%83%E7%A0%94"><span class="toc-number">7.1.</span> <span class="toc-text">1. 工作开始前要进行技术调研</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%88%B6%E5%AE%9A%E8%AF%A6%E7%BB%86%E6%95%B4%E4%BD%93%E8%A7%84%E5%88%92"><span class="toc-number">7.2.</span> <span class="toc-text">2. 制定详细整体规划</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%B3%A8%E6%84%8F%E5%AF%B9%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F%E7%9A%84%E6%8E%A7%E5%88%B6"><span class="toc-number">7.3.</span> <span class="toc-text">3. 注意对代码质量的控制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E9%87%8D%E8%A7%86%E4%BF%A1%E6%81%AF%E7%9A%84%E6%96%87%E6%A1%A3%E5%8C%96"><span class="toc-number">7.4.</span> <span class="toc-text">4. 重视信息的文档化</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83-%E5%BC%80%E6%BA%90%E6%88%90%E6%9E%9C"><span class="toc-number">8.</span> <span class="toc-text">七. 开源成果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB-%E5%90%8E%E8%AE%B0"><span class="toc-number">9.</span> <span class="toc-text">八. 后记</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&text=蜂鸟商家版 iOS 组件化 / 模块化实践总结"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&title=蜂鸟商家版 iOS 组件化 / 模块化实践总结"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&is_video=false&description=蜂鸟商家版 iOS 组件化 / 模块化实践总结"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=蜂鸟商家版 iOS 组件化 / 模块化实践总结&body=Check out this article: http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&title=蜂鸟商家版 iOS 组件化 / 模块化实践总结"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&title=蜂鸟商家版 iOS 组件化 / 模块化实践总结"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&title=蜂鸟商家版 iOS 组件化 / 模块化实践总结"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&title=蜂鸟商家版 iOS 组件化 / 模块化实践总结"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&name=蜂鸟商家版 iOS 组件化 / 模块化实践总结&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://www.efqrcode.com/2018/01/20/LPDBusinessiOS/&t=蜂鸟商家版 iOS 组件化 / 模块化实践总结"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
 
     </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
   </div>
 </div>
 
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2015-2022
+    EyreFree
+  </div>
+  <div class="footer-center">
+    <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">苏ICP备15023694号-2</a>
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/search/">搜索</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
 
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+ 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script> 
+
+
+
+
+<!-- clipboard -->
 
   
-      <div class="fexo-comments comments-post">
-    
-  <section class="disqus-comments">
-    <div id="disqus_thread">
-      <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-  </section>
-
-  <script>
-    var disqus_shortname = 'eyrefree';
-    
-    var disqus_url = 'http://www.eyrefree.org/2018/01/20/LPDBusinessiOS/';
-    
-    (function(){
-      var dsq = document.createElement('script');
-      dsq.type = 'text/javascript';
-      dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script> 
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
   </script>
 
-  <script id="dsq-count-scr" src="//eyrefree.disqus.com/count.js" async></script>
 
+<script src="/js/main.js"></script>
 
+<!-- search -->
 
-    
+<!-- Google Analytics -->
 
-    
-    
-
-    
-
-    
-    
-
-    
-
-  </div>
-
-  
+<!-- Baidu Analytics -->
 
   <script type="text/javascript">
-  function loadScript(url, callback) {
-    var script = document.createElement('script')
-    script.type = 'text/javascript';
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?638f7245dab1e13e3d8fbdd9cc3b0895";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
 
-    if (script.readyState) { //IE
-      script.onreadystatechange = function() {
-        if (script.readyState == 'loaded' ||
-          script.readyState == 'complete') {
-          script.onreadystatechange = null;
-          callback();
-        }
-      };
-    } else { //Others
-      script.onload = function() {
-        callback();
-      };
-    }
+<!-- Cloudflare Analytics -->
 
-    script.src = url;
-    document.getElementsByTagName('head')[0].appendChild(script);
-  }
+<!-- Umami Analytics -->
 
-  window.onload = function() {
-    loadScript('/js/bundle.js?235683', function() {
-      // load success
-    });
-  }
-</script>
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
 
 </body>
 </html>
