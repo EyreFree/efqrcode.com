@@ -1,0 +1,20 @@
+.hover-item {
+  color: rgba(255,255,255,.5);
+  background-color: transparent;
+  text-decoration: none;
+}
+.hover-item:hover {
+  color: rgba(255,255,255,.75);
+  background-color: transparent;
+  text-decoration: none;
+}
+.hover-item:visited {
+  color: rgba(255,255,255,.5);
+  background-color: transparent;
+  text-decoration: none;
+}
+.hover-item:visited:hover {
+  color: rgba(255,255,255,.75);
+  background-color: transparent;
+  text-decoration: none;
+}
